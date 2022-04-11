@@ -32,7 +32,7 @@ a {
 .column {
     float: left;
     width: 50%;
-    padding: 5%;
+    padding: 10%;
 }
 
 /* Clear floats after image containers */
