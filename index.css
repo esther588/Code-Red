@@ -9,6 +9,10 @@ body {
     background-color: #FAD9E6;
 }
 
+.container {
+    padding: 20px;
+}
+
 .box {
     margin-left: 10px;
     margin-top: 10px;
