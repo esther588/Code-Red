@@ -41,6 +41,7 @@ body {
     float: left;
    	width: 300px;
     padding: 20px;
+}
 
 /* Clear floats after image containers */
 .row::after {
