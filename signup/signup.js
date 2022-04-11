@@ -18,3 +18,21 @@ signupButton.addEventListener("click", (e) => {
         alert("You have successfully signed up!");
     }
 })
+
+function WriteToFile(passForm) {
+
+    var firstName = document.getElementById('firstname');
+    var lastName  = document.getElementById('lastname');
+    var username = document.getElementById('username');
+    var password  = document.getElementById('password');
+ 
+    let fso = CreateObject("Scripting.FileSystemObject"); 
+    let s = fso.CreateTextFile(username + ".txt", True);
+ 
+    s.writeline(firstname);
+    s.writeline(lastname);
+    s.writeline(username);
+    s.writeline(password);
+
+    s.Close();
+ }
