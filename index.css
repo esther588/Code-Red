@@ -10,6 +10,7 @@ body {
 }
 
 .box {
+    float: left;
     width: 35%;
     height: 60%;
     margin-left: 10px;
