@@ -44,6 +44,10 @@ html {
     opacity: 0;
   }
 
+  #error-blank-second-line {
+    display: block;
+  }
+
   #signup-pwd-error-holder {
     width: 100%;
     height: 100%;
@@ -63,6 +67,10 @@ html {
     border: 1px solid #8a0000;
     background-color: #e58f8f;
     opacity: 0;
+  }
+
+  #error-pwd-second-line {
+    display: block;
   }
   
   #signup-form {
