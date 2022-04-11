@@ -21,8 +21,8 @@ signupButton.addEventListener("click", (e) => {
 
 function WriteToFile(passForm) {
 
-    var firstName = document.getElementById('firstname');
-    var lastName  = document.getElementById('lastname');
+    var firstname = document.getElementById('firstname');
+    var lastname  = document.getElementById('lastname');
     var username = document.getElementById('username');
     var password  = document.getElementById('password');
  
