@@ -9,7 +9,8 @@ body {
     background-color: #61A4BC;
 }
   
-.holder {
+.left-holder {
+    float: left;
     width: 70%;
     height: 70%;
     background-color: white;
