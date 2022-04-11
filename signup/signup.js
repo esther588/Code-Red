@@ -17,11 +17,4 @@ signupButton.addEventListener("click", (e) => {
     } else {
         alert("You have successfully signed up!");
     }
-
-    var fs = require('fs'); 
-    var fileContent = " " + firstname + " " + lastname + " " + username + " " + password; 
-    var filepath = username + ".txt"; 
-    fs.writeFile(filepath, fileContent, (err) => { 
-        if (err) throw err; 
-    }); 
 })
