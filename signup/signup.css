@@ -32,10 +32,10 @@ html {
   }
   
   #signup-blank-error {
-    width: 45%;
+    width: 23%;
     text-align: center;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     font-size: 12px;
     font-weight: bold;
     color: #8a0000;
