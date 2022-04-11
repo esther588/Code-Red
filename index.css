@@ -33,9 +33,9 @@ body {
 /* Two image containers */
 .column {
     float: left;
-    width: 30%;
+   	width: 300px;
     height: 500px;
-    padding: 10%;
+    padding: 150px;
     margin-left: 10px;
     margin-top: 10px;
     display: grid;
