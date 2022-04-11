@@ -28,17 +28,13 @@ body {
 }
 
 #imgbox {
-    width: 300px;
-    height: 500px;
-    padding: 150px;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px 2px black;
+    height:500px;
+    width:500px;
+    line-height: 100px;
+    overflow:hidden;
+    border:solid 1px #000;
+    margin-left:10px;
+    margin-top:10px;
 }
 
 #imgbox img {
