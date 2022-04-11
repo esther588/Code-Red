@@ -9,7 +9,7 @@ body {
     background-color: #FAD9E6;
 }
 
-a {
+.box {
     float: left;
     width: 55%;
     height: 60%;
