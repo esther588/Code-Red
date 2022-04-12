@@ -4,13 +4,13 @@ const loginErrorMsg = document.getElementById("login-error-msg");
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    // Stored data from the signup-form
-    var storedUser = localStorage.getItem('username');
-    var storedPwd = localStorage.getItem('password');
-
     // Entered data from the login-form
     const username = loginForm.username.value;
     const password = loginForm.password.value;
+
+    // Stored data from the signup-form
+    var storedUser = localStorage.getItem(username + ' username');
+    var storedPwd = localStorage.getItem(username + ' password');
 
     // check if stored data from register-form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
