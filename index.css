@@ -38,7 +38,7 @@ body {
 .column {
     float: left;
    	width: 50%;
-    padding: 55px;
+    padding: 75px;
 }
 
 /* Clear floats after image containers */
