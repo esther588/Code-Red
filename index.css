@@ -37,7 +37,7 @@ body {
 /* Two image containers */
 .column {
     float: left;
-   	width: 300px;
+   	width: 50%;
     padding: 20px;
 }
 
