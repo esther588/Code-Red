@@ -38,13 +38,11 @@ body {
 .left-column {
     float: left;
    	width: 50%;
-    padding: 15px;
 }
 
 .right-column {
     float: right;
    	width: 50%;
-    padding: 15px;
 }
 
 /* Clear floats after image containers */
