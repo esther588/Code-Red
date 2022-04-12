@@ -14,3 +14,21 @@ loginButton.addEventListener("click", (e) => {
         loginErrorMsg.style.opacity = 1;
     }
 })
+
+function check() {
+
+    // Stored data from the signup-form
+    var storedUser = localStorage.getItem('username');
+    var storedPwd = localStorage.getItem('password');
+
+    // Entered data from the login-form
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+
+    // check if stored data from register-form is equal to data from login form
+    if(username.value == storedUser && password.value == storedPwd) {
+        alert('You are loged in.');
+    }else {
+        alert('ERROR.');
+    }
+}
