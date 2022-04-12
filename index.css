@@ -35,15 +35,9 @@ body {
 }
 
 /* Two image containers */
-.left-column {
+.column {
     float: left;
-   	width: 50%;
-    padding: 20px;
-}
-
-.right-column {
-    float: right;
-   	width: 50%;
+   	width: 60%;
     padding: 20px;
 }
 
