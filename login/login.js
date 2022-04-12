@@ -15,7 +15,7 @@ loginButton.addEventListener("click", (e) => {
     }
 })
 
-function check() {
+function checkCred() {
 
     // Stored data from the signup-form
     var storedUser = localStorage.getItem('username');
