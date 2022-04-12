@@ -15,10 +15,14 @@ signupButton.addEventListener("click", (e) => {
     } else if (password.length < 8) {
         signupPwdError.style.opacity = 1;
     } else {
-        localStorage.setItem('firstname', firstname);
-        localStorage.setItem('lastname', lastname);
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        alert("You have successfully signed up!");
+        var storedUser = localStorage.getItem(username + ' username');
+        if(username.value == storedUser) {
+        } else {
+            localStorage.setItem(username + ' firstname', firstname);
+            localStorage.setItem(username + ' lastname', lastname);
+            localStorage.setItem(username + ' username', username);
+            localStorage.setItem(username + ' password', password);
+            alert("You have successfully signed up!");
+        }
     }
 })
