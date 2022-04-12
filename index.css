@@ -14,8 +14,8 @@ body {
 }
 
 #box {
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     display: grid;
     justify-items: center;
     align-items: center;
