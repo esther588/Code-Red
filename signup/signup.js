@@ -15,19 +15,10 @@ signupButton.addEventListener("click", (e) => {
     } else if (password.length < 8) {
         signupPwdError.style.opacity = 1;
     } else {
+        localStorage.setItem('firstname', firstname);
+        localStorage.setItem('lastname', lastname);
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
         alert("You have successfully signed up!");
     }
 })
-
-var firstname = document.getElementById('firstname');
-var lastname = document.getElementById('lastname');
-var username = document.getElementById('username');
-var password = document.getElementById('password');
-
-// Storing input from signup-form
-function store() {
-    localStorage.setItem('firstname', firstname.value);
-    localStorage.setItem('lastname', lastname.value);
-    localStorage.setItem('username', username.value);
-    localStorage.setItem('password', password.value);
-}
