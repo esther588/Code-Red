@@ -15,7 +15,7 @@ loginButton.addEventListener("click", (e) => {
     // check if stored data from register-form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
         alert("You have successfully logged in.");
-        window.location.href = "homepage/homepage.html";
+        location.assign("homepage/homepage.html");
     }else {
         loginErrorMsg.style.opacity = 1;
     }
