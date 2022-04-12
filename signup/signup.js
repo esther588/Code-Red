@@ -2,6 +2,7 @@ const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
+const signupUserError = document.getElementById("signup-user-error");
 
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -17,6 +18,7 @@ signupButton.addEventListener("click", (e) => {
     } else {
         var storedUser = localStorage.getItem(username + ' username');
         if(username.value == storedUser) {
+            signupUserError.style.opacity = 1;
         } else {
             localStorage.setItem(username + ' firstname', firstname);
             localStorage.setItem(username + ' lastname', lastname);
