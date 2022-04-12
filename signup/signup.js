@@ -19,20 +19,15 @@ signupButton.addEventListener("click", (e) => {
     }
 })
 
-function WriteToFile(passForm) {
+var firstname = document.getElementById('firstname');
+var lastname = document.getElementById('lastname');
+var username = document.getElementById('username');
+var password = document.getElementById('password');
 
-    var firstname = document.getElementById('firstname');
-    var lastname  = document.getElementById('lastname');
-    var username = document.getElementById('username');
-    var password  = document.getElementById('password');
- 
-    let fso = CreateObject("Scripting.FileSystemObject"); 
-    let s = fso.CreateTextFile(username + ".txt", True);
- 
-    s.writeline(firstname);
-    s.writeline(lastname);
-    s.writeline(username);
-    s.writeline(password);
-
-    s.Close();
- }
+// Storing input from signup-form
+function store() {
+    localStorage.setItem('firstname', firstname.value);
+    localStorage.setItem('lastname', lastname.value);
+    localStorage.setItem('username', username.value);
+    localStorage.setItem('password', password.value);
+}
