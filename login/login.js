@@ -15,7 +15,7 @@ loginButton.addEventListener("click", (e) => {
     if(username.value == storedUser && password.value == storedPwd) {
         alert("You have successfully logged in.");
         location.assign("https://esther588.github.io/Code-Red/homepage/homepage.html");
-    }else {
+    } else {
         loginErrorMsg.style.opacity = 1;
     }
 })
@@ -26,4 +26,4 @@ function getFirstName(username) {
     return storedFirst.value;
 }
 
-document.getElementById("ret").innerHTML = getFirstName();
+document.getElementById("ret").innerHTML = getFirstName(username);
