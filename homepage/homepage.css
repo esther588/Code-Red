@@ -17,7 +17,9 @@ body {
 
 i {
     margin-right: 10px;
-}/* ---------horizontal-navbar-menu-----------*/
+}
+
+/* ---------horizontal-navbar-menu-----------*/
 
 #navbar-animmenu {
     background: #5161ce;
@@ -28,13 +30,13 @@ i {
     width: 100%;    
 }
 
-#navbar-animmenu ul{
+#navbar-animmenu ul {
     padding: 0px;
     margin: 0px;
 
 }
 
-#navbar-animmenu ul li a i{
+#navbar-animmenu ul li a i {
     margin-right: 10px;
 }
 
@@ -43,7 +45,7 @@ i {
     float: left;
 }
 
-#navbar-animmenu ul li a{
+#navbar-animmenu ul li a {
     color: rgba(255,255,255,0.5);
     text-decoration: none;
     font-size: 15px;
@@ -55,7 +57,7 @@ i {
     position: relative;
 }
 
-#navbar-animmenu>ul>li.active>a{
+#navbar-animmenu>ul>li.active>a {
     color: #5161ce;
     background-color: transparent;
     transition: all 0.7s;
@@ -79,7 +81,8 @@ i {
 #navbar-animmenu .active>a:not(:only-child):after {
     transform: rotate(90deg);
 }
-.hori-selector{
+
+.hori-selector {
     display:inline-block;
     position:absolute;
     height: 100%;
@@ -91,8 +94,9 @@ i {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
 .hori-selector .right,
-.hori-selector .left{
+.hori-selector .left {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -100,11 +104,11 @@ i {
     bottom: 10px;
 }
 
-.hori-selector .right{
+.hori-selector .right {
     right: -25px;
 }
 
-.hori-selector .left{
+.hori-selector .left {
     left: -25px;
 }
 
@@ -118,26 +122,26 @@ i {
     background-color: #5161ce;
 }
 
-.hori-selector .right:before{
+.hori-selector .right:before {
     bottom: 0;
     right: -25px;
 }
 
-.hori-selector .left:before{
+.hori-selector .left:before {
     bottom: 0;
     left: -25px;
 }
 
-  /* Create three equal columns that floats next to each other */
-  .column {
+/* Create three equal columns that floats next to each other */
+.column {
     float: left;
     width: 33.33%;
     padding: 15px;
-  }
+}
   
-  /* Clear floats after the columns */
-  .row:after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
