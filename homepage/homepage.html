@@ -6,13 +6,15 @@
         <title>Homepage</title>
         <link rel="stylesheet" href="homepage.css">
         <script defer src="homepage/homepage.js"></script>
+        <script defer src="login/login.js"></script>
     </head>
     <body>
         <div class="header">
-            <h1 id="num"></h1>
+            <h1 id="firstname"></h1>
             <script>
-                var number = "123";
-                document.getElementById("num").innerHTML = number;
+                var user = getUser();
+                var firstname = localStorage.getItem(username + ' firstname');
+                document.getElementById("firstname").innerHTML = firstname;
               </script>
         </div>
     </body>
