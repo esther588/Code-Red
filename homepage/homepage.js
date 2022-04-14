@@ -4,4 +4,4 @@ function getFirstName() {
     return storedFirst.value;
 }
 
-document.getElementById("ret").innerHTML = getFirstName();
+ddocument.write(compare(getFirstName()));
