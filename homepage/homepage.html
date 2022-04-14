@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
         <link rel="stylesheet" href="homepage.css">
-        <script defer src="homepage/homepage.js"></script>
+        <!-- <script defer src="homepage/homepage.js"></script> -->
         <script defer src="login/login.js"></script>
     </head>
     <body>
@@ -13,8 +13,8 @@
             <h1 id="firstname"></h1>
             <script>
                 var user = getUser();
-                var firstname = localStorage.getItem(username + ' firstname');
-                document.getElementById("firstname").innerHTML = firstname;
+                var firstname = localStorage.getItem(user.value + ' firstname');
+                document.getElementById("firstname").innerHTML = firstname.value;
               </script>
         </div>
     </body>
