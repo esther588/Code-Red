@@ -1,4 +1,4 @@
 function myFunction() {
     var number = "123";
-    document.write(number);
+    document.getElementById("num").innerHTML = number;
   }
