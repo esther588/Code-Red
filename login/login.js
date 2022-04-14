@@ -1,12 +1,11 @@
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
+const username = loginForm.username.value;
+const password = loginForm.password.value;
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    // Entered data from the login form
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
 
     // Stored data from the signup form
     var storedUser = localStorage.getItem(username + ' username');
@@ -20,3 +19,11 @@ loginButton.addEventListener("click", (e) => {
         loginErrorMsg.style.opacity = 1;
     }
 })
+
+function getFirstName(username) {
+    // Obtain stored name via localStorage
+    var storedFirst = localStorage.getItem(username + ' firstname');
+    return storedFirst.value;
+}
+
+document.getElementById("ret").innerHTML = getFirstName();
