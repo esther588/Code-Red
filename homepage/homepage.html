@@ -7,9 +7,13 @@
         <link rel="stylesheet" href="homepage.css">
         <script defer src="homepage/homepage.js"></script>
     </head>
-    <body onload="myFunction()">
+    <body>
         <div class="header">
-            <h1>"The value for number is: " <span id="myText"></span></h1>
+            <h1>
+                <script>
+                    document.write(myFunction());
+                </script>
+            </h1>
         </div>
     </body>
 </html>
