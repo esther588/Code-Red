@@ -1,0 +1,133 @@
+body {
+  background: #EF798A;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4A4860;
+  z-index: 10000;
+  border-bottom: 4px solid #323042;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media all and (min-width: 545px) {
+  nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+nav ul li {
+  display: none;
+}
+
+@media all and (min-width: 545px) {
+  nav ul li {
+    display: block;
+  }
+}
+
+nav ul a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 0.7em;
+  color: #FFE4FA;
+  text-align: center;
+  padding: 14px 30px;
+  -webkit-transition: background .25s, -webkit-box-shadow .15s;
+  transition: background .25s, -webkit-box-shadow .15s;
+  transition: background .25s, box-shadow .15s;
+  transition: background .25s, box-shadow .15s, -webkit-box-shadow .15s;
+}
+
+nav ul a:hover {
+  color: #4A4860;
+  background: #FFC4EB;
+  -webkit-box-shadow: 0px 4px 0px 0px #BB8EAC;
+          box-shadow: 0px 4px 0px 0px #BB8EAC;
+}
+
+@media all and (min-width: 545px) {
+  nav ul a {
+    padding: 20px;
+  }
+}
+
+.heart {
+  display: none;
+  margin: 0 auto;
+  padding: 12px 30px;
+}
+
+@media all and (min-width: 545px) {
+  .heart {
+    display: block;
+    margin: initial;
+  }
+}
+
+.heart-trigger {
+  display: block;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  padding: 12px 30px;
+}
+
+@media all and (min-width: 545px) {
+  .heart-trigger {
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
+.visible {
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fa-heart {
+  font-size: 1.8em;
+  color: #FFC4EB;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fa-heart:hover {
+  color: #DE6E4B;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media all and (min-width: 545px) {
+  .fa-heart {
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=homepage.css.map */
