@@ -1,7 +1,3 @@
-$("#heart-trigger").click(function () {
-    $("li").toggleClass("visible");
- });
-
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
