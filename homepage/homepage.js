@@ -14,19 +14,21 @@ showCalendar(currentMonth, currentYear);
 // Create string array of months
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-
+// Change to the next month and year
 function next() {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth + 1) % 12;
     showCalendar(currentMonth, currentYear);
 }
 
+// Change to the previous month and year
 function previous() {
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     showCalendar(currentMonth, currentYear);
 }
 
+// Go to inputted month and year
 function jump() {
     currentYear = parseInt(selectYear.value);
     currentMonth = parseInt(selectMonth.value);
