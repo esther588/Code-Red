@@ -7,10 +7,12 @@ currentYear = today.getFullYear();
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+// Get the month and year currently displayed on the calendar
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
+
+// Create string array of months
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 function next() {
