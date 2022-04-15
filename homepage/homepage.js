@@ -1,87 +1,79 @@
-// Get the current date
-today = new Date();
-currentMonth = today.getMonth();
-currentYear = today.getFullYear();
+// Create array of months
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// Get the selected month and year
-selectYear = document.getElementById("year");
-selectMonth = document.getElementById("month");
+function drawCalendarMonths() {
+    for(var i = 0; i < months.length; i++) {
+        var doc = document.createElement("div");
+        doc.innerHTML = months[i];
+        doc.classList.add("dropdown-item");
 
-// Get the month and year currently displayed on the calendar
-monthAndYear = document.getElementById("monthAndYear");
-showCalendar(currentMonth, currentYear);
+        doc.onclick = (function () {
+        var selectedMonth = i;
+        return function () {
+            month = selectedMonth;
+            document.getElementById("curMonth").innerHTML = months[month];
+            loadCalendarDays();
+            return month;
+            }
+        })();
 
-// Create string array of months
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-// Change to the next month and year
-function next() {
-    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
-    showCalendar(currentMonth, currentYear);
+        document.getElementById("months").appendChild(doc);
+    }
 }
 
-// Change to the previous month and year
-function previous() {
-    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showCalendar(currentMonth, currentYear);
+function loadYears() {
+    var startYear = 1900;
+    var endYear = 2022;
+
+    for(var i = startYear; i <= endYear; i++) {
+        var doc = document.createElement("div");
+        doc.innerHTML = i;
+        doc.classList.add("dropdown-item");
+
+        doc.onclick = (function(){
+        var selectedYear = i;
+        return function(){
+            year = selectedYear;
+            document.getElementById("curYear").innerHTML = year;
+            loadCalendarDays();
+            return year;
+            }
+        })();
+
+        document.getElementById("years").appendChild(doc);
+    }
 }
 
-// Go to inputted month and year
-function jump() {
-    currentYear = parseInt(selectYear.value);
-    currentMonth = parseInt(selectMonth.value);
-    showCalendar(currentMonth, currentYear);
+// Get the number of days in the month
+function daysInMonth(month, year) {
+    let day = new Date(year, month + 1, 0);
+    return day.getDate();
 }
 
-function showCalendar(month, year) {
+function loadCalendarDays() {
+    document.getElementById("calendarDays").innerHTML = "";
 
-    let dayOfWeek = (new Date(year, month)).getDay();
+    var tmpDate = new Date(year, month, 0);
+    var num = daysInMonth(month, year);
+    var dayofweek = tmpDate.getDay();
 
-    tbl = document.getElementById("calendar-body");
-
-    tbl.innerHTML = "";
-
-    monthAndYear.innerHTML = months[month] + " " + year;
-    selectYear.value = year;
-    selectMonth.value = month;
-
-    let date = 1;
-    for (let i = 0; i < 6; i++) {
-        let row = document.createElement("tr");
-
-        for (let j = 0; j < 7; j++) {
-            if (i === 0 && j < dayOfWeek) {
-                cell = document.createElement("td");
-                cellText = document.createTextNode("");
-                cell.appendChild(cellText);
-                row.appendChild(cell);
-            }
-            else if (date > daysInMonth(month, year)) {
-                break;
-            }
-
-            else {
-                cell = document.createElement("td");
-                cellText = document.createTextNode(date);
-                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
-                }
-                cell.appendChild(cellText);
-                row.appendChild(cell);
-                date++;
-            }
-
-
-        }
-
-        tbl.appendChild(row);
+    for(var i = 0; i <= dayofweek; i++) {
+        var d = document.createElement("div");
+        d.classList.add("day");
+        d.classList.add("blank");
+        document.getElementById("calendarDays").appendChild(d);
     }
 
-}
+    for(var i = 0; i < num; i++) {
+        var tmp = i + 1;
+        var d = document.createElement("div");
+        d.id = "calendarday_" + i;
+        d.className = "day";
+        d.innerHTML = tmp;
+        document.getElementById("calendarDays").appendChild(d);
+    }
 
-// Get the days in specific month of specific year
-function daysInMonth(month, year) {
-    return 32 - new Date(year, month, 32).getDate();
+    var clear = document.createElement("div");
+    clear.className = "clear";
+    document.getElementById("calendarDays").appendChild(clear);
 }
