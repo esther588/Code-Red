@@ -1,10 +1,13 @@
+// Get the current date
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
+
+// Get the selected month and year
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
