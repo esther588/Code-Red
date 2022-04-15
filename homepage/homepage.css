@@ -92,37 +92,30 @@ nav ul a:hover {
 
 .heart-trigger {
   display: block;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  order: -1;
   padding: 12px 30px;
 }
 
 @media all and (min-width: 545px) {
   .heart-trigger {
-    -webkit-box-ordinal-group: initial;
-        -ms-flex-order: initial;
-            order: initial;
+      order: initial;
   }
 }
 
 .visible {
   display: block;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .fa-heart {
   font-size: 1.8em;
   color: #ffc4eb;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .fa-heart:hover {
   color: #de6e4b;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 @media all and (min-width: 545px) {
