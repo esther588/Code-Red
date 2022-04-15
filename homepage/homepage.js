@@ -77,3 +77,14 @@ function loadCalendarDays() {
     clear.className = "clear";
     document.getElementById("calendarDays").appendChild(clear);
 }
+
+window.addEventListener('load', function () {
+    var date = new Date();
+    month = date.getMonth();
+    year = date.getFullYear();
+    document.getElementById("curMonth").innerHTML = months[month];
+    document.getElementById("curYear").innerHTML = year;
+    loadCalendarMonths();
+    loadCalendarYears();
+    loadCalendarDays();
+});
