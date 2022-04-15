@@ -37,7 +37,7 @@ function jump() {
 
 function showCalendar(month, year) {
 
-    let firstDay = (new Date(year, month)).getDay();
+    let dayOfWeek = (new Date(year, month)).getDay();
 
     tbl = document.getElementById("calendar-body");
 
@@ -52,7 +52,7 @@ function showCalendar(month, year) {
         let row = document.createElement("tr");
 
         for (let j = 0; j < 7; j++) {
-            if (i === 0 && j < firstDay) {
+            if (i === 0 && j < dayOfWeek) {
                 cell = document.createElement("td");
                 cellText = document.createTextNode("");
                 cell.appendChild(cellText);
@@ -81,6 +81,7 @@ function showCalendar(month, year) {
 
 }
 
-function daysInMonth(iMonth, iYear) {
-    return 32 - new Date(iYear, iMonth, 32).getDate();
+// Get the days in specific month of specific year
+function daysInMonth(month, year) {
+    return 32 - new Date(year, month, 32).getDate();
 }
