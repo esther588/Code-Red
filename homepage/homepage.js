@@ -7,22 +7,11 @@ dayOfWeek = currentDay.getDay();
 // Create array of months
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-function calendarDays() {
-    for( var i = 1; i <= 31; i += 1 ){
-        var addClass = '';
-        if( i === 12 ){ addClass = ' class="selected"'; }
-        
-        switch( i ){
-        case 8:
-        case 10:
-        case 27:
-            addClass = ' class="event"';
-        break;
-        }
-
-        document.write( '<li><a href="#" title="'+i+'" data-value="'+_i+'"'+addClass+'>'+i+'</a></li>' );
-    }
+function getDayOfWeek() {
+    return dayOfWeek;
 }
+
+document.getElementById("dayOfWeek").innerHTML = getDayOfWeek();
 
 function daysInMonth(month,year) {
     return new Date(year, month, 0).getDate();
