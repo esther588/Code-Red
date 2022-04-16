@@ -14,8 +14,6 @@ function getDayOfWeek() {
     return days[dayOfWeek];
 }
 
-document.getElementById("dayOfWeek").innerHTML = getDayOfWeek();
-
 function getYear() {
     return currentYear;
 }

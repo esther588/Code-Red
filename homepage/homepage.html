@@ -22,7 +22,10 @@
         <div class="calendar">
             <div class="col leftCol">
                 <div class="content">
-                    <h1 class="date" id="dayOfWeek">
+                    <h1 class="date">
+                        <script>
+                            document.getElementById("dayOfWeek").innerHTML = getDayOfWeek();
+                        </script>
                       <span>September 12th</span>
                     </h1>
                   <div class="notes">
