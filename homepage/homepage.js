@@ -6,6 +6,8 @@ currentYear = currentDay.getFullYear();
 // Create array of months
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+calendarDays(currentMonth, currentYear);
+
 function calendarDays(month, year) {
     tbl = document.getElementById("calendar-body"); // body of the calendar
 
