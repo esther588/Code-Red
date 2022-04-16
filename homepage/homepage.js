@@ -1,8 +1,8 @@
 // Get today's date
-currentDay = new Date();
-currentMonth = currentDay.getMonth();
-currentYear = currentDay.getFullYear();
-dayOfWeek = currentDay.getDay(); 
+var currentDay = new Date();
+var currentMonth = currentDay.getMonth();
+var currentYear = currentDay.getFullYear();
+var dayOfWeek = currentDay.getDay(); 
 
 // Create array of months
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
