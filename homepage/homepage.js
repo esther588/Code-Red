@@ -11,11 +11,11 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function getDayOfWeek() {
-    return days[dayOfWeek];
+    return String(days[dayOfWeek]);
 }
 
 function getYear() {
-    return currentYear;
+    return String(currentYear);
 }
 
 function daysInMonth(month, year) {
