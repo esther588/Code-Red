@@ -1,38 +1,34 @@
-var app = {
-  settings: {
-    container: $('.calendar'),
-    calendar: $('.front'),
-    days: $('.weeks span'),
-    form: $('.back'),
-    input: $('.back input'),
-    buttons: $('.back button')
-  },
+// Get today's date
+currentDay = new Date();
+currentMonth = currentDay.getMonth();
+currentYear = currentDay.getFullYear();
 
-  init: function() {
-    instance = this;
-    settings = this.settings;
-    this.bindUIActions();
-  },
+// Create array of months
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  swap: function(currentSide, desiredSide) {
-    settings.container.toggleClass('flip');
+function calendarDays(month, year) {
+    tbl = document.getElementById("calendar-body"); // body of the calendar
 
-    currentSide.fadeOut(900);
-    currentSide.hide();
-    desiredSide.show();
+    // clearing all previous cells
+    tbl.innerHTML = "";
+    for( var i = 1; i <= 31; i += 1 ){
+        var addClass = '';
+        if( i === 12 ){ addClass = ' class="selected"'; }
+        
+        switch( i ){
+          case 8:
+          case 10:
+          case 27:
+            addClass = ' class="event"';
+          break;
+        }
 
-  },
+        document.write( '<li><a href="#" title="'+i+'" data-value="'+_i+'"'+addClass+'>'+i+'</a></li>' );
+      }
 
-  bindUIActions: function() {
-    settings.days.on('click', function(){
-      instance.swap(settings.calendar, settings.form);
-      settings.input.focus();
-    });
-
-    settings.buttons.on('click', function(){
-      instance.swap(settings.form, settings.calendar);
-    });
-  }
 }
 
-app.init();
+function daysInMonth(month,year) {
+    return new Date(year, month, 0).getDate();
+}
+            
