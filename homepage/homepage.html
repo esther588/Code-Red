@@ -39,7 +39,11 @@
         
               <div class="col rightCol">
                 <div class="content">
-                  <h2 class="year" id="currentYear"></h2>
+                  <h2 class="year">
+                      <script>
+                          document.getElementById("currentYear").innerHTML = getYear();
+                      </script>
+                  </h2>
                   <ul class="months">
                     <li><a href="#" title="Jan" data-value="1">Jan</a></li>
                     <li><a href="#" title="Feb" data-value="2">Feb</a></li>

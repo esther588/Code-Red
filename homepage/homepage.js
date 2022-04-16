@@ -20,8 +20,6 @@ function getYear() {
     return currentYear;
 }
 
-document.getElementById("currentYear").innerHTML = getYear();
-
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
