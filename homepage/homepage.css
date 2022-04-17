@@ -8,6 +8,15 @@ header {
   border-bottom: 4px solid #323042;
 }
 
+body {
+  margin: 20px;
+  background-color: #ef798a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 96.5%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 nav ul {
   list-style: none;
   display: -webkit-box;
@@ -104,15 +113,6 @@ nav ul a:hover {
 * {
   padding: 0px;
   margin: 0px;
-}
-
-body {
-  margin: 20px;
-  background-color: #EEEDE9;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-size: 96.5%;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 input {
