@@ -20,3 +20,9 @@ messages[17] = "My needs and wants are important.";
 messages[18] = "I am powerful and  can do anything I put my mind to.";
 messages[19] = "Remember to live in gratitude for another day to rise.";
 messages[20] = "I am not alone.";
+
+var min = 0;
+var max = 20;
+var randIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+
+document.getElementById("message).innerHTML = messages[randIndex];
