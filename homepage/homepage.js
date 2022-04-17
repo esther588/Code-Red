@@ -6,7 +6,7 @@ var currentYear = today.getFullYear();
 var dayOfWeek = today.getDay();
 
 // Create array of months
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemver", "December"];
 
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
