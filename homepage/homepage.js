@@ -13,6 +13,12 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 finalDay = document.getElementById("currentDay");
 finalDay.innerHTML = days[dayOfWeek];
 
+monthAndYear = document.getElementById("monthAndYear");
+monthAndYear.innerHTML = currentMonth + " " + currentYear;
+
+finalYear = document.getElementById("currentYear");
+finalYear.innerHTML = currentYear;
+
 function getYear() {
     return currentYear;
 }
