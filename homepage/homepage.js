@@ -13,6 +13,7 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 
 displayDay(days, dayOfWeek);
 displayDate(currentDate, months, currentMonth);
+displayYear(currentYear);
 
 function displayDay(daysArr, dayOfWeek) {
     finalDay = document.getElementById("currentDay");
