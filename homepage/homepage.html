@@ -25,7 +25,12 @@
                     <h1 class="date" id="currentDay">
                     </h1>
                     <script>
-                        document.getElementById("currentDay").innerHTML = "Monday";
+                        var currentDay = new Date();
+                        var currentMonth = currentDay.getMonth();
+                        var currentYear = currentDay.getFullYear();
+                        var dayOfWeek = currentDay.getDay(); 
+                        days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        document.getElementById("currentDay").innerHTML = days[daysofWeek];
                     </script>
                   <div class="notes">
                     <p>
