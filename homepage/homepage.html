@@ -22,11 +22,11 @@
         <div class="calendar">
             <div class="col leftCol">
                 <div class="content">
-                    <script>
-                        $("#currentDay").html("Monday");
-                    </script>
                     <h1 class="date" id="currentDay">
                     </h1>
+                    <script>
+                        document.getElementById("currentDay").innerHTML = "Monday";
+                    </script>
                   <div class="notes">
                     <p>
                       <input type="text" value="" placeholder="new note"/>
