@@ -25,4 +25,4 @@ var min = 0;
 var max = 20;
 var randIndex = Math.floor(Math.random() * (max - min + 1)) + min;
 
-document.getElementById("message).innerHTML = messages[randIndex];
+document.getElementById("message").innerHTML = messages[randIndex];
