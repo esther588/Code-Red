@@ -11,7 +11,8 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function getDayOfWeek() {
-    return days[dayOfWeek];
+    var strDay = days[dayOfWeek];
+    return strDay;
 }
 
 document.getElementById("currentYear").innerHTML = getYear();
