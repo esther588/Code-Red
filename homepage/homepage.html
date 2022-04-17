@@ -25,7 +25,9 @@
                     <h1 class="date" id="currentDay">
                     </h1>
                     <script>
-                        getDayOfWeek();
+                        days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        finalDay = document.getElementById("currentDay");
+                        finalDay.innerHTML = days[1];
                     </script>
                   <div class="notes">
                     <p>
