@@ -12,8 +12,6 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 displayDay(days, dayOfWeek);
-displayDate(currentDate, months, currentMonth);
-displayYear(currentYear);
 
 function displayDay(daysArr, dayOfWeek) {
     finalDay = document.getElementById("currentDay");
