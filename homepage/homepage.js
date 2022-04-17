@@ -12,10 +12,8 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 
 function getDayOfWeek() {
     var strDay = days[dayOfWeek];
-    return strDay;
+    $("#currentYear").text(strDay);
 }
-
-document.getElementById("currentYear").innerHTML = getYear();
 
 function getYear() {
     return currentYear;
