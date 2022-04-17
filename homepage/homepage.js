@@ -9,7 +9,7 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-$("#currentDay").html(days[dayOfWeek]);
+$("#currentDay").html("Monday");
 
 function getYear() {
     return currentYear;
