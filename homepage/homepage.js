@@ -18,7 +18,7 @@ function displayDates(daysArr, dayOfWeek, date, monthsArr, month, year) {
     finalDay.innerHTML = daysArr[dayOfWeek];
 
     fullDate = document.getElementById("currentDate");
-    finalYear.innerHTML = monthsArr[month] + " " + date;
+    fullDate.innerHTML = monthsArr[month] + " " + date;
 
     finalYear = document.getElementById("currentYear");
     finalYear.innerHTML = year;
