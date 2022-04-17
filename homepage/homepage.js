@@ -11,7 +11,7 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function getDayOfWeek() {
-    document.write(days[dayOfWeek]);
+    return days[dayOfWeek];
 }
 
 function getYear() {
