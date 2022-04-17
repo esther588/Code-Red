@@ -10,8 +10,10 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-finalDay = document.getElementById("currentDay");
-finalDay.innerHTML = days[dayOfWeek];
+function getDayOfWeek() {
+    finalDay = document.getElementById("currentDay");
+    finalDay.innerHTML = days[dayOfWeek];
+}
 
 function getYear() {
     return currentYear;
