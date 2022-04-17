@@ -11,14 +11,17 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-displayDay(days, dayOfWeek, currentDate, months, currentMonth);
+displayDay(days, dayOfWeek, currentDate, months, currentMonth, currentYear);
 
-function displayDay(daysArr, dayOfWeek, date, monthsArr, month) {
+function displayDay(daysArr, dayOfWeek, date, monthsArr, month, year) {
     finalDay = document.getElementById("currentDay");
     finalDay.innerHTML = daysArr[dayOfWeek];
 
     fullDate = document.getElementById("currentDate");
     fullDate.innerHTML = monthsArr[month] + " " + date;
+
+    finalYear = document.getElementById("currentYear");
+    finalYear.innerHTML = year;
 }
 
 function displayDate(date, monthsArr, month) {
