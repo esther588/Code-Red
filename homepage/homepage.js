@@ -16,7 +16,7 @@ displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
 
 function displayDay(daysArr, day) {
-    finalDay = document.getElementById("currentDate");
+    finalDay = document.getElementById("currentDay");
     finalDay.innerHTML = daysArr[day];
 }
 
