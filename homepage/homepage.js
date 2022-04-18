@@ -16,6 +16,7 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 
 let daysHtml = document.getElementById("calendarBody");
 let monthsHtml = document.getElementById("calendarMonths");
+let noteHtml = document.getElementById("addNote");
 
 displayDay(days, dayOfWeek);
 displayDate(currentDate, fullMonths, currentMonth);
@@ -84,5 +85,9 @@ function createMonths(monthsArr, month) {
 }
 
 function addNote() {
-    
+    html = '';
+    note = "Hello"
+    html = '<ul class="noteList"><li>' + note + '<a href="#" title="Remove note" class="removeNote animate">x</a></li>';
+
+    noteHtml.innerHTML = html;
 }
