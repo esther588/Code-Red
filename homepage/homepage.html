@@ -65,24 +65,9 @@
                   <li><a href="#" title="Sun" data-value="7">Sun</a></li>
                 </ul>
                 <div class="clearfix"></div>
-                <ul class="days">
-                    <script>
-                        for(var i = 1; i <= 31; i += 1){
-                            var addClass = '';
-                            if( i === 12 ){ addClass = ' class="selected"'; }
-                            
-                            switch( i ){
-                            case 8:
-                            case 10:
-                            case 27:
-                                addClass = ' class="event"';
-                            break;
-                            }
-    
-                            document.write('<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>');
-                        }
-                    </script>
-                </ul>
+                <tbody class="days" id="calendar-body">
+
+                </tbody>
                 <div class="clearfix"></div>
               </div>
             </div>
