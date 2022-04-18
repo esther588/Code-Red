@@ -20,7 +20,7 @@ let monthsHtml = document.getElementById("calendarMonths");
 displayDay(days, dayOfWeek);
 displayDate(currentDate, fullMonths, currentMonth);
 displayYear(currentYear);
-//createBody(dayOfWeek, currentDate, currentMonth, currentYear);
+createBody(dayOfWeek, currentDate, currentMonth, currentYear);
 createMonths(abbrevMonths, currentMonth);
 
 function displayDay(daysArr, day) {
