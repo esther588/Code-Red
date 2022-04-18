@@ -49,8 +49,7 @@ function addDays() {
           break;
         }
 
-        createCalendar = document.getElementById("createCalendar");
-        createCalendar.innerHTML = '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
+        document.write('<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>');
       }
 }
             
