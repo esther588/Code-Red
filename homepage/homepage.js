@@ -80,3 +80,7 @@ function createMonths(monthsArr, month) {
     }
     monthsHtml.innerHTML = html;
 }
+
+function addNote() {
+    
+}
