@@ -32,24 +32,27 @@ function displayYear(year) {
     finalYear.innerHTML = year;
 }
 
-function daysInMonth(month, year) {
-    return new Date(year, month, 0).getDate();
+function addDays() {
+    var calendarBody = '';
+                    for(var i = 1; i <= 31; i += 1){
+                        var addClass = '';
+                        if( i === 12 ){ addClass = ' class="selected"'; }
+                        
+                        switch( i ){
+                        case 8:
+                        case 10:
+                        case 27:
+                            addClass = ' class="event"';
+                        break;
+                        }
+
+                        calendarBody += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
+                    }
+                    finalBody = document.getElementById("createBody");
+                    finalBody.innerHTML = calendarBody;
 }
 
-function addDays() {
-    for( var i = 1; i <= 31; i += 1 ){
-        var addClass = '';
-        if( i === 12 ){ addClass = ' class="selected"'; }
-        
-        switch( i ){
-          case 8:
-          case 10:
-          case 27:
-            addClass = ' class="event"';
-          break;
-        }
-
-        document.write('<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>');
-      }
+function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
 }
             
