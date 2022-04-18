@@ -46,30 +46,23 @@ function daysInMonth(month, year) {
 function createBody(day, date, month, year) {
     html = '';
     totalDays = daysInMonth(month, year);
-    for(var i = 1; i <= 7; i++) {
-        if(i == day) {
-            for(var j = 1; j <= totalDays; j++){
-                var addClass = '';
-                if(j === date) { 
-                    addClass = ' class="selected"'; 
-                }
-                
-                switch(j) {
-                    case 8:
-                    case 10:
-                    case 27:
-                        addClass = ' class="event"';
-                    break;
-                }
-        
-                html += '<li><a href="#" title="' + j + '" data-value="' + j + '"' + addClass + '>' + j + '</a></li>';
-            }
-            daysHtml.innerHTML = html;
-            break;
-        } else {
-            html += '<li><a href="#" title="' + ' ' + '" data-value="'+ ' ' +'"' + addClass + '>' + ' ' + '</a></li>';
+    for(var j = 1; j <= totalDays; j++){
+        var addClass = '';
+        if(j === date) { 
+            addClass = ' class="selected"'; 
         }
+        
+        switch(j) {
+            case 8:
+            case 10:
+            case 27:
+                addClass = ' class="event"';
+            break;
+        }
+
+        html += '<li><a href="#" title="' + j + '" data-value="' + j + '"' + addClass + '>' + j + '</a></li>';
     }
+    daysHtml.innerHTML = html;
 }
 
 function createMonths(monthsArr, month) {
