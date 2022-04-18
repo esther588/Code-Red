@@ -65,26 +65,23 @@
                   <li><a href="#" title="Sun" data-value="7">Sun</a></li>
                 </ul>
                 <div class="clearfix"></div>
-                <script>
-                    var calendarBody = '';
-                    for(var i = 1; i <= 31; i += 1){
-                        var addClass = '';
-                        if( i === 12 ){ addClass = ' class="selected"'; }
-                        
-                        switch( i ){
-                        case 8:
-                        case 10:
-                        case 27:
-                            addClass = ' class="event"';
-                        break;
+                <ul class="days">
+                    <script>
+                        for(var i = 1; i <= 31; i += 1){
+                            var addClass = '';
+                            if( i === 12 ){ addClass = ' class="selected"'; }
+                            
+                            switch( i ){
+                            case 8:
+                            case 10:
+                            case 27:
+                                addClass = ' class="event"';
+                            break;
+                            }
+    
+                            document.write('<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>');
                         }
-
-                        calendarBody += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
-                    }
-                    finalBody = document.getElementById("createBody");
-                    finalBody.innerHTML = calendarBody;
-                </script>
-                <ul class="days" id="createBody">
+                    </script>
                 </ul>
                 <div class="clearfix"></div>
               </div>
@@ -94,10 +91,4 @@
       
           </div>
     </body>
-            <!--<h1 id="firstname"></h1>
-            <script>
-                var user = "esther588";
-                var firstname = localStorage.getItem(user.value + ' firstname');
-                document.getElementById("firstname").innerHTML = firstname;
-              </script>-->
 </html>
