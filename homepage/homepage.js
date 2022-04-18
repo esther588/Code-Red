@@ -36,7 +36,7 @@ function daysInMonth(month, year) {
 }     
 
 function showCalendar() {
-    calendaryBody = document.getElementById("calendarBody");
+    calendarBody = document.getElementById("calendarBody");
     for(var i = 1; i <= 31; i += 1){
         var addClass = '';
         if( i === 12 ){ addClass = ' class="selected"'; }
@@ -49,6 +49,6 @@ function showCalendar() {
         break;
         }
 
-        calendaryBody.innerHTML += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
+        calendarBody.innerHTML += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
     }
 }
