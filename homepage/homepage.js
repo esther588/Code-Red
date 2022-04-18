@@ -68,6 +68,7 @@ function createBody(day, date, month, year) {
 function createMonths(monthsArr, month) {
     html = '';
     for(var i = 1; i <= 12; i++) {
+        var addClass = '';
         monthName = monthsArr[i];
         if(i === month) { 
             addClass = ' class="selected"'; 
