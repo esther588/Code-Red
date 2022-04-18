@@ -20,7 +20,7 @@ let monthsHtml = document.getElementById("calendarMonths");
 displayDay(days, dayOfWeek);
 displayDate(currentDate, fullMonths, currentMonth);
 displayYear(currentYear);
-createBody(dayOfWeek, currentDate, currentMonth, currentYear);
+createBody(currentDate, currentMonth, currentYear);
 createMonths(abbrevMonths, currentMonth);
 
 function displayDay(daysArr, day) {
@@ -43,11 +43,13 @@ function daysInMonth(month, year) {
     return 32 - new Date(year, month, 32).getDate();
 }
 
-function createBody(day, date, month, year) {
+function createBody(date, month, year) {
     html = '';
-    totalDays = daysInMonth(month, year);
-    for(var i = 1; i <= day; i++) {
-        html += '<li>' + 0 + '</li>';
+    var firstDay = new Date(year, month, 1);
+    var dayOfWeek = firstDay.getDay();
+    var totalDays = daysInMonth(month, year);
+    for(var i = 1; i < dayOfWeek; i++) {
+        html += '<li><a href="#" title="' + i + '" data-value="' + i + '"' + '' + '>' + '</a></li>';
     }
     for(var j = 1; j <= totalDays; j++){
         var addClass = '';
