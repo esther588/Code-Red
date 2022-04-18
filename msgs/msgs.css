@@ -6,11 +6,6 @@ header {
   background: #4a4860;
   z-index: 10000;
   border-bottom: 4px solid #323042;
-}
-
-body {
-  margin: 20px;
-  background-color: #ef798a;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 70%;
