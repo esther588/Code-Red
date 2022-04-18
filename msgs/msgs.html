@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="msgs.css">
         <script defer src="msgs.js"></script>
     </head>
-    <body>
+    <body onload="getMessage()">
         <header>
             <nav role='navigation'>
               <ul>
@@ -19,7 +19,7 @@
               </ul>
             </nav>
         </header>
-        <div class="content" onload="getMessage()">
+        <div class="content">
           <h2 class="text_shadows" id="message"></h2>
         </div>
     </body>
