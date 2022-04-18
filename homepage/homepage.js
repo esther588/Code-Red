@@ -11,9 +11,12 @@ months = ["January", "February", "March", "April", "May", "June", "July", "Augus
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+let daysHtml = document.getElementById("calendarBody");
+
 displayDay(days, dayOfWeek);
 displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
+showCalendar();
 
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
@@ -33,10 +36,10 @@ function displayYear(year) {
 
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
-}     
+}
 
 function showCalendar() {
-    calendarBody = document.getElementById("calendarBody");
+    html = '';
     for(var i = 1; i <= 31; i += 1){
         var addClass = '';
         if( i === 12 ){ addClass = ' class="selected"'; }
@@ -49,6 +52,8 @@ function showCalendar() {
         break;
         }
 
-        calendarBody.innerHTML += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
+        html += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
     }
+
+    daysHtml.innerHTML = html; 
 }
