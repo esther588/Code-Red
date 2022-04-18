@@ -47,7 +47,7 @@ function createBody(day, date, month, year) {
     html = '';
     totalDays = daysInMonth(month, year);
     for(var i = 1; i <= day; i++) {
-        html += '<li><a href="#" title="' + i + '" data-value="' + j + '"' + '>' + '</a></li>';
+        html += '<li>' + '</li>';
     }
     for(var j = 1; j <= totalDays; j++){
         var addClass = '';
