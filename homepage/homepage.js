@@ -35,7 +35,7 @@ function displayYear(year) {
 }
 
 function daysInMonth(month, year) {
-    return new Date(year, month, 0).getDate();
+    return 32 - new Date(year, month, 32).getDate();
 }
 
 function showCalendar(date, month, year) {
