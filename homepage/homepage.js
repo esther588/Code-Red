@@ -16,7 +16,7 @@ let daysHtml = document.getElementById("calendarBody");
 displayDay(days, dayOfWeek);
 displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
-showCalendar();
+showCalendar(currentDate, currentMonth, currentYear);
 
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
@@ -38,12 +38,14 @@ function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
 
-function showCalendar() {
+function showCalendar(date, month, year) {
     html = '';
-    totalDays = daysInMonth(currentMonth, currentYear);
+    totalDays = daysInMonth(month, year);
     for(var i = 1; i <= totalDays; i += 1){
         var addClass = '';
-        if( i === 12 ){ addClass = ' class="selected"'; }
+        if(i === date) { 
+            addClass = ' class="selected"'; 
+        }
         
         switch( i ){
         case 8:
