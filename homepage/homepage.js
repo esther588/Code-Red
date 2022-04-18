@@ -12,7 +12,7 @@ months = ["January", "February", "March", "April", "May", "June", "July", "Augus
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 displayDay(days, dayOfWeek);
-//displayDate(currentDate, months, currentMonth);
+displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
 
 function displayDay(daysArr, day) {
