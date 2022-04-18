@@ -21,14 +21,11 @@ messages[18] = "I am powerful and  can do anything I put my mind to.";
 messages[19] = "Remember to live in gratitude for another day to rise.";
 messages[20] = "I am not alone.";
 
-const msgButton = document.getElementById("get-message");
-
-msgButton.addEventListener("click", (e) => {
-    e.preventDefault();
+function getMessage() {
     var min = 0;
     var max = 20;
     var randIndex = Math.floor(Math.random() * (max - min + 1)) + min;
 
     finalMsg = document.getElementById("message");
     finalMsg.innerHTML = messages[randIndex];``
-})
+}
