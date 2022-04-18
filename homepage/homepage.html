@@ -27,8 +27,10 @@
                 <h1 class="date" id="currentDate"></h1>
                 <div class="notes">
                   <p>
-                    <input type="text" value="" placeholder="Create New Note"/>
-                    <input type="button" title="Add note" class="addNote animate" value="+" onclick="addNote()">
+                    <form id="note-form">
+                        <input type="text" value="" placeholder="Create New Note"/>
+                        <input type="button" title="Add note" name="noteInput" class="addNote animate" value="+" onclick="addNote()">
+                    </form>
                     <ul id="note"></ul>
                   </p>
                 </div>

@@ -84,9 +84,11 @@ function createMonths(monthsArr, month) {
     monthsHtml.innerHTML = html;
 }
 
+const noteForm = document.getElementById("note-form");
+
 function addNote() {
     html = '';
-    note = "Hello"
+    note = noteForm.noteInput.value;
     html = '<li>' + note + '<a href="#" title="Remove note" class="removeNote animate">x</a></li>';
     noteHtml.innerHTML = html;
 }
