@@ -70,7 +70,7 @@ function createMonths(monthsArr, month) {
     for(var i = 0; i < 12; i++) {
         var addClass = '';
         monthName = monthsArr[i];
-        if(i === month - 1) { 
+        if(i + 1 === month) { 
             addClass = ' class="selected"'; 
         }
         html += '<li><a href="#" title="' + monthName + '" data-value="' + i + 1 + '"' + addClass + '>' + monthName + '</a></li>';
