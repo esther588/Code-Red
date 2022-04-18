@@ -16,7 +16,7 @@ let daysHtml = document.getElementById("calendarBody");
 displayDay(days, dayOfWeek);
 displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
-showCalendar(currentDate, currentMonth, currentYear);
+showCalendar(dayOfWeek, currentDate, currentMonth, currentYear);
 
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
@@ -38,25 +38,31 @@ function daysInMonth(month, year) {
     return 32 - new Date(year, month, 32).getDate();
 }
 
-function showCalendar(date, month, year) {
+function showCalendar(day, date, month, year) {
     html = '';
     totalDays = daysInMonth(month, year);
-    for(var i = 1; i <= totalDays; i += 1){
-        var addClass = '';
-        if(i === date) { 
-            addClass = ' class="selected"'; 
-        }
+    for(var i = 1; i <= 7; i++) {
+        if(i == day) {
+            for(var j = 1; j <= totalDays; j++){
+                var addClass = '';
+                if(j === date) { 
+                    addClass = ' class="selected"'; 
+                }
+                
+                switch(j) {
+                    case 8:
+                    case 10:
+                    case 27:
+                        addClass = ' class="event"';
+                    break;
+                }
         
-        switch( i ){
-        case 8:
-        case 10:
-        case 27:
-            addClass = ' class="event"';
-        break;
+                html += '<li><a href="#" title="' + j + '" data-value="' + j + '"' + addClass + '>' + j + '</a></li>';
+            }
+            daysHtml.innerHTML = html;
+            break;
+        } else {
+            html += '<li><a href="#" title="' + ' ' + '" data-value="'+ ' ' +'"' + addClass + '>' + ' ' + '</a></li>';
         }
-
-        html += '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
     }
-
-    daysHtml.innerHTML = html; 
 }
