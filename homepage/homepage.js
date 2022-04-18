@@ -14,6 +14,7 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 displayDay(days, dayOfWeek);
 displayDate(currentDate, months, currentMonth);
 displayYear(currentYear);
+addDays();
 
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
@@ -48,7 +49,8 @@ function addDays() {
           break;
         }
 
-        document.write( '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>' );
+        createCalendar = document.getElementById("createCalendar");
+        createCalendar.innerHTML = '<li><a href="#" title="'+i+'" data-value="'+i+'"'+addClass+'>'+i+'</a></li>';
       }
 }
             
