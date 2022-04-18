@@ -40,7 +40,8 @@ function daysInMonth(month, year) {
 
 function showCalendar() {
     html = '';
-    for(var i = 1; i <= 31; i += 1){
+    totalDays = daysInMonth(currentMonth, currentYear);
+    for(var i = 1; i <= totalDays; i += 1){
         var addClass = '';
         if( i === 12 ){ addClass = ' class="selected"'; }
         
