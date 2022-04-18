@@ -70,10 +70,10 @@ function createMonths(monthsArr, month) {
     for(var i = 0; i < 12; i++) {
         var addClass = '';
         monthName = monthsArr[i];
-        if(i + 1 === month) { 
+        if(i === month) { 
             addClass = ' class="selected"'; 
         }
-        html += '<li><a href="#" title="' + monthName + '" data-value="' + i + 1 + '"' + addClass + '>' + monthName + '</a></li>';
+        html += '<li><a href="#" title="' + monthName + '" data-value="' + i + '"' + addClass + '>' + monthName + '</a></li>';
     }
     monthsHtml.innerHTML = html;
 }
