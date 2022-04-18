@@ -67,13 +67,13 @@ function createBody(day, date, month, year) {
 
 function createMonths(monthsArr, month) {
     html = '';
-    for(var i = 1; i <= 12; i++) {
+    for(var i = 0; i < 12; i++) {
         var addClass = '';
         monthName = monthsArr[i];
-        if(i === month) { 
+        if(i === month - 1) { 
             addClass = ' class="selected"'; 
         }
-        html += '<li><a href="#" title="' + monthName + '" data-value="' + i + '"' + addClass + '>' + monthName + '</a></li>';
+        html += '<li><a href="#" title="' + monthName + '" data-value="' + i + 1 + '"' + addClass + '>' + monthName + '</a></li>';
     }
     monthsHtml.innerHTML = html;
 }
