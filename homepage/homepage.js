@@ -86,8 +86,7 @@ function createMonths(monthsArr, month) {
 
 const noteButton = document.getElementById("add-note");
 
-noteButton.addEventListener("click", (e) => {
-    e.preventDefault();
+function addNote() {
     note = "Hello"
     document.write('<ul class="noteList"><li>' + note + '<a href="#" title="Remove note" class="removeNote animate">x</a></li>');
-})
+}
