@@ -5,18 +5,23 @@ var currentMonth = today.getMonth();
 var currentYear = today.getFullYear();
 var dayOfWeek = today.getDay();
 
-// Create array of months
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemver", "December"];
+// Create array of months with their full names
+fullMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// Create array of months with their abbreviated names
+abbrevMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // Create array of days
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 let daysHtml = document.getElementById("calendarBody");
+let monthsHtml = document.getElementById("calendarMonths");
 
 displayDay(days, dayOfWeek);
-displayDate(currentDate, months, currentMonth);
+displayDate(currentDate, fullMonths, currentMonth);
 displayYear(currentYear);
-showCalendar(dayOfWeek, currentDate, currentMonth, currentYear);
+createBody(dayOfWeek, currentDate, currentMonth, currentYear);
+createMonths(abbrevMonths, currentMonth);
 
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
@@ -38,7 +43,7 @@ function daysInMonth(month, year) {
     return 32 - new Date(year, month, 32).getDate();
 }
 
-function showCalendar(day, date, month, year) {
+function createBody(day, date, month, year) {
     html = '';
     totalDays = daysInMonth(month, year);
     for(var i = 1; i <= 7; i++) {
@@ -65,4 +70,16 @@ function showCalendar(day, date, month, year) {
             html += '<li><a href="#" title="' + ' ' + '" data-value="'+ ' ' +'"' + addClass + '>' + ' ' + '</a></li>';
         }
     }
+}
+
+function createMonths(monthsArr, month) {
+    html = '';
+    for(var i = 1; i <= 12; i++) {
+        monthName = monthsArr[i];
+        if(i === month) { 
+            addClass = ' class="selected"'; 
+        }
+        html += '<li><a href="#" title="' + monthName + '" data-value="' + i + '"' + addClass + '>' + monthName + '</a></li>';
+    }
+    monthsHtml.innerHTML = html;
 }
