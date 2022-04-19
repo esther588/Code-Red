@@ -1,7 +1,7 @@
 const messages = {};
 messages[0] = "One small positive thought can change your whole day.";
 messages[1] = "Believe that life is worth living and your belief will help create the fact.";
-messages[2] = "Don’t focus on negative things; focus on the positive, and you will flourish.";
+messages[2] = "Focus on the positive instead of the negative, and you will flourish.";
 messages[3] = "Nothing is impossible if you put your mind to it and maintain a positive attitude.";
 messages[4] = "It’s important that you surround yourself with positivity.";
 messages[5] = "I will succeed today.";
