@@ -1,17 +1,25 @@
 const elem = document.getElementById("graph");
+const elem1 = document.getElementById("barGraph");
+const elem2 = document.getElementById("pieChart");
     
 function createGraph(id) {
     var typeOfGraph = "";
 
     if(id == "opt-1") {
+        
     } else if(id == "opt-2") {
-        typeOfGraph = "line"
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
     } else if(id == "opt-3") {
-        typeOfGraph = "bar"
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
     } else if(id == "opt-4") {
-        typeOfGraph = "pie"
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
     }
+}
 
+function createGraph(typeOfGraph) {
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
     var barColors = [
