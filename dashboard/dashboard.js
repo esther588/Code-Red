@@ -1,8 +1,28 @@
-function createAll() {
-    const ctx = document.getElementById("graph");
-    const ctx1 = document.getElementById("barGraph");
-    const ctx2 = document.getElementById("pieChart");
+const ctx = document.getElementById("graph");
+const ctx1 = document.getElementById("graph");
+const ctx2 = document.getElementById("graph");
 
+function validateRadios() {
+    var radios = document.getElementsByTagName('input');
+    var value;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].type === 'radio' && radios[i].checked) {
+            // get value, set checked flag or do whatever you need to
+            value = radios[i].value;
+            if(typeof value == "opt-1") {
+                createAll();
+            } else if(typeof value == "opt-2") {
+                createLine();
+            } else if(typeof value == "opt-3") {
+                createBar();
+            } else if(typeof value == "opt-4") {
+                createPie();
+            }
+        }
+    }
+}
+
+function createAll() {
     var xValues = [100,200,300,400,500,600,700,800,900,1000];
         
     const myChart = new Chart(ctx, {
@@ -78,7 +98,7 @@ function createAll() {
     function createLine() {
         var xValues = [100,200,300,400,500,600,700,800,900,1000];
         
-        new Chart("graph", {
+        new Chart(ctx, {
             type: "line",
             data: {
             labels: xValues,
@@ -107,7 +127,7 @@ function createAll() {
         var yValues = [55, 49, 44, 24, 15];
         var barColors = ["red", "green","blue","orange","brown"];
         
-        new Chart("graph", {
+        new Chart(ctx1, {
         type: "bar",
         data: {
             labels: xValues,
@@ -137,7 +157,7 @@ function createAll() {
         "#1e7145"
         ];
     
-        new Chart("graph", {
+        new Chart(ctx2, {
         type: "pie",
         data: {
             labels: xValues,
