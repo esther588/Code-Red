@@ -185,7 +185,7 @@ body {
 .arrow {
   cursor: pointer;
   height: 120px;
-  float: left;
+  left: 10%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -219,8 +219,8 @@ body {
 .arrow-top {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .arrow-top:after {
@@ -233,8 +233,8 @@ body {
 .arrow-bottom {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .arrow-bottom:after {
