@@ -1,6 +1,12 @@
-let pieHtml = document.getElementById("pieChart");
+if(document.getElementById("opt-1").checked) {
+} else if(document.getElementById("opt-2").checked) {
+} else if(document.getElementById("opt-3").checked) {
+} else if(document.getElementById("opt-4").checked) {
+    createPie();
+}
 
 function createPie() {
+    let pieHtml = document.getElementById("pieChart");
     var data = [
         {x: "White", value: 223553265},
         {x: "Black or African American", value: 38929319},
