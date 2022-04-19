@@ -47,3 +47,7 @@ function createGraph(typeOfGraph) {
     }
     });
 }
+
+function errorMsg() {
+    alert("You have successfully logged out.");
+}
