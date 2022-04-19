@@ -1,73 +1,105 @@
 function createAll() {
     const ctx = document.getElementById("graph");
     const ctx1 = document.getElementById("barGraph");
-const ctx2 = document.getElementById("pieChart");
+    const ctx2 = document.getElementById("pieChart");
 
-const myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      fill: true,
-      borderWidth: 1,
-    }]
-  },
-});
+    var xValues = [100,200,300,400,500,600,700,800,900,1000];
+        
+    const myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+            labels: xValues,
+            datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+            }, { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+            }, { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+            }]
+            },
+            options: {
+            legend: {display: false}
+            }
+        });
 
-const myChart1 = new Chart(ctx1, {
-    type: 'line',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        fill: true,
-        borderWidth: 1,
-      }]
-    },
-  });
+    const myChart1 = new Chart(ctx1, {
+        type: "bar",
+            data: {
+            labels: xValues,
+            datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+            }, { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+            }, { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+            }]
+            },
+            options: {
+            legend: {display: false}
+            }
+    });
 
-const myChart2 = new Chart(ctx2, {
-  type: 'line',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      fill: true,
-      borderWidth: 1,
-    }]
-  },
-});
-  }
-  
-  function createLine() {
-      var xValues = [100,200,300,400,500,600,700,800,900,1000];
+    const myChart2 = new Chart(ctx2, {
+        type: "pie",
+        data: {
+        labels: xValues,
+        datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+        }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+        }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+        }]
+        },
+        options: {
+        legend: {display: false}
+        }
+    });
+    }
     
-      new Chart("graph", {
-          type: "line",
-          data: {
-          labels: xValues,
-          datasets: [{ 
-              data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-              borderColor: "red",
-              fill: false
-          }, { 
-              data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-              borderColor: "green",
-              fill: false
-          }, { 
-              data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-              borderColor: "blue",
-              fill: false
-          }]
-          },
-          options: {
-          legend: {display: false}
-          }
-      });
+    function createLine() {
+        var xValues = [100,200,300,400,500,600,700,800,900,1000];
+        
+        new Chart("graph", {
+            type: "line",
+            data: {
+            labels: xValues,
+            datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+            }, { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+            }, { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+            }]
+            },
+            options: {
+            legend: {display: false}
+            }
+        });
     }
   
     function createBar() {
