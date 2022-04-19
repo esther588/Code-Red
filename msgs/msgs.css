@@ -186,8 +186,8 @@ body {
   cursor: pointer;
   height: 120px;
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 20%;
+  left: 20%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   -webkit-transition: -webkit-transform .1s;
