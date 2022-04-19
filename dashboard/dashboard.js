@@ -2,20 +2,25 @@ const elem = document.getElementById("graph");
 const elem1 = document.getElementById("barGraph");
 const elem2 = document.getElementById("pieChart");
     
-function createGraph(id) {
+function checkType(id) {
     var typeOfGraph = "";
 
     if(id == "opt-1") {
         
     } else if(id == "opt-2") {
-        typeOfGraph = "line"
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
     } else if(id == "opt-3") {
-        typeOfGraph = "bar"
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
     } else if(id == "opt-4") {
-        typeOfGraph = "pie"
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
     }
+}
 
-    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+function createGraph(type) {
+  var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
     var barColors = [
     "#b91d47",
@@ -26,7 +31,7 @@ function createGraph(id) {
     ];
 
     const newChart = new Chart(elem, {
-    type: typeOfGraph,
+    type: type,
     data: {
         labels: xValues,
         datasets: [{
