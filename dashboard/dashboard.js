@@ -1,10 +1,3 @@
-if(document.getElementById("opt-1").checked) {
-} else if(document.getElementById("opt-2").checked) {
-} else if(document.getElementById("opt-3").checked) {
-} else if(document.getElementById("opt-4").checked) {
-    createPie();
-}
-
 function createPie() {
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
