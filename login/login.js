@@ -16,7 +16,7 @@ loginButton.addEventListener("click", (e) => {
     // Check if stored data from signuo form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
         alert("You have successfully logged in.");
-        location.assign("https://esther588.github.io/Code-Red/homepage/homepage.html");
+        location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
         loginErrorMsg.style.opacity = 1;
     }
