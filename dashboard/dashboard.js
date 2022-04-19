@@ -75,15 +75,15 @@ function createAll() {
     });
     }
     
-    function createGraph() {
+    function createGraph(id) {
         var typeOfGraph = "";
 
-        if(document.getElementById('opt-1').checked) {
-        } else if(document.getElementById('opt-2').checked) {
+        if(id == "opt-1") {
+        } else if(id == "opt-2") {
             typeOfGraph = "line"
-        } else if(document.getElementById('opt-3').checked) {
+        } else if(id == "opt-3") {
             typeOfGraph = "bar"
-        } else if(document.getElementById('opt-4').checked) {
+        } else if(id == "opt-4") {
             typeOfGraph = "pie"
         }
         var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
