@@ -8,18 +8,13 @@ function createGraph(id) {
     if(id == "opt-1") {
         
     } else if(id == "opt-2") {
-        typeOfGraph = "line";
-        createGraph(typeOfGraph);
+        typeOfGraph = "line"
     } else if(id == "opt-3") {
-        typeOfGraph = "bar";
-        createGraph(typeOfGraph);
+        typeOfGraph = "bar"
     } else if(id == "opt-4") {
-        typeOfGraph = "pie";
-        createGraph(typeOfGraph);
+        typeOfGraph = "pie"
     }
-}
 
-function createGraph(typeOfGraph) {
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
     var barColors = [
