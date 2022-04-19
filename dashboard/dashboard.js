@@ -2,26 +2,6 @@ const ctx = document.getElementById("graph");
 const ctx1 = document.getElementById("graph");
 const ctx2 = document.getElementById("graph");
 
-function validateRadios() {
-    var radios = document.getElementsByTagName('input');
-    var value;
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].type === 'radio' && radios[i].checked) {
-            // get value, set checked flag or do whatever you need to
-            value = radios[i].value;
-            if(typeof value == "opt-1") {
-                createAll();
-            } else if(typeof value == "opt-2") {
-                createLine();
-            } else if(typeof value == "opt-3") {
-                createBar();
-            } else if(typeof value == "opt-4") {
-                createPie();
-            }
-        }
-    }
-}
-
 function createAll() {
     var xValues = [100,200,300,400,500,600,700,800,900,1000];
         
