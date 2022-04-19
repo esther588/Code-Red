@@ -2,7 +2,6 @@ const elem = document.getElementById("graph");
     
 function createGraph(id) {
     var typeOfGraph = "";
-    elem = "";
 
     if(id == "opt-1") {
     } else if(id == "opt-2") {
