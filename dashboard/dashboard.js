@@ -1,5 +1,6 @@
 function createAll() {
-    const ctx = document.getElementById("barGraph");
+    const ctx = document.getElementById("graph");
+    const ctx1 = document.getElementById("barGraph");
 const ctx2 = document.getElementById("pieChart");
 
 const myChart = new Chart(ctx, {
@@ -14,6 +15,19 @@ const myChart = new Chart(ctx, {
     }]
   },
 });
+
+const myChart1 = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        fill: true,
+        borderWidth: 1,
+      }]
+    },
+  });
 
 const myChart2 = new Chart(ctx2, {
   type: 'line',
