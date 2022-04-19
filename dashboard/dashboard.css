@@ -521,4 +521,8 @@ h1 {
       padding: 20px;
     }
   }
-  /*# sourceMappingURL=dashboard.css.map */
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
