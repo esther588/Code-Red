@@ -1,14 +1,3 @@
-var typeOfGraph = "";
-
-if(document.getElementById('opt-1').checked) {
-} else if(document.getElementById('opt-2').checked) {
-    typeOfGraph = "line"
-} else if(document.getElementById('opt-3').checked) {
-    typeOfGraph = "bar"
-} else if(document.getElementById('opt-4').checked) {
-    typeOfGraph = "pie"
-}
-
 const ctx = document.getElementById("graph");
 const ctx1 = document.getElementById("graph");
 const ctx2 = document.getElementById("graph");
@@ -87,6 +76,16 @@ function createAll() {
     }
     
     function createGraph() {
+        var typeOfGraph = "";
+
+        if(document.getElementById('opt-1').checked) {
+        } else if(document.getElementById('opt-2').checked) {
+            typeOfGraph = "line"
+        } else if(document.getElementById('opt-3').checked) {
+            typeOfGraph = "bar"
+        } else if(document.getElementById('opt-4').checked) {
+            typeOfGraph = "pie"
+        }
         var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
         var yValues = [55, 49, 44, 24, 15];
         var barColors = [
