@@ -1,3 +1,5 @@
+let pieHtml = document.getElementById("pieChart");
+
 function createPie() {
     var data = [
         {x: "White", value: 223553265},
@@ -20,5 +22,5 @@ function createPie() {
   
     // display the chart in the container
     chart.container('container');
-    chart.draw();
+    pieHtml.innerHTML = chart.draw();
 }
