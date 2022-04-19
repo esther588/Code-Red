@@ -1,119 +1,70 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --color-primary: #f6aca2;
-  --color-secondary: #f49b90;
-  --color-tertiary: #f28b7d;
-  --color-quaternary: #f07a6a;
-  --color-quinary: #ee6352;
-  /*
-  --color-primary: #5192ED;
-  --color-secondary: #69A1F0;
-  --color-tertiary: #7EAEF2;
-  --color-quaternary: #90BAF5;
-  --color-quinary: #A2C4F5;
-  */
-}
-
-body {
-  min-height: 100vh;
-  font-family: canada-type-gibson, sans-serif;
-  font-weight: 300;
-  font-size: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #eff8e2;
-}
-
-.content {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.text_shadows {
-  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
-    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-  font-family: bungee, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: calc(2rem + 5vw);
-  text-align: center;
-  margin: 0;
-  color: var(--color-primary);
-  //color: transparent;
-  //background-color: white;
-  //background-clip: text;
-  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
-  letter-spacing: 0.4rem;
-}
-
-@keyframes shadows {
-  0% {
-    text-shadow: none;
+.arrow {
+    cursor: pointer;
+    height: 120px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform .1s;
+    width: 80px;
+    
+    $transition-time: .15s;
+    
+    &-top,
+    &-bottom {
+      background-color: #666;
+      height: 4px;
+      left: -5px;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      
+      &:after {
+        background-color: #fff;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all $transition-time;
+      }
+    }
+    
+    &-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+      
+      &:after {
+        left: 100%;
+        right: 0;
+        transition-delay: 0s;
+      }
+    }
+    
+    &-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+      
+      &:after {
+        left: 0;
+        right: 100%;
+        transition-delay: $transition-time;
+      }
+    }
+    
+    &:hover & {
+      
+      &-top:after {
+        left: 0;
+        transition-delay: $transition-time;
+      }
+  
+      &-bottom:after {
+        right: 0;
+        transition-delay: 0s;
+      }
+    }
+    
+    &:active {
+      transform: translateX(-50%) translateY(-50%) scale(0.9);
+    }
   }
-  10% {
-    text-shadow: 3px 3px 0 var(--color-secondary);
-  }
-  20% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary);
-  }
-  30% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
-  }
-  40% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-      12px 12px 0 var(--color-quinary);
-  }
-  50% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-      12px 12px 0 var(--color-quinary);
-  }
-  60% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
-      12px 12px 0 var(--color-quinary);
-  }
-  70% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
-  }
-  80% {
-    text-shadow: 3px 3px 0 var(--color-secondary),
-      6px 6px 0 var(--color-tertiary);
-  }
-  90% {
-    text-shadow: 3px 3px 0 var(--color-secondary);
-  }
-  100% {
-    text-shadow: none;
-  }
-}
-
-@keyframes move {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  40% {
-    transform: translate(-12px, -12px);
-  }
-  50% {
-    transform: translate(-12px, -12px);
-  }
-  60% {
-    transform: translate(-12px, -12px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
