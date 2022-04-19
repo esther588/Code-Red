@@ -29,3 +29,7 @@ function getMessage() {
     finalMsg = document.getElementById("message");
     finalMsg.innerHTML = messages[randIndex];``
 }
+
+function goBack() {
+    location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
+}
