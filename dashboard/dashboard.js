@@ -2,6 +2,7 @@ const elem = document.getElementById("graph");
     
 function createGraph(id) {
     var typeOfGraph = "";
+    elem = "";
 
     if(id == "opt-1") {
     } else if(id == "opt-2") {
@@ -11,7 +12,7 @@ function createGraph(id) {
     } else if(id == "opt-4") {
         typeOfGraph = "pie"
     }
-    
+
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
     var barColors = [
