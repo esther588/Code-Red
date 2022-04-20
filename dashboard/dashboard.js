@@ -46,6 +46,8 @@ function createGraph(type) {
         }
     }
     });
+
+    newChart.update();
 }
 
 function errorMsg() {
