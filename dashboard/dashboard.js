@@ -1,6 +1,7 @@
 const elem = document.getElementById("graph");
 const elem1 = document.getElementById("barGraph");
 const elem2 = document.getElementById("pieChart");
+const newChart = null;
     
 function checkType(id) {
     var typeOfGraph = "";
@@ -20,35 +21,38 @@ function checkType(id) {
 }
 
 function createGraph(type) {
-  var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-    var yValues = [55, 49, 44, 24, 15];
-    var barColors = [
-    "#b91d47",
-    "#00aba9",
-    "#2b5797",
-    "#e8c3b9",
-    "#1e7145"
-    ];
-
-    const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: "World Wide Wine Production 2018"
-        }
+    if(newChart != null){
+        newChart.destroy();
     }
-    });
-
-    newChart.update();
-}
+    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yValues = [55, 49, 44, 24, 15];
+      var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+      ];
+  
+      newChart = new Chart(elem, {
+      type: type,
+      data: {
+          labels: xValues,
+          datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+          }]
+      },
+      options: {
+          title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+          }
+      }
+      });
+  
+      newChart.update();
+  }
 
 function errorMsg() {
     alert("You have successfully logged out.");
