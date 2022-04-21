@@ -32,7 +32,7 @@ function createAll() {
     ];
 
     const newChart = new Chart(elem, {
-        type: "pie",
+        type: "bar",
         data: {
             labels: xValues,
             datasets: [{
