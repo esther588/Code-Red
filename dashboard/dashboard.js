@@ -17,20 +17,14 @@ function checkType(id) {
 
 function createAll() {
   
-    html = '';
-
+  html = '';
     document.getElementById("chartContainer").innerHTML = '&nbsp;';
-
-    html += '<canvas id="lineGraph" style="width:100%;max-width:600px"></canvas>';
-    html += '<canvas id="barGraph" style="width:100%;max-width:600px"></canvas>';
-    html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
-
+    html += '<canvas id="graph" style="width:100%;max-width:600px"></canvas>';
+  
+  html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
     document.getElementById("chartContainer").innerHTML = html;
-
-    var elem = document.getElementById("lineGraph").getContext("2d");
-    var elem1 = document.getElementById("barGraph").getContext("2d");
-    var elem2 = document.getElementById("pieChart").getContext("2d");
-
+    var elem = document.getElementById("graph").getContext("2d");
+    var elem1 = document.getElementById("pieChart").getContext("2d");
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yValues = [55, 49, 44, 24, 15];
     var barColors = [
@@ -42,23 +36,6 @@ function createAll() {
     ];
 
     const newChart = new Chart(elem, {
-        type: "line",
-        data: {
-            labels: xValues,
-            datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-            }]
-        },
-        options: {
-            title: {
-            display: true,
-            text: "World Wide Wine Production 2018"
-            }
-        }
-    });
-
-    const newChart1 = new Chart(elem1, {
         type: "bar",
         data: {
             labels: xValues,
@@ -75,7 +52,7 @@ function createAll() {
         }
     });
   
-    const newChart2 = new Chart(elem2, {
+    const newChart1 = new Chart(elem1, {
     type: "pie",
     data: {
         labels: xValues,
@@ -127,4 +104,13 @@ function createGraph(type) {
 
 function errorMsg() {
     alert("You have successfully logged out.");
+}
+
+function showSection() {
+  var x = document.getElementById("graphAndChart");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
