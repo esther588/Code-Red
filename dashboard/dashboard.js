@@ -16,9 +16,13 @@ function checkType(id) {
 }
 
 function createAll() {
+  
+  html = '';
     document.getElementById("chartContainer").innerHTML = '&nbsp;';
-    document.getElementById("chartContainer").innerHTML = '<canvas id="graph" style="width:100%;max-width:600px"></canvas>';
-    document.getElementById("chartContainer").innerHTML = '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="graph" style="width:100%;max-width:600px"></canvas>';
+  
+  html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
+    document.getElementById("chartContainer").innerHTML = html;
     var elem = document.getElementById("graph").getContext("2d");
     var elem1 = document.getElementById("pieChart").getContext("2d");
     var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
