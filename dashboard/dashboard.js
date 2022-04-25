@@ -40,6 +40,7 @@ function createAll() {
         "#e8c3b9",
         "#1e7145"
     ];
+    var title = "Period Symptoms";
 
     const newChart = new Chart(elem, {
         type: "line",
@@ -53,7 +54,7 @@ function createAll() {
         options: {
             title: {
             display: true,
-            text: "World Wide Wine Production 2018"
+            text: title
             }
         }
     });
@@ -70,7 +71,7 @@ function createAll() {
         options: {
             title: {
             display: true,
-            text: "World Wide Wine Production 2018"
+            text: title
             }
         }
     });
@@ -87,7 +88,7 @@ function createAll() {
     options: {
         title: {
         display: true,
-        text: "World Wide Wine Production 2018"
+        text: title
         }
     }
     });
@@ -119,7 +120,7 @@ function createGraph(type) {
     options: {
         title: {
         display: true,
-        text: "World Wide Wine Production 2018"
+        text: "Period Symptoms"
         }
     }
     });
