@@ -126,7 +126,7 @@ function createGraph(type) {
     });
 }
 
-function errorMsg() {
+function logOutMsg() {
     alert("You have successfully logged out.");
 }
 
