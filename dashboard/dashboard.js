@@ -22,7 +22,9 @@ function createAll() {
     document.getElementById("chartContainer").innerHTML = '&nbsp;';
 
     html += '<canvas id="lineGraph" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="emptySpace1" style="width:100%;max-width:600px"></canvas>';
     html += '<canvas id="barGraph" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="emptySpace2" style="width:100%;max-width:600px"></canvas>';
     html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
 
     document.getElementById("chartContainer").innerHTML = html;
