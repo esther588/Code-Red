@@ -1,3 +1,9 @@
+const acneButton = document.getElementById("acne-submit");
+const moodButton = document.getElementById("mood-submit");
+const crampsButton = document.getElementById("cramps-submit");
+const fatigueButton = document.getElementById("fatigue-submit");
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
             
