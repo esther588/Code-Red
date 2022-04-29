@@ -17,7 +17,7 @@ body {
   justify-items: center;
 }
 
-p {
+label {
   display: block;
   width: 100%;
   font-size: 14pt;
@@ -33,7 +33,7 @@ p {
   color: black;
 }
 
-p:focus {
+label:focus {
   border-bottom: 5px solid #ffa580;
 }
 
