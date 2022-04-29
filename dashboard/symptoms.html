@@ -13,8 +13,16 @@
             <div class="mySlides fade">
                 <form class="contact-us">
                     <label for="acne">Acne</label>
-                    <input placeholder="Email" type="email" name="customerEmail">
-                    <input placeholder="Phone" type="tel" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <label for="type">Type</label>
+                    <input type="checkbox" id="touch"> 
+                    <select name="type" id="type" class="slide">
+                        <option value="blackheads">Blackheads</option>
+                        <option value="whiteheads">Whiteheads</option>
+                        <option value="papules">Papules</option>
+                        <option value="pustules">Pustules</option>
+                        <option value="nodules">Nodules</option>
+                        <option value="cysts">Cysts</option>
+                    </select>
                     <button type="button" id="acne-submit">SIGN UP</button>
                 </form>
             </div>
