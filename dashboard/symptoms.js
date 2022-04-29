@@ -3,6 +3,21 @@ const moodButton = document.getElementById("mood-submit");
 const crampsButton = document.getElementById("cramps-submit");
 const fatigueButton = document.getElementById("fatigue-submit");
 
+acneButton.addEventListener("click", (e) => {
+
+})
+
+moodButton.addEventListener("click", (e) => {
+
+})
+
+crampsButton.addEventListener("click", (e) => {
+
+})
+
+fatigueButton.addEventListener("click", (e) => {
+    
+})
 
 let slideIndex = 1;
 showSlides(slideIndex);
