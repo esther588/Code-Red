@@ -1,7 +1,11 @@
 const acneButton = document.getElementById("acne-submit");
+const acneForm = document.getElementById("acne-form");
 const moodButton = document.getElementById("mood-submit");
+const moodForm = document.getElementById("mood-form");
 const crampsButton = document.getElementById("cramps-submit");
+const crampsForm = document.getElementById("cramps-form");
 const fatigueButton = document.getElementById("fatigue-submit");
+const fatigueForm = document.getElementById("fatigue-form");
 
 acneButton.addEventListener("click", (e) => {
     e.preventDefault();
