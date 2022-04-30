@@ -215,15 +215,6 @@ span::after {
   transition: height .4s ease;
 }
 
-.slide {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: height .4s ease;
-}
-
 .slide li {padding : 30px;}
 
 #touch {position: absolute; opacity: 0; height: 0px;}    
