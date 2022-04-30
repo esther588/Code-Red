@@ -1,26 +1,22 @@
 const acneButton = document.getElementById("acne-submit");
-const acneForm = document.getElementById("acne-form");
 const moodButton = document.getElementById("mood-submit");
-const moodForm = document.getElementById("mood-form");
 const crampsButton = document.getElementById("cramps-submit");
-const crampsForm = document.getElementById("cramps-form");
 const fatigueButton = document.getElementById("fatigue-submit");
-const fatigueForm = document.getElementById("fatigue-form");
 
 acneButton.addEventListener("click", (e) => {
-    e.preventDefault();
+
 })
 
 moodButton.addEventListener("click", (e) => {
-    e.preventDefault();
+
 })
 
 crampsButton.addEventListener("click", (e) => {
-    e.preventDefault();
+
 })
 
 fatigueButton.addEventListener("click", (e) => {
-    e.preventDefault();
+    
 })
 
 let slideIndex = 1;
@@ -53,3 +49,27 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 }
+
+for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
+    dropdown.addEventListener('click', function () {
+        this.querySelector('.custom-select').classList.toggle('open');
+    })
+}
+
+for (const option of document.querySelectorAll(".custom-option")) {
+    option.addEventListener('click', function () {
+        if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+        }
+    })
+}
+
+window.addEventListener('click', function (e) {
+    for (const select of document.querySelectorAll('.custom-select')) {
+        if (!select.contains(e.target)) {
+            select.classList.remove('open');
+        }
+    }
+});
