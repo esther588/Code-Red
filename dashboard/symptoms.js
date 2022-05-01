@@ -4,19 +4,19 @@ const crampsButton = document.getElementById("cramps-submit");
 const fatigueButton = document.getElementById("fatigue-submit");
 
 acneButton.addEventListener("click", (e) => {
-
+    e.preventDefault();
 })
 
 moodButton.addEventListener("click", (e) => {
-
+    e.preventDefault();
 })
 
 crampsButton.addEventListener("click", (e) => {
-
+    e.preventDefault();
 })
 
 fatigueButton.addEventListener("click", (e) => {
-    
+    e.preventDefault();
 })
 
 let slideIndex = 1;
