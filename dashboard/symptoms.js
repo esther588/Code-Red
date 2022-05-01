@@ -5,6 +5,16 @@ const fatigueButton = document.getElementById("fatigue-submit");
 
 acneButton.addEventListener("click", (e) => {
     e.preventDefault();
+    for (const option of document.querySelectorAll(".custom-option")) {
+        option.addEventListener('click', function () {
+            if (this.classList.contains('selected')) {
+                if(option.value == "Whiteheads") {
+                    localStorage.setItem('Acne', option.value);
+                }
+                alert("You have successfully signed up!");
+            }
+        })
+    }
 })
 
 moodButton.addEventListener("click", (e) => {
