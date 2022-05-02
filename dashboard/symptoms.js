@@ -1,8 +1,10 @@
-const acneButton = document.getElementById("acne-submit");
 function acneSubmit() {
-    acneButton.addEventListener('click', function () {
-        alert("Your data has been submitted!");
-    })
+    for (const option of document.querySelectorAll(".custom-option")) {
+        if (option.classList.contains('selected')) {
+            localStorage.setItem('Acne', option.value);
+            alert("Your data has been submitted!");
+        }
+    }
 }
 
 function moodSubmit() {
