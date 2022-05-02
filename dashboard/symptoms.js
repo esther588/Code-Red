@@ -1,9 +1,20 @@
+var optionsArray = [];
+
 function acneSubmit() {
-    for (const option of document.querySelectorAll(".custom-option")) {
-        if (option.classList.contains('selected')) {
+    for (let i = 0; i < optionsArray.length; i++) {
+        if (optionsArray[1] == "Whiteheads") {
             localStorage.setItem('Acne', option.value);
-            alert("Your data has been submitted!");
+        } else if (optionsArray[1] == "Blackheads") {
+            localStorage.setItem('Acne', option.value);
+        }  else if (optionsArray[1] == "Papules") {
+            localStorage.setItem('Acne', option.value);
+        }  else if (optionsArray[1] == "Nodules") {
+            localStorage.setItem('Acne', option.value);
+        }  else if (optionsArray[1] == "Cysts") {
+            localStorage.setItem('Acne', option.value);
         }
+        alert("Your data has been submitted!");
+        break;
     }
 }
 
@@ -83,6 +94,7 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+            optionsArray.push(option.value);
         }
     })
 }
