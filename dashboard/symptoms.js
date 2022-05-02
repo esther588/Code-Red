@@ -20,7 +20,22 @@ function acneSubmit() {
 }
 
 function moodSubmit() {
-    alert("You have successfully signed up!");
+    for (const option of document.querySelectorAll(".custom-option")) {
+        option.addEventListener('click', function () {
+            if (this.classList.contains('selected')) {
+                if (option.value == "Irritability") {
+                    localStorage.setItem('Mood', option.value);
+                } else if (option.value == "Anger") {
+                    localStorage.setItem('Mood', option.value);
+                }  else if (option.value == "Sadness") {
+                    localStorage.setItem('Mood', option.value);
+                }  else if (option.value == "Anxiety") {
+                    localStorage.setItem('Mood', option.value);
+                }
+                alert("Your data has been submitted!");
+            }
+        })
+    }
 }
 
 function crampsSubmit() {
