@@ -79,15 +79,15 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
             if (this.textContent.localeCompare("Whiteheads") == 0) {
-                optionsArray.push(selectedOption);
+                optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Blackheads") == 0) {
-                optionsArray.push(selectedOption);
+                optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Papules") == 0) {
-                optionsArray.push(selectedOption);
+                optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Nodules") == 0) {
-                optionsArray.push(selectedOption);
+                optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Nodules") == 0) {
-                optionsArray.push(selectedOption);
+                optionsArray.push(this.textContent);
             }
         }
     })
