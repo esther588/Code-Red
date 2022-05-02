@@ -2,17 +2,7 @@ function acneSubmit() {
     for (const option of document.querySelectorAll(".custom-option")) {
         option.addEventListener('click', function () {
             if (this.classList.contains('selected')) {
-                if (option.value == "Whiteheads") {
-                    localStorage.setItem('Acne', option.value);
-                } else if (option.value == "Blackheads") {
-                    localStorage.setItem('Acne', option.value);
-                }  else if (option.value == "Papules") {
-                    localStorage.setItem('Acne', option.value);
-                }  else if (option.value == "Nodules") {
-                    localStorage.setItem('Acne', option.value);
-                }  else if (option.value == "Cysts") {
-                    localStorage.setItem('Acne', option.value);
-                }
+                localStorage.setItem('Acne', option.value);
                 alert("Your data has been submitted!");
             }
         })
@@ -23,15 +13,7 @@ function moodSubmit() {
     for (const option of document.querySelectorAll(".custom-option")) {
         option.addEventListener('click', function () {
             if (this.classList.contains('selected')) {
-                if (option.value == "Irritability") {
-                    localStorage.setItem('Mood', option.value);
-                } else if (option.value == "Anger") {
-                    localStorage.setItem('Mood', option.value);
-                }  else if (option.value == "Sadness") {
-                    localStorage.setItem('Mood', option.value);
-                }  else if (option.value == "Anxiety") {
-                    localStorage.setItem('Mood', option.value);
-                }
+                localStorage.setItem('Acne', option.value);
                 alert("Your data has been submitted!");
             }
         })
@@ -42,15 +24,7 @@ function crampsSubmit() {
     for (const option of document.querySelectorAll(".custom-option")) {
         option.addEventListener('click', function () {
             if (this.classList.contains('selected')) {
-                if (option.value == "None") {
-                    localStorage.setItem('Cramps', option.value);
-                } else if (option.value == "Minimal") {
-                    localStorage.setItem('Cramps', option.value);
-                }  else if (option.value == "Moderate") {
-                    localStorage.setItem('Cramps', option.value);
-                }  else if (option.value == "Extreme") {
-                    localStorage.setItem('Cramps', option.value);
-                }
+                localStorage.setItem('Acne', option.value);
                 alert("Your data has been submitted!");
             }
         })
@@ -61,19 +35,7 @@ function fatigueSubmit() {
     for (const option of document.querySelectorAll(".custom-option")) {
         option.addEventListener('click', function () {
             if (this.classList.contains('selected')) {
-                if (option.value == "Social") {
-                    localStorage.setItem('Fatigue', option.value);
-                } else if (option.value == "Emotional") {
-                    localStorage.setItem('Fatigue', option.value);
-                }  else if (option.value == "Physical") {
-                    localStorage.setItem('Fatigue', option.value);
-                }  else if (option.value == "Pain") {
-                    localStorage.setItem('Fatigue', option.value);
-                } else if (option.value == "Mental") {
-                    localStorage.setItem('Fatigue', option.value);
-                } else if (option.value == "Chronic") {
-                    localStorage.setItem('Fatigue', option.value);
-                }
+                localStorage.setItem('Acne', option.value);
                 alert("Your data has been submitted!");
             }
         })
