@@ -2,23 +2,23 @@ var optionsArray = [];
 
 function acneSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i] == "whiteheads") {
+        if (optionsArray[i].localeCompare("Whiteheads")) {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        } else if (optionsArray[i] == "blackheads") {
+        } else if (optionsArray[i].localeCompare("Blackheads")) {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "papules") {
+        }  else if (optionsArray[i].localeCompare("Papules")) {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "nodules") {
+        }  else if (optionsArray[i].localeCompare("Nodules")) {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "cysts") {
+        }  else if (optionsArray[i].localeCompare("Cysts")) {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
@@ -78,16 +78,15 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-            var selectedOption = this.getAttribute('data-value');
-            if (selectedOption == "whiteheads") {
+            if (this.textContent.localeCompare("Whiteheads")) {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "blackheads") {
+            } else if (this.textContent.localeCompare("Blackheads")) {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "papules") {
+            } else if (this.textContent.localeCompare("Papules")) {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "nodules") {
+            } else if (this.textContent.localeCompare("Nodules")) {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "cysts") {
+            } else if (this.textContent.localeCompare("Nodules")) {
                 optionsArray.push(selectedOption);
             }
         }
