@@ -2,23 +2,23 @@ var optionsArray = [];
 
 function acneSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i] == "Whiteheads") {
+        if (optionsArray[i].localeCompare("Whiteheads") == 0) {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        } else if (optionsArray[i] == "Blackheads") {
+        } else if (optionsArray[i].localeCompare("Blackheads") == 0) {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Papules") {
+        }  else if (optionsArray[i].localeCompare("Papules") == 0) {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Nodules") {
+        }  else if (optionsArray[i].localeCompare("Nodules") == 0) {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Cysts") {
+        }  else if (optionsArray[i].localeCompare("Cysts") == 0) {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
@@ -78,7 +78,15 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-            if (option.value == "Whiteheads" || option.value == "Blackheads" || option.value == "Papules" || option.value == "Nodules" || option.value == "Cysts") {
+            if (option.value.localeCompare("Whiteheads") == 0) {
+                optionsArray.push(option.value);
+            } else if (option.value.localeCompare("Blackheads") == 0) {
+                optionsArray.push(option.value);
+            } else if (option.value.localeCompare("Papules") == 0) {
+                optionsArray.push(option.value);
+            } else if (option.value.localeCompare("Modules") == 0) {
+                optionsArray.push(option.value);
+            } else if (option.value.localeCompare("Cysts") == 0) {
                 optionsArray.push(option.value);
             }
         }
