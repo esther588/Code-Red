@@ -2,23 +2,23 @@ var optionsArray = [];
 
 function acneSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[1] == "Whiteheads") {
+        if (optionsArray[i] == "Whiteheads") {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        } else if (optionsArray[1] == "Blackheads") {
+        } else if (optionsArray[i] == "Blackheads") {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[1] == "Papules") {
+        }  else if (optionsArray[i] == "Papules") {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[1] == "Nodules") {
+        }  else if (optionsArray[i] == "Nodules") {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[1] == "Cysts") {
+        }  else if (optionsArray[i] == "Cysts") {
             localStorage.setItem('Acne', option.value);
             alert("Your data has been submitted!");
             break;
