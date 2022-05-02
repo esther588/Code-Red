@@ -71,6 +71,33 @@ function crampsSubmit() {
 }
 
 function fatigueSubmit() {
+    for (let i = 0; i < optionsArray.length; i++) {
+        if (optionsArray[i].localeCompare("Social") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        } else if (optionsArray[i].localeCompare("Emotional") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }  else if (optionsArray[i].localeCompare("Physical") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }  else if (optionsArray[i].localeCompare("Pain") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        } else if (optionsArray[i].localeCompare("Mental") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        } else if (optionsArray[i].localeCompare("Chronic") == 0) {
+            localStorage.setItem('Fatigue', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }
+    }
 }
 
 let slideIndex = 1;
@@ -145,6 +172,20 @@ for (const option of document.querySelectorAll(".custom-option")) {
             } else if (this.textContent.localeCompare("Moderate") == 0) {
                 optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Extreme") == 0) {
+                optionsArray.push(this.textContent);
+            }
+
+            if (this.textContent.localeCompare("Social") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Emotional") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Physical") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Pain") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Mental") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Chronic") == 0) {
                 optionsArray.push(this.textContent);
             }
         }
