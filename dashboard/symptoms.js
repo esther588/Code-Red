@@ -39,7 +39,22 @@ function moodSubmit() {
 }
 
 function crampsSubmit() {
-    alert("You have successfully signed up!");
+    for (const option of document.querySelectorAll(".custom-option")) {
+        option.addEventListener('click', function () {
+            if (this.classList.contains('selected')) {
+                if (option.value == "None") {
+                    localStorage.setItem('Cramps', option.value);
+                } else if (option.value == "Minimal") {
+                    localStorage.setItem('Cramps', option.value);
+                }  else if (option.value == "Moderate") {
+                    localStorage.setItem('Cramps', option.value);
+                }  else if (option.value == "Extreme") {
+                    localStorage.setItem('Cramps', option.value);
+                }
+                alert("Your data has been submitted!");
+            }
+        })
+    }
 }
 
 function fatigueSubmit() {
