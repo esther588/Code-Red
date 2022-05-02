@@ -29,19 +29,19 @@ function acneSubmit() {
 function moodSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
         if (optionsArray[i].localeCompare("Irritability") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Mood', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         } else if (optionsArray[i].localeCompare("Anger") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Mood', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Sadness") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Mood', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Anxiety") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Mood', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }
@@ -51,19 +51,19 @@ function moodSubmit() {
 function crampsSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
         if (optionsArray[i].localeCompare("None") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Cramps', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         } else if (optionsArray[i].localeCompare("Minimal") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Cramps', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Moderate") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Cramps', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Extreme") == 0) {
-            localStorage.setItem('Acne', optionsArray[i]);
+            localStorage.setItem('Cramps', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }
