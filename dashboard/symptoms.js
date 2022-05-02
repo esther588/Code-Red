@@ -2,18 +2,18 @@ function acneSubmit() {
     for (const option of document.querySelectorAll(".custom-option")) {
         option.addEventListener('click', function () {
             if (this.classList.contains('selected')) {
-                if(option.value == "Whiteheads") {
+                if (option.value == "Whiteheads") {
                     localStorage.setItem('Acne', option.value);
-                } else if(option.value == "Blackheads") {
+                    alert("You have successfully signed up!");
+                } else if (option.value == "Blackheads") {
                     localStorage.setItem('Acne', option.value);
-                }  else if(option.value == "Papules") {
+                }  else if (option.value == "Papules") {
                     localStorage.setItem('Acne', option.value);
-                }  else if(option.value == "Nodules") {
+                }  else if (option.value == "Nodules") {
                     localStorage.setItem('Acne', option.value);
-                }  else if(option.value == "Cysts") {
+                }  else if (option.value == "Cysts") {
                     localStorage.setItem('Acne', option.value);
                 }
-                alert("You have successfully signed up!");
             }
         })
     }
