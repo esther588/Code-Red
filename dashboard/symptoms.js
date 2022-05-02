@@ -3,23 +3,23 @@ var optionsArray = [];
 function acneSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
         if (optionsArray[i].localeCompare("Whiteheads") == 0) {
-            localStorage.setItem('Acne', option.value);
+            localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         } else if (optionsArray[i].localeCompare("Blackheads") == 0) {
-            localStorage.setItem('Acne', option.value);
+            localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Papules") == 0) {
-            localStorage.setItem('Acne', option.value);
+            localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Nodules") == 0) {
-            localStorage.setItem('Acne', option.value);
+            localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }  else if (optionsArray[i].localeCompare("Cysts") == 0) {
-            localStorage.setItem('Acne', option.value);
+            localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
         }
@@ -78,16 +78,17 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-            if (option.value.localeCompare("Whiteheads") == 0) {
-                optionsArray.push(option.value);
-            } else if (option.value.localeCompare("Blackheads") == 0) {
-                optionsArray.push(option.value);
-            } else if (option.value.localeCompare("Papules") == 0) {
-                optionsArray.push(option.value);
-            } else if (option.value.localeCompare("Modules") == 0) {
-                optionsArray.push(option.value);
-            } else if (option.value.localeCompare("Cysts") == 0) {
-                optionsArray.push(option.value);
+            var selectedOption = this.getAttribute('data-value')
+            if (selectedOption.localeCompare("Whiteheads") == 0) {
+                optionsArray.push(selectedOption);
+            } else if (selectedOption.localeCompare("Blackheads") == 0) {
+                optionsArray.push(selectedOption);
+            } else if (selectedOption.localeCompare("Papules") == 0) {
+                optionsArray.push(selectedOption);
+            } else if (selectedOption.localeCompare("Modules") == 0) {
+                optionsArray.push(selectedOption);
+            } else if (selectedOption.localeCompare("Cysts") == 0) {
+                optionsArray.push(selectedOption);
             }
         }
     })
