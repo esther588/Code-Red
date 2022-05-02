@@ -1,24 +1,18 @@
-const acneButton = document.getElementById("acne-submit");
-const moodButton = document.getElementById("mood-submit");
-const crampsButton = document.getElementById("cramps-submit");
-const fatigueButton = document.getElementById("fatigue-submit");
-
-acneButton.addEventListener("click", (e) => {
-    e.preventDefault();
+function acneSubmit() {
     alert("You have successfully signed up!");
-})
+}
 
-moodButton.addEventListener("click", (e) => {
-    e.preventDefault();
-})
+function moodSubmit() {
+    alert("You have successfully signed up!");
+}
 
-crampsButton.addEventListener("click", (e) => {
-    e.preventDefault();
-})
+function crampsSubmit() {
+    alert("You have successfully signed up!");
+}
 
-fatigueButton.addEventListener("click", (e) => {
-    e.preventDefault();
-})
+function fatigueSubmit() {
+    alert("You have successfully signed up!");
+}
 
 let slideIndex = 1;
 showSlides(slideIndex);
