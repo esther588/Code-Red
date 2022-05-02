@@ -78,7 +78,7 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-            var selectedOption = this.getAttribute('data-value')
+            var selectedOption = this.getAttribute('data-value');
             if (selectedOption == "whiteheads") {
                 optionsArray.push(selectedOption);
             } else if (selectedOption == "blackheads") {
