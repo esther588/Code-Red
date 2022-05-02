@@ -27,6 +27,25 @@ function acneSubmit() {
 }
 
 function moodSubmit() {
+    for (let i = 0; i < optionsArray.length; i++) {
+        if (optionsArray[i].localeCompare("Irritability") == 0) {
+            localStorage.setItem('Acne', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        } else if (optionsArray[i].localeCompare("Anger") == 0) {
+            localStorage.setItem('Acne', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }  else if (optionsArray[i].localeCompare("Sadness") == 0) {
+            localStorage.setItem('Acne', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }  else if (optionsArray[i].localeCompare("Anxiety") == 0) {
+            localStorage.setItem('Acne', optionsArray[i]);
+            alert("Your data has been submitted!");
+            break;
+        }
+    }
 }
 
 function crampsSubmit() {
@@ -86,7 +105,17 @@ for (const option of document.querySelectorAll(".custom-option")) {
                 optionsArray.push(this.textContent);
             } else if (this.textContent.localeCompare("Nodules") == 0) {
                 optionsArray.push(this.textContent);
-            } else if (this.textContent.localeCompare("Nodules") == 0) {
+            } else if (this.textContent.localeCompare("Cysts") == 0) {
+                optionsArray.push(this.textContent);
+            }
+
+            if (this.textContent.localeCompare("Irritability") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Anger") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Sadness") == 0) {
+                optionsArray.push(this.textContent);
+            } else if (this.textContent.localeCompare("Anxiety") == 0) {
                 optionsArray.push(this.textContent);
             }
         }
