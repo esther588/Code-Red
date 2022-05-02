@@ -58,7 +58,26 @@ function crampsSubmit() {
 }
 
 function fatigueSubmit() {
-    alert("You have successfully signed up!");
+    for (const option of document.querySelectorAll(".custom-option")) {
+        option.addEventListener('click', function () {
+            if (this.classList.contains('selected')) {
+                if (option.value == "Social") {
+                    localStorage.setItem('Fatigue', option.value);
+                } else if (option.value == "Emotional") {
+                    localStorage.setItem('Fatigue', option.value);
+                }  else if (option.value == "Physical") {
+                    localStorage.setItem('Fatigue', option.value);
+                }  else if (option.value == "Pain") {
+                    localStorage.setItem('Fatigue', option.value);
+                } else if (option.value == "Mental") {
+                    localStorage.setItem('Fatigue', option.value);
+                } else if (option.value == "Chronic") {
+                    localStorage.setItem('Fatigue', option.value);
+                }
+                alert("Your data has been submitted!");
+            }
+        })
+    }
 }
 
 let slideIndex = 1;
