@@ -2,23 +2,23 @@ var optionsArray = [];
 
 function acneSubmit() {
     for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i] == "Whiteheads") {
+        if (optionsArray[i] == "whiteheads") {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        } else if (optionsArray[i] == "Blackheads") {
+        } else if (optionsArray[i] == "blackheads") {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Papules") {
+        }  else if (optionsArray[i] == "papules") {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Nodules") {
+        }  else if (optionsArray[i] == "nodules") {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
-        }  else if (optionsArray[i] == "Cysts") {
+        }  else if (optionsArray[i] == "cysts") {
             localStorage.setItem('Acne', optionsArray[i]);
             alert("Your data has been submitted!");
             break;
@@ -79,15 +79,15 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.classList.add('selected');
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
             var selectedOption = this.getAttribute('data-value')
-            if (selectedOption == "Whiteheads") {
+            if (selectedOption == "whiteheads") {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "Blackheads") {
+            } else if (selectedOption == "blackheads") {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "Papules") {
+            } else if (selectedOption == "papules") {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "Nodules") {
+            } else if (selectedOption == "nodules") {
                 optionsArray.push(selectedOption);
-            } else if (selectedOption == "Cysts") {
+            } else if (selectedOption == "cysts") {
                 optionsArray.push(selectedOption);
             }
         }
