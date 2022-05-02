@@ -4,7 +4,6 @@ function acneSubmit() {
             if (this.classList.contains('selected')) {
                 if (option.value == "Whiteheads") {
                     localStorage.setItem('Acne', option.value);
-                    alert("You have successfully signed up!");
                 } else if (option.value == "Blackheads") {
                     localStorage.setItem('Acne', option.value);
                 }  else if (option.value == "Papules") {
@@ -14,6 +13,7 @@ function acneSubmit() {
                 }  else if (option.value == "Cysts") {
                     localStorage.setItem('Acne', option.value);
                 }
+                alert("Your data has been submitted!");
             }
         })
     }
