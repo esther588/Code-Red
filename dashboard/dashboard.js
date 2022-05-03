@@ -135,8 +135,8 @@ function logOutMsg() {
     alert("You have successfully logged out.");
 }
 
-function showSection() {
-  var x = document.getElementById("graphAndChart");
+function showSection(id) {
+  var x = document.getElementById(id);
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
