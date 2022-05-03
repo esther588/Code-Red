@@ -136,10 +136,16 @@ function logOutMsg() {
 }
 
 function showSection(id) {
-  var x = document.getElementById(id);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+    var prev = localStorage.setItem('prevGraph');
+    if (prev.style.display === "block") {
+        prev.style.display = "none";
+    }
+    
+    var curr = document.getElementById(id);
+    if (curr.style.display === "none") {
+        curr.style.display = "block";
+    } else {
+        curr.style.display = "none";
+    }
+  localStorage.setItem('prevGraph', curr);
 }
