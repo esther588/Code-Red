@@ -1,4 +1,14 @@
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
+var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+var title = "Period Symptoms";
 
 feather.replace();
 
@@ -34,17 +44,6 @@ function acneCreateAll() {
     var elem = document.getElementById("acneLine").getContext("2d");
     var elem1 = document.getElementById("acneBar").getContext("2d");
     var elem2 = document.getElementById("acnePie").getContext("2d");
-
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
-    var title = "Period Symptoms";
 
     const newChart = new Chart(elem, {
         type: "line",
@@ -230,15 +229,6 @@ function moodCreateGraph(type) {
     document.getElementById("moodContainer").innerHTML = '&nbsp;';
     document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createMood").getContext("2d");
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
   
     const newChart = new Chart(elem, {
     type: type,
@@ -252,7 +242,7 @@ function moodCreateGraph(type) {
     options: {
         title: {
         display: true,
-        text: "Period Symptoms"
+        text: title
         }
     }
     });
@@ -290,17 +280,6 @@ function crampsCreateAll() {
     var elem = document.getElementById("crampsLine").getContext("2d");
     var elem1 = document.getElementById("crampsBar").getContext("2d");
     var elem2 = document.getElementById("crampsPie").getContext("2d");
-
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
-    var title = "Period Symptoms";
 
     const newChart = new Chart(elem, {
         type: "line",
@@ -358,15 +337,6 @@ function crampsCreateGraph(type) {
     document.getElementById("crampsContainer").innerHTML = '&nbsp;';
     document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createCramps").getContext("2d");
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
   
     const newChart = new Chart(elem, {
     type: type,
@@ -380,7 +350,7 @@ function crampsCreateGraph(type) {
     options: {
         title: {
         display: true,
-        text: "Period Symptoms"
+        text: title
         }
     }
     });
@@ -418,17 +388,6 @@ function fatigueCreateAll() {
     var elem = document.getElementById("fatigueLine").getContext("2d");
     var elem1 = document.getElementById("fatigueBar").getContext("2d");
     var elem2 = document.getElementById("fatiguePie").getContext("2d");
-
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
-    var title = "Period Symptoms";
 
     const newChart = new Chart(elem, {
         type: "line",
@@ -486,15 +445,6 @@ function fatigueCreateGraph(type) {
     document.getElementById("fatigueContainer").innerHTML = '&nbsp;';
     document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createFatigue").getContext("2d");
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
   
     const newChart = new Chart(elem, {
     type: type,
@@ -508,7 +458,7 @@ function fatigueCreateGraph(type) {
     options: {
         title: {
         display: true,
-        text: "Period Symptoms"
+        text: title
         }
     }
     });
