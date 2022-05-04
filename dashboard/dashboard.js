@@ -70,11 +70,11 @@ function checkFatigue(id) {
     }
 }
 
-function createAll() {
+function createAll(id) {
   
     html = '';
 
-    document.getElementById("chartContainer").innerHTML = '&nbsp;';
+    document.getElementById(id).innerHTML = '&nbsp;';
 
     html += '<canvas id="lineGraph" style="width:100%;max-width:600px"></canvas>';
     html += '<canvas id="barGraph" style="width:100%;max-width:600px"></canvas>';
