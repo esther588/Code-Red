@@ -111,22 +111,7 @@ function acneCreateGraph(type) {
         "#1e7145"
     ];
   
-    const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: "Period Symptoms"
-        }
-    }
-    });
+    createGraph(elem, type);
 }
 
 // Functions for mood graphs
@@ -230,22 +215,7 @@ function moodCreateGraph(type) {
     document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createMood").getContext("2d");
   
-    const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: title
-        }
-    }
-    });
+    createGraph(elem, type);
 }
 
 // Functions for cramps graphs
@@ -338,22 +308,7 @@ function crampsCreateGraph(type) {
     document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createCramps").getContext("2d");
   
-    const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: title
-        }
-    }
-    });
+    createGraph(elem, type);
 }
 
 // Functions for fatigue graphs
@@ -446,22 +401,26 @@ function fatigueCreateGraph(type) {
     document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createFatigue").getContext("2d");
   
+    createGraph(elem, type);
+}
+
+function createGraph(elem, type) {
     const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: title
+        type: type,
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
         }
-    }
-    });
+        });
 }
 
 function logOutMsg() {
