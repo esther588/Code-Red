@@ -62,7 +62,7 @@ function checkFatigue(id) {
     }
 }
 
-function moodCreateAll() {
+function acneCreateAll() {
   
     html = '';
 
