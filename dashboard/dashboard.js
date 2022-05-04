@@ -2,18 +2,18 @@ var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 
 feather.replace();
 
-function checkType(id) {
+function checkAcne(id) {
     var typeOfGraph = "";
 
-    if(id == "opt-1") {
+    if(id == "acne-1") {
         createAll();
-    } else if(id == "opt-2") {
+    } else if(id == "acne-2") {
         typeOfGraph = "line";
         createGraph(typeOfGraph);
-    } else if(id == "opt-3") {
+    } else if(id == "acne-3") {
         typeOfGraph = "bar";
         createGraph(typeOfGraph);
-    } else if(id == "opt-4") {
+    } else if(id == "acne-4") {
         typeOfGraph = "pie";
         createGraph(typeOfGraph);
     }
