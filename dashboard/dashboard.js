@@ -19,6 +19,23 @@ function checkAcne(id) {
     }
 }
 
+function checkMood(id) {
+    var typeOfGraph = "";
+
+    if(id == "mood-1") {
+        createAll();
+    } else if(id == "mood-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "mood-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "mood-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
+}
+
 function createAll() {
   
     html = '';
