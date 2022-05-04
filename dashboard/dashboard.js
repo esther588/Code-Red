@@ -1,4 +1,8 @@
-localStorage.setItem('prevGraph', ' ');
+var storedAcne = localStorage.getItem('Acne');
+var storedMood = localStorage.getItem('Mood');
+var storedCramps = localStorage.getItem('Cramps');
+var storedFatigue = localStorage.getItem('Mood');
+var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 
 function checkType(id) {
     var typeOfGraph = "";
@@ -133,16 +137,16 @@ function logOutMsg() {
 }
 
 function showSection(id) {
-    var prev = localStorage.getItem('prevGraph');
-    if (prev.style.display === "block") {
-        prev.style.display = "none";
+    for (let i = 0; i < graphsArray.length; i++) {
+        var elem = document.getElementById(graphsArray[i]);
+        if (elem.style.display === "block") {
+            elem.style.display = "none";
+        }
     }
-
     var curr = document.getElementById(id);
     if (curr.style.display === "none") {
         curr.style.display = "block";
     } else {
         curr.style.display = "none";
     }
-  localStorage.setItem('prevGraph', curr);
 }
