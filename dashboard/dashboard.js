@@ -5,9 +5,7 @@ feather.replace();
 function checkAcne(id) {
     var typeOfGraph = "";
 
-    if(id == "acne-1") {
-        createAll();
-    } else if(id == "acne-2") {
+    if(id == "acne-2") {
         typeOfGraph = "line";
         createGraph(typeOfGraph);
     } else if(id == "acne-3") {
@@ -22,9 +20,7 @@ function checkAcne(id) {
 function checkMood(id) {
     var typeOfGraph = "";
 
-    if(id == "mood-1") {
-        createAll();
-    } else if(id == "mood-2") {
+    if(id == "mood-2") {
         typeOfGraph = "line";
         createGraph(typeOfGraph);
     } else if(id == "mood-3") {
@@ -39,9 +35,7 @@ function checkMood(id) {
 function checkCramps(id) {
     var typeOfGraph = "";
 
-    if(id == "cramps-1") {
-        createAll();
-    } else if(id == "cramps-2") {
+    if(id == "cramps-2") {
         typeOfGraph = "line";
         createGraph(typeOfGraph);
     } else if(id == "cramps-3") {
@@ -56,9 +50,7 @@ function checkCramps(id) {
 function checkFatigue(id) {
     var typeOfGraph = "";
 
-    if(id == "fatigue-1") {
-        createAll();
-    } else if(id == "fatigue-2") {
+    if(id == "fatigue-2") {
         typeOfGraph = "line";
         createGraph(typeOfGraph);
     } else if(id == "fatigue-3") {
@@ -80,7 +72,7 @@ function createAll(id) {
     html += '<canvas id="barGraph" style="width:100%;max-width:600px"></canvas>';
     html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
 
-    document.getElementById("chartContainer").innerHTML = html;
+    document.getElementById(id).innerHTML = html;
 
     var elem = document.getElementById("lineGraph").getContext("2d");
     var elem1 = document.getElementById("barGraph").getContext("2d");
