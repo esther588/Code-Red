@@ -1,5 +1,7 @@
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 
+feather.replace();
+
 function checkType(id) {
     var typeOfGraph = "";
 
