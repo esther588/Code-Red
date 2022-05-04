@@ -15,7 +15,10 @@ var barColors = [
         "#4D4C7D",
         "#363062"
     ];
-var title = "Period Symptoms";
+var acneTitle = "Acne Flare-Ups";
+var moodTitle = "Mood Swings";
+var crampsTitle = "Intensity of Cramps";
+var fatigueTitle = "Fatigueness";
 
 feather.replace();
 
@@ -64,7 +67,7 @@ function acneCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: acneTitle
             }
         }
     });
@@ -81,7 +84,7 @@ function acneCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: acneTitle
             }
         }
     });
@@ -98,7 +101,7 @@ function acneCreateAll() {
     options: {
         title: {
         display: true,
-        text: title
+        text: acneTitle
         }
     }
     });
@@ -118,7 +121,7 @@ function acneCreateGraph(type) {
         "#1e7145"
     ];
   
-    createGraph(elem, type);
+    createGraph(elem, type, acneTitle);
 }
 
 // Functions for mood graphs
@@ -177,7 +180,7 @@ function moodCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: moodTitle
             }
         }
     });
@@ -194,7 +197,7 @@ function moodCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: moodTitle
             }
         }
     });
@@ -211,7 +214,7 @@ function moodCreateAll() {
     options: {
         title: {
         display: true,
-        text: title
+        text: moodTitle
         }
     }
     });
@@ -222,7 +225,7 @@ function moodCreateGraph(type) {
     document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createMood").getContext("2d");
   
-    createGraph(elem, type);
+    createGraph(elem, type, moodTitle);
 }
 
 // Functions for cramps graphs
@@ -270,7 +273,7 @@ function crampsCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: crampsTitle
             }
         }
     });
@@ -287,7 +290,7 @@ function crampsCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: crampsTitle
             }
         }
     });
@@ -304,7 +307,7 @@ function crampsCreateAll() {
     options: {
         title: {
         display: true,
-        text: title
+        text: crampsTitle
         }
     }
     });
@@ -315,7 +318,7 @@ function crampsCreateGraph(type) {
     document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createCramps").getContext("2d");
   
-    createGraph(elem, type);
+    createGraph(elem, type, crampsTitle);
 }
 
 // Functions for fatigue graphs
@@ -363,7 +366,7 @@ function fatigueCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: fatigueTitle
             }
         }
     });
@@ -380,7 +383,7 @@ function fatigueCreateAll() {
         options: {
             title: {
             display: true,
-            text: title
+            text: fatigueTitle
             }
         }
     });
@@ -397,7 +400,7 @@ function fatigueCreateAll() {
     options: {
         title: {
         display: true,
-        text: title
+        text: fatigueTitle
         }
     }
     });
@@ -408,10 +411,10 @@ function fatigueCreateGraph(type) {
     document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createFatigue").getContext("2d");
   
-    createGraph(elem, type);
+    createGraph(elem, type, fatigueTitle);
 }
 
-function createGraph(elem, type) {
+function createGraph(elem, type, title) {
     const newChart = new Chart(elem, {
         type: type,
         data: {
