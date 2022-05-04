@@ -62,21 +62,21 @@ function checkFatigue(id) {
     }
 }
 
-function createAll(id) {
+function moodCreateAll() {
   
     html = '';
 
-    document.getElementById(id).innerHTML = '&nbsp;';
+    document.getElementById("acneContainer").innerHTML = '&nbsp;';
 
-    html += '<canvas id="lineGraph" style="width:100%;max-width:600px"></canvas>';
-    html += '<canvas id="barGraph" style="width:100%;max-width:600px"></canvas>';
-    html += '<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="acneLine" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="acneBar" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="acnePie" style="width:100%;max-width:600px"></canvas>';
 
-    document.getElementById(id).innerHTML = html;
+    document.getElementById("acneContainer").innerHTML = html;
 
-    var elem = document.getElementById("lineGraph").getContext("2d");
-    var elem1 = document.getElementById("barGraph").getContext("2d");
-    var elem2 = document.getElementById("pieChart").getContext("2d");
+    var elem = document.getElementById("acneLine").getContext("2d");
+    var elem1 = document.getElementById("acneBar").getContext("2d");
+    var elem2 = document.getElementById("acnePie").getContext("2d");
 
     var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
     var yValues = [55, 49, 44, 24, 15];
