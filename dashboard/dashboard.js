@@ -137,13 +137,13 @@ function checkMood(id) {
 
     if(id == "mood-2") {
         typeOfGraph = "line";
-        createGraph(typeOfGraph);
+        moodCreateGraph(typeOfGraph);
     } else if(id == "mood-3") {
         typeOfGraph = "bar";
-        createGraph(typeOfGraph);
+        moodCreateGraph(typeOfGraph);
     } else if(id == "mood-4") {
         typeOfGraph = "pie";
-        createGraph(typeOfGraph);
+        moodCreateGraph(typeOfGraph);
     }
 }
 
@@ -226,6 +226,38 @@ function moodCreateAll() {
     });
 }
 
+function moodCreateGraph(type) {
+    document.getElementById("moodContainer").innerHTML = '&nbsp;';
+    document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
+    var elem = document.getElementById("createMood").getContext("2d");
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+  
+    const newChart = new Chart(elem, {
+    type: type,
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Period Symptoms"
+        }
+    }
+    });
+}
+
 // Functions for cramps graphs
 
 function checkCramps(id) {
@@ -233,13 +265,13 @@ function checkCramps(id) {
 
     if(id == "cramps-2") {
         typeOfGraph = "line";
-        createGraph(typeOfGraph);
+        crampsCreateGraph(typeOfGraph);
     } else if(id == "cramps-3") {
         typeOfGraph = "bar";
-        createGraph(typeOfGraph);
+        crampsCreateGraph(typeOfGraph);
     } else if(id == "cramps-4") {
         typeOfGraph = "pie";
-        createGraph(typeOfGraph);
+        crampsCreateGraph(typeOfGraph);
     }
 }
 
@@ -322,6 +354,38 @@ function crampsCreateAll() {
     });
 }
 
+function crampsCreateGraph(type) {
+    document.getElementById("crampsContainer").innerHTML = '&nbsp;';
+    document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
+    var elem = document.getElementById("createCramps").getContext("2d");
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+  
+    const newChart = new Chart(elem, {
+    type: type,
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Period Symptoms"
+        }
+    }
+    });
+}
+
 // Functions for fatigue graphs
 
 function checkFatigue(id) {
@@ -329,13 +393,13 @@ function checkFatigue(id) {
 
     if(id == "fatigue-2") {
         typeOfGraph = "line";
-        createGraph(typeOfGraph);
+        fatigueCreateGraph(typeOfGraph);
     } else if(id == "fatigue-3") {
         typeOfGraph = "bar";
-        createGraph(typeOfGraph);
+        fatigueCreateGraph(typeOfGraph);
     } else if(id == "fatigue-4") {
         typeOfGraph = "pie";
-        createGraph(typeOfGraph);
+        fatigueCreateGraph(typeOfGraph);
     }
 }
 
@@ -413,6 +477,38 @@ function fatigueCreateAll() {
         title: {
         display: true,
         text: title
+        }
+    }
+    });
+}
+
+function fatigueCreateGraph(type) {
+    document.getElementById("fatigueContainer").innerHTML = '&nbsp;';
+    document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
+    var elem = document.getElementById("createFatigue").getContext("2d");
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+  
+    const newChart = new Chart(elem, {
+    type: type,
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Period Symptoms"
         }
     }
     });
