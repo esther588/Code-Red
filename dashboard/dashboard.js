@@ -115,6 +115,85 @@ function checkMood(id) {
     }
 }
 
+function moodCreateAll() {
+  
+    html = '';
+
+    document.getElementById("moodContainer").innerHTML = '&nbsp;';
+
+    html += '<canvas id="moodLine" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="moodBar" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="moodPie" style="width:100%;max-width:600px"></canvas>';
+
+    document.getElementById("moodContainer").innerHTML = html;
+
+    var elem = document.getElementById("moodLine").getContext("2d");
+    var elem1 = document.getElementById("moodBar").getContext("2d");
+    var elem2 = document.getElementById("moodPie").getContext("2d");
+
+    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+    var title = "Period Symptoms";
+
+    const newChart = new Chart(elem, {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+
+    const newChart1 = new Chart(elem1, {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+  
+    const newChart2 = new Chart(elem2, {
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: title
+        }
+    }
+    });
+}
+
 // Functions for cramps graphs
 
 function checkCramps(id) {
