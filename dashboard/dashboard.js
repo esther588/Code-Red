@@ -146,7 +146,7 @@ function createGraph(type) {
     document.getElementById("chartContainer").innerHTML = '<canvas id="graph" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("graph").getContext("2d");
     var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [storedAcne, storedMood, storedCramps, storedFatigue];
+    var yValues = [55, 49, 44, 24, 15];
     var barColors = [
         "#b91d47",
         "#00aba9",
