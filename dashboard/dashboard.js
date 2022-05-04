@@ -2,11 +2,18 @@ var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
+        "#E9D5DA",
+        "#827397",
+        "#4D4C7D",
+        "#363062",
+        "#E9D5DA",
+        "#827397",
+        "#4D4C7D",
+        "#363062",
+        "#E9D5DA",
+        "#827397",
+        "#4D4C7D",
+        "#363062"
     ];
 var title = "Period Symptoms";
 
