@@ -2,6 +2,8 @@ var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 
 feather.replace();
 
+// Functions for acne graphs
+
 function checkAcne(id) {
     var typeOfGraph = "";
 
@@ -12,51 +14,6 @@ function checkAcne(id) {
         typeOfGraph = "bar";
         createGraph(typeOfGraph);
     } else if(id == "acne-4") {
-        typeOfGraph = "pie";
-        createGraph(typeOfGraph);
-    }
-}
-
-function checkMood(id) {
-    var typeOfGraph = "";
-
-    if(id == "mood-2") {
-        typeOfGraph = "line";
-        createGraph(typeOfGraph);
-    } else if(id == "mood-3") {
-        typeOfGraph = "bar";
-        createGraph(typeOfGraph);
-    } else if(id == "mood-4") {
-        typeOfGraph = "pie";
-        createGraph(typeOfGraph);
-    }
-}
-
-function checkCramps(id) {
-    var typeOfGraph = "";
-
-    if(id == "cramps-2") {
-        typeOfGraph = "line";
-        createGraph(typeOfGraph);
-    } else if(id == "cramps-3") {
-        typeOfGraph = "bar";
-        createGraph(typeOfGraph);
-    } else if(id == "cramps-4") {
-        typeOfGraph = "pie";
-        createGraph(typeOfGraph);
-    }
-}
-
-function checkFatigue(id) {
-    var typeOfGraph = "";
-
-    if(id == "fatigue-2") {
-        typeOfGraph = "line";
-        createGraph(typeOfGraph);
-    } else if(id == "fatigue-3") {
-        typeOfGraph = "bar";
-        createGraph(typeOfGraph);
-    } else if(id == "fatigue-4") {
         typeOfGraph = "pie";
         createGraph(typeOfGraph);
     }
@@ -139,6 +96,57 @@ function acneCreateAll() {
         }
     }
     });
+}
+
+// Functions for mood graphs
+
+function checkMood(id) {
+    var typeOfGraph = "";
+
+    if(id == "mood-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "mood-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "mood-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
+}
+
+// Functions for cramps graphs
+
+function checkCramps(id) {
+    var typeOfGraph = "";
+
+    if(id == "cramps-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "cramps-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "cramps-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
+}
+
+// Functions for fatigue graphs
+
+function checkFatigue(id) {
+    var typeOfGraph = "";
+
+    if(id == "fatigue-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "fatigue-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "fatigue-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
 }
 
 function createGraph(type) {
