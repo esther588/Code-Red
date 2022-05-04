@@ -35,8 +35,8 @@ function acneCreateAll() {
     var elem1 = document.getElementById("acneBar").getContext("2d");
     var elem2 = document.getElementById("acnePie").getContext("2d");
 
-    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [55, 49, 44, 24, 15];
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var barColors = [
         "#b91d47",
         "#00aba9",
@@ -131,8 +131,8 @@ function moodCreateAll() {
     var elem1 = document.getElementById("moodBar").getContext("2d");
     var elem2 = document.getElementById("moodPie").getContext("2d");
 
-    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [55, 49, 44, 24, 15];
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var barColors = [
         "#b91d47",
         "#00aba9",
@@ -227,8 +227,8 @@ function crampsCreateAll() {
     var elem1 = document.getElementById("crampsBar").getContext("2d");
     var elem2 = document.getElementById("crampsPie").getContext("2d");
 
-    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [55, 49, 44, 24, 15];
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var barColors = [
         "#b91d47",
         "#00aba9",
@@ -323,8 +323,8 @@ function fatigueCreateAll() {
     var elem1 = document.getElementById("fatigueBar").getContext("2d");
     var elem2 = document.getElementById("fatiguePie").getContext("2d");
 
-    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [55, 49, 44, 24, 15];
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var barColors = [
         "#b91d47",
         "#00aba9",
