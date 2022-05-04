@@ -36,6 +36,23 @@ function checkMood(id) {
     }
 }
 
+function checkCramps(id) {
+    var typeOfGraph = "";
+
+    if(id == "cramps-1") {
+        createAll();
+    } else if(id == "cramps-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "cramps-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "cramps-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
+}
+
 function createAll() {
   
     html = '';
