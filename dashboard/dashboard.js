@@ -9,13 +9,13 @@ function checkAcne(id) {
 
     if(id == "acne-2") {
         typeOfGraph = "line";
-        createGraph(typeOfGraph);
+        acneCreateGraph(typeOfGraph);
     } else if(id == "acne-3") {
         typeOfGraph = "bar";
-        createGraph(typeOfGraph);
+        acneCreateGraph(typeOfGraph);
     } else if(id == "acne-4") {
         typeOfGraph = "pie";
-        createGraph(typeOfGraph);
+        acneCreateGraph(typeOfGraph);
     }
 }
 
@@ -93,6 +93,38 @@ function acneCreateAll() {
         title: {
         display: true,
         text: title
+        }
+    }
+    });
+}
+
+function acneCreateGraph(type) {
+    document.getElementById("acneContainer").innerHTML = '&nbsp;';
+    document.getElementById("acneContainer").innerHTML = '<canvas id="createAcne" style="width:100%;max-width:600px"></canvas>';
+    var elem = document.getElementById("createAcne").getContext("2d");
+    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+  
+    const newChart = new Chart(elem, {
+    type: type,
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Period Symptoms"
         }
     }
     });
@@ -381,38 +413,6 @@ function fatigueCreateAll() {
         title: {
         display: true,
         text: title
-        }
-    }
-    });
-}
-
-function createGraph(type) {
-    document.getElementById("chartContainer").innerHTML = '&nbsp;';
-    document.getElementById("chartContainer").innerHTML = '<canvas id="graph" style="width:100%;max-width:600px"></canvas>';
-    var elem = document.getElementById("graph").getContext("2d");
-    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
-    var yValues = [55, 49, 44, 24, 15];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
-  
-    const newChart = new Chart(elem, {
-    type: type,
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        title: {
-        display: true,
-        text: "Period Symptoms"
         }
     }
     });
