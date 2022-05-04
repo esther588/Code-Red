@@ -1,7 +1,4 @@
-var storedAcne = localStorage.getItem('Acne');
-var storedMood = localStorage.getItem('Mood');
-var storedCramps = localStorage.getItem('Cramps');
-var storedFatigue = localStorage.getItem('Mood');
+localStorage.setItem('prevGraph', ' ');
 
 function checkType(id) {
     var typeOfGraph = "";
