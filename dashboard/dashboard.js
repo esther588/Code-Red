@@ -211,6 +211,85 @@ function checkCramps(id) {
     }
 }
 
+function crampsCreateAll() {
+  
+    html = '';
+
+    document.getElementById("crampsContainer").innerHTML = '&nbsp;';
+
+    html += '<canvas id="crampsLine" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="crampsBar" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="crampsPie" style="width:100%;max-width:600px"></canvas>';
+
+    document.getElementById("crampsContainer").innerHTML = html;
+
+    var elem = document.getElementById("crampsLine").getContext("2d");
+    var elem1 = document.getElementById("crampsBar").getContext("2d");
+    var elem2 = document.getElementById("crampsPie").getContext("2d");
+
+    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+    var title = "Period Symptoms";
+
+    const newChart = new Chart(elem, {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+
+    const newChart1 = new Chart(elem1, {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+  
+    const newChart2 = new Chart(elem2, {
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: title
+        }
+    }
+    });
+}
+
 // Functions for fatigue graphs
 
 function checkFatigue(id) {
@@ -226,6 +305,85 @@ function checkFatigue(id) {
         typeOfGraph = "pie";
         createGraph(typeOfGraph);
     }
+}
+
+function fatigueCreateAll() {
+  
+    html = '';
+
+    document.getElementById("fatigueContainer").innerHTML = '&nbsp;';
+
+    html += '<canvas id="fatigueLine" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="fatigueBar" style="width:100%;max-width:600px"></canvas>';
+    html += '<canvas id="fatiguePie" style="width:100%;max-width:600px"></canvas>';
+
+    document.getElementById("fatigueContainer").innerHTML = html;
+
+    var elem = document.getElementById("fatigueLine").getContext("2d");
+    var elem1 = document.getElementById("fatigueBar").getContext("2d");
+    var elem2 = document.getElementById("fatiguePie").getContext("2d");
+
+    var xValues = ["Acne", "Mood Swings", "Cramps", "Fatigue"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+    var title = "Period Symptoms";
+
+    const newChart = new Chart(elem, {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+
+    const newChart1 = new Chart(elem1, {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: title
+            }
+        }
+    });
+  
+    const newChart2 = new Chart(elem2, {
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: title
+        }
+    }
+    });
 }
 
 function createGraph(type) {
