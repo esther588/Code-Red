@@ -136,11 +136,11 @@ function logOutMsg() {
 }
 
 function showSection(id) {
-    var prev = localStorage.setItem('prevGraph');
+    var prev = localStorage.getItem('prevGraph');
     if (prev.style.display === "block") {
         prev.style.display = "none";
     }
-    
+
     var curr = document.getElementById(id);
     if (curr.style.display === "none") {
         curr.style.display = "block";
