@@ -53,6 +53,23 @@ function checkCramps(id) {
     }
 }
 
+function checkFatigue(id) {
+    var typeOfGraph = "";
+
+    if(id == "fatigue-1") {
+        createAll();
+    } else if(id == "fatigue-2") {
+        typeOfGraph = "line";
+        createGraph(typeOfGraph);
+    } else if(id == "fatigue-3") {
+        typeOfGraph = "bar";
+        createGraph(typeOfGraph);
+    } else if(id == "fatigue-4") {
+        typeOfGraph = "pie";
+        createGraph(typeOfGraph);
+    }
+}
+
 function createAll() {
   
     html = '';
