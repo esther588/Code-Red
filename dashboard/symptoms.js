@@ -127,7 +127,13 @@ window.addEventListener('click', function (e) {
     }
 });
 
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
 
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
 
 var acneCounter = localStorage.getObj('acneCounter');
 var moodCounter = localStorage.getObj('moodCounter');
