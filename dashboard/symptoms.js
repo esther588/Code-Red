@@ -141,8 +141,9 @@ var crampsCounter = localStorage.getObj('crampsCounter');
 var fatigueCounter = localStorage.getObj('fatigueCounter');
 
 function acneSubmit() {
+    var acneOption = optionsMap.get("Acne");
+    var counter = acneCounter[monthIndex];
     
-    localStorage.setObj('acneCounter', acneCounter);
     alert("Your data has been submitted!");
 }
 
