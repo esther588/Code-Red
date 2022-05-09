@@ -4,65 +4,13 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
-var acneCounter = {
-    January: 0,
-    February: 0,
-    March: 0,
-    April: 0,
-    May: 0,
-    June: 0,
-    July: 0,
-    August: 0,
-    September: 0,
-    October: 0,
-    November: 0,
-    December: 0
-};
+var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 localStorage.setObj('acneCounter', acneCounter);
-var moodCounter = {
-    January: 0,
-    February: 0,
-    March: 0,
-    April: 0,
-    May: 0,
-    June: 0,
-    July: 0,
-    August: 0,
-    September: 0,
-    October: 0,
-    November: 0,
-    December: 0
-};
+var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 localStorage.setObj('moodCounter', moodCounter);
-var crampsCounter = {
-    January: 0,
-    February: 0,
-    March: 0,
-    April: 0,
-    May: 0,
-    June: 0,
-    July: 0,
-    August: 0,
-    September: 0,
-    October: 0,
-    November: 0,
-    December: 0
-};
+var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 localStorage.setObj('crampsCounter', crampsCounter);
-var fatigueCounter = {
-    January: 0,
-    February: 0,
-    March: 0,
-    April: 0,
-    May: 0,
-    June: 0,
-    July: 0,
-    August: 0,
-    September: 0,
-    October: 0,
-    November: 0,
-    December: 0
-};
+var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 localStorage.setObj('fatigueCounter', fatigueCounter);
 
 signupButton.addEventListener("click", (e) => {
