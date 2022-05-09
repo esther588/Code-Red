@@ -1,10 +1,13 @@
-var storedAcne = localStorage.getItem('Acne May');
-var storedMood = localStorage.getItem('Mood');
-var storedCramps = localStorage.getItem('Cramps');
-var storedFatigue = localStorage.getItem('Fatigue');
+var acneCounter = localStorage.getObj('acneCounter');
+var moodCounter = localStorage.getObj('moodCounter');
+var crampsCounter = localStorage.getObj('crampsCounter');
+var fatigueCounter = localStorage.getObj('fatigueCounter');
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var yValues = [0, 1, 2, 3, storedAcne, 5, 6, 7, 8, 9, 10, 11];
+var acneValues = getValues(acneCounter);
+var moodValues = getValues(moodCounter);
+var crampsValues = getValues(crampsCounter);
+var fatigueValues = getValues(fatigueCounter);
 var acneColors = [
     "#8E3200",
     "#A64B2A",
@@ -68,6 +71,23 @@ var fatigueTitle = "Fatigueness";
 
 feather.replace();
 
+function getValues(optionMap) {
+    var finalArr = [];
+    finalArr[0] = optionMap.get("January");
+    finalArr[1] = optionMap.get("February");
+    finalArr[2] = optionMap.get("March");
+    finalArr[3] = optionMap.get("April");
+    finalArr[4] = optionMap.get("May");
+    finalArr[5] = optionMap.get("June");
+    finalArr[6] = optionMap.get("July");
+    finalArr[7] = optionMap.get("August");
+    finalArr[8] = optionMap.get("September");
+    finalArr[9] = optionMap.get("October");
+    finalArr[10] = optionMap.get("November");
+    finalArr[11] = optionMap.get("December");
+    return finalArr;
+}
+
 // Functions for acne graphs
 
 function checkAcne(id) {
@@ -104,7 +124,7 @@ function acneCreateAll() {
     const newChart = new Chart(elem, {
         type: "line",
         data: {
-            labels: xValues,
+            labels: acneValues,
             datasets: [{
             backgroundColor: acneColors,
             data: yValues
@@ -121,7 +141,7 @@ function acneCreateAll() {
     const newChart1 = new Chart(elem1, {
         type: "bar",
         data: {
-            labels: xValues,
+            labels: acneValues,
             datasets: [{
             backgroundColor: acneColors,
             data: yValues
@@ -138,7 +158,7 @@ function acneCreateAll() {
     const newChart2 = new Chart(elem2, {
     type: "pie",
     data: {
-        labels: xValues,
+        labels: acneValues,
         datasets: [{
         backgroundColor: acneColors,
         data: yValues
@@ -158,7 +178,7 @@ function acneCreateGraph(type) {
     document.getElementById("acneContainer").innerHTML = '<canvas id="createAcne" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createAcne").getContext("2d");
   
-    createGraph(elem, type, acneTitle, acneColors);
+    createGraph(elem, type, acneTitle, acneColors, acneValues);
 }
 
 // Functions for mood graphs
@@ -440,7 +460,7 @@ function fatigueCreateGraph(type) {
     createGraph(elem, type, fatigueTitle, fatigueColors);
 }
 
-function createGraph(elem, type, title, colors) {
+function createGraph(elem, type, title, colors, xValues) {
     const newChart = new Chart(elem, {
         type: type,
         data: {
@@ -476,4 +496,12 @@ function showSection(id) {
     } else {
         curr.style.display = "none";
     }
+}
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
 }
