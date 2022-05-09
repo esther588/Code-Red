@@ -30,7 +30,7 @@ function showSlides(n) {
 }
 
 var optionsMap = new Map();
-var monthmonthIndexOption = 0;
+var monthIndex = 0;
 
 for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
     dropdown.addEventListener('click', function () {
