@@ -193,18 +193,6 @@ button {
   margin-right: 14px;
 }
 
-.top-part .count {
-  font-size: 12px;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  background-color: #623ce8;
-  color: #fff;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .right-content {
   padding: 10px 40px;
   overflow-y: auto;
