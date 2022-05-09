@@ -4,10 +4,6 @@ var crampsCounter = localStorage.getObj('crampsCounter');
 var fatigueCounter = localStorage.getObj('fatigueCounter');
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var acneValues = getValues(acneCounter);
-var moodValues = getValues(moodCounter);
-var crampsValues = getValues(crampsCounter);
-var fatigueValues = getValues(fatigueCounter);
 var acneColors = [
     "#8E3200",
     "#A64B2A",
@@ -70,23 +66,6 @@ var crampsTitle = "Intensity of Cramps";
 var fatigueTitle = "Fatigueness";
 
 feather.replace();
-
-function getValues(optionMap) {
-    var finalArr = [];
-    finalArr[0] = optionMap.get("January");
-    finalArr[1] = optionMap.get("February");
-    finalArr[2] = optionMap.get("March");
-    finalArr[3] = optionMap.get("April");
-    finalArr[4] = optionMap.get("May");
-    finalArr[5] = optionMap.get("June");
-    finalArr[6] = optionMap.get("July");
-    finalArr[7] = optionMap.get("August");
-    finalArr[8] = optionMap.get("September");
-    finalArr[9] = optionMap.get("October");
-    finalArr[10] = optionMap.get("November");
-    finalArr[11] = optionMap.get("December");
-    return finalArr;
-}
 
 // Functions for acne graphs
 
