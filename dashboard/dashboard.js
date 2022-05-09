@@ -1,6 +1,20 @@
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var moodColors = [
+    "#4E944F",
+    "#83BD75",
+    "#B4E197",
+    "#E9EFC0",
+    "#4E944F",
+    "#83BD75",
+    "#B4E197",
+    "#E9EFC0",
+    "#4E944F",
+    "#83BD75",
+    "#B4E197",
+    "#E9EFC0"
+];
 var crampsColors = [
     "#1A3C40",
     "#1D5C63",
@@ -171,23 +185,12 @@ function moodCreateAll() {
     var elem1 = document.getElementById("moodBar").getContext("2d");
     var elem2 = document.getElementById("moodPie").getContext("2d");
 
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
-    var title = "Period Symptoms";
-
     const newChart = new Chart(elem, {
         type: "line",
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: moodColors,
             data: yValues
             }]
         },
@@ -204,7 +207,7 @@ function moodCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: moodColors,
             data: yValues
             }]
         },
@@ -221,7 +224,7 @@ function moodCreateAll() {
     data: {
         labels: xValues,
         datasets: [{
-        backgroundColor: barColors,
+        backgroundColor: moodColors,
         data: yValues
         }]
     },
@@ -239,7 +242,7 @@ function moodCreateGraph(type) {
     document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createMood").getContext("2d");
   
-    createGraph(elem, type, moodTitle);
+    createGraph(elem, type, moodTitle, moodColors);
 }
 
 // Functions for cramps graphs
