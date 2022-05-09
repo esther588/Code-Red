@@ -7,7 +7,6 @@ var monthOption = "";
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
-    var counter = counterArray[0];
     if (acneOption.localeCompare("Whiteheads") == 0) {
         localStorage.setItem('Acne ' + monthOption, counter++);
     } else if (acneOption.localeCompare("Blackheads") == 0) {
@@ -153,67 +152,48 @@ for (const option of document.querySelectorAll(".custom-option")) {
             this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
             if (this.textContent.localeCompare("Whiteheads") == 0) {
                 optionsMap.set("Acne", this.textContent);
-                acneCounter[0] += 1;
             } else if (this.textContent.localeCompare("Blackheads") == 0) {
                 optionsMap.set("Acne", this.textContent);
-                acneCounter[1] += 1;
             } else if (this.textContent.localeCompare("Papules") == 0) {
                 optionsMap.set("Acne", this.textContent);
-                acneCounter[2] += 1;
             } else if (this.textContent.localeCompare("Nodules") == 0) {
                 optionsMap.set("Acne", this.textContent);
-                acneCounter[3] += 1;
             } else if (this.textContent.localeCompare("Cysts") == 0) {
                 optionsMap.set("Acne", this.textContent);
-                acneCounter[4] += 1;
             }
 
             if (this.textContent.localeCompare("Irritability") == 0) {
                 optionsMap.set("Mood", this.textContent);
-                moodCounter[0] += 1;
             } else if (this.textContent.localeCompare("Anger") == 0) {
                 optionsMap.set("Mood", this.textContent);
-                moodCounter[1] += 1;
             } else if (this.textContent.localeCompare("Sadness") == 0) {
                 optionsMap.set("Mood", this.textContent);
-                moodCounter[2] += 1;
             } else if (this.textContent.localeCompare("Anxiety") == 0) {
                 optionsMap.set("Mood", this.textContent);
-                moodCounter[3] += 1;
             }
 
             if (this.textContent.localeCompare("None") == 0) {
                 optionsMap.set("Cramps", this.textContent);
-                crampsCounter[0] += 1;
             } else if (this.textContent.localeCompare("Minimal") == 0) {
                 optionsMap.set("Cramps", this.textContent);
-                crampsCounter[1] += 1;
             } else if (this.textContent.localeCompare("Moderate") == 0) {
                 optionsMap.set("Cramps", this.textContent);
-                crampsCounter[2] += 1;
             } else if (this.textContent.localeCompare("Extreme") == 0) {
                 optionsMap.set("Cramps", this.textContent);
-                crampsCounter[3] += 1;
             }
 
             if (this.textContent.localeCompare("Social") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[0] += 1;
             } else if (this.textContent.localeCompare("Emotional") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[1] += 1;
             } else if (this.textContent.localeCompare("Physical") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[2] += 1;
             } else if (this.textContent.localeCompare("Pain") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[3] += 1;
             } else if (this.textContent.localeCompare("Mental") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[4] += 1;
             } else if (this.textContent.localeCompare("Chronic") == 0) {
                 optionsMap.set("Fatigue", this.textContent);
-                fatigueCounter[5] += 1;
             }
 
             if (this.textContent.localeCompare("January") == 0) {
