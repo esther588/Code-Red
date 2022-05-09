@@ -4,6 +4,9 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
+var counterArray = [];
+localStorage.setObj('counterArray', counterArray);
+
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -32,3 +35,7 @@ signupButton.addEventListener("click", (e) => {
         }
     }
 })
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
