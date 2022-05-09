@@ -4,7 +4,7 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
-var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var acneCounter = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
 localStorage.setObj('acneCounter', acneCounter);
 var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 localStorage.setObj('moodCounter', moodCounter);
