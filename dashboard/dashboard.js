@@ -1,10 +1,10 @@
-var storedAcne = localStorage.getItem('Acne');
+var storedAcne = localStorage.getItem('Acne May');
 var storedMood = localStorage.getItem('Mood');
 var storedCramps = localStorage.getItem('Cramps');
 var storedFatigue = localStorage.getItem('Fatigue');
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var yValues = [0, 1, 2, 3, storedAcne, 5, 6, 7, 8, 9, 10, 11];
 var acneColors = [
     "#8E3200",
     "#A64B2A",
