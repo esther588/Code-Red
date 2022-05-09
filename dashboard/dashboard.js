@@ -1,7 +1,7 @@
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var barColors = [
+var fatigueColors = [
         "#E9D5DA",
         "#827397",
         "#4D4C7D",
@@ -359,7 +359,7 @@ function fatigueCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: fatigueColors,
             data: yValues
             }]
         },
@@ -376,7 +376,7 @@ function fatigueCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: fatigueColors,
             data: yValues
             }]
         },
@@ -393,7 +393,7 @@ function fatigueCreateAll() {
     data: {
         labels: xValues,
         datasets: [{
-        backgroundColor: barColors,
+        backgroundColor: fatigueColors,
         data: yValues
         }]
     },
@@ -411,16 +411,16 @@ function fatigueCreateGraph(type) {
     document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createFatigue").getContext("2d");
   
-    createGraph(elem, type, fatigueTitle);
+    createGraph(elem, type, fatigueTitle, fatigueColors);
 }
 
-function createGraph(elem, type, title) {
+function createGraph(elem, type, title, colors) {
     const newChart = new Chart(elem, {
         type: type,
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: colors,
             data: yValues
             }]
         },
