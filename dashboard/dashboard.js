@@ -1,7 +1,4 @@
-var acneValues = localStorage.getObj('acneCounter');
-var moodValues = localStorage.getObj('moodCounter');
-var crampsValues = localStorage.getObj('crampsCounter');
-var fatigueValues = localStorage.getObj('fatigueCounter');
+
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var acneColors = [
