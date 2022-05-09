@@ -157,3 +157,15 @@ function acneSubmit() {
     localStorage.setObj('acneCounter', acneCounter);
     alert("Your data has been submitted!");
 }
+
+function moodSubmit() {
+
+}
+
+function crampsSubmit() {
+    
+}
+
+function fatigueSubmit() {
+    
+}
