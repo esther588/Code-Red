@@ -30,7 +30,7 @@ function showSlides(n) {
 }
 
 var optionsMap = new Map();
-var monthOption = "";
+var monthmonthIndexOption = 0;
 
 for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
     dropdown.addEventListener('click', function () {
@@ -91,29 +91,29 @@ for (const option of document.querySelectorAll(".custom-option")) {
             }
 
             if (this.textContent.localeCompare("January") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 0;
             } else if (this.textContent.localeCompare("February") == 0) {
-                monthOption = this.textContent;
+                monthOption = 1;
             } else if (this.textContent.localeCompare("March") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 2;
             } else if (this.textContent.localeCompare("April") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 3;
             } else if (this.textContent.localeCompare("May") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 4;
             }  else if (this.textContent.localeCompare("June") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 5;
             } else if (this.textContent.localeCompare("July") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 6;
             } else if (this.textContent.localeCompare("August") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 7;
             } else if (this.textContent.localeCompare("September") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 8;
             }  else if (this.textContent.localeCompare("October") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 9;
             } else if (this.textContent.localeCompare("November") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 10;
             } else if (this.textContent.localeCompare("December") == 0) {
-                monthOption = this.textContent;
+                monthIndex = 11;
             }
         }
     })
@@ -142,6 +142,18 @@ var fatigueCounter = localStorage.getObj('fatigueCounter');
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
-    
+    var counter = acneCounter[monthIndex];
+    if (acneOption.localeCompare("Whiteheads") == 0) {
+        acneCounterp[monthIndex] = counter++;
+    } else if (acneOption.localeCompare("Blackheads") == 0) {
+        acneCounter[monthIndex] = counter++;
+    }  else if (acneOption.localeCompare("Papules") == 0) {
+        acneCounter[monthIndex] = counter++;
+    }  else if (acneOption.localeCompare("Nodules") == 0) {
+        acneCounter[monthIndex] = counter++;
+    }  else if (acneOption.localeCompare("Cysts") == 0) {
+        acneCounter[monthIndex] = counter++;
+    }
+    localStorage.setObj('acneCounter', acneCounter);
     alert("Your data has been submitted!");
 }
