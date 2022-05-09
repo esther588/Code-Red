@@ -1,9 +1,5 @@
 feather.replace();
 
-var acneValues = localStorage.getObj('acneCounter');
-var moodValues = localStorage.getObj('moodCounter');
-var crampsValues = localStorage.getObj('crampsCounter');
-var fatigueValues = localStorage.getObj('fatigueCounter');
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var acneColors = [
@@ -66,6 +62,30 @@ var acneTitle = "Acne Flare-Ups";
 var moodTitle = "Mood Swings";
 var crampsTitle = "Intensity of Cramps";
 var fatigueTitle = "Fatigueness";
+
+function logOutMsg() {
+    alert("You have successfully logged out.");
+}
+
+function showSection(id) {
+    for (let i = 0; i < graphsArray.length; i++) {
+        var elem = document.getElementById(graphsArray[i]);
+        if (elem.style.display === "block") {
+            elem.style.display = "none";
+        }
+    }
+    var curr = document.getElementById(id);
+    if (curr.style.display === "none") {
+        curr.style.display = "block";
+    } else {
+        curr.style.display = "none";
+    }
+}
+
+var acneValues = localStorage.getObj('acneCounter');
+var moodValues = localStorage.getObj('moodCounter');
+var crampsValues = localStorage.getObj('crampsCounter');
+var fatigueValues = localStorage.getObj('fatigueCounter');
 
 // Functions for acne graphs
 
@@ -456,23 +476,4 @@ function createGraph(elem, type, title, colors, yValues) {
             }
         }
         });
-}
-
-function logOutMsg() {
-    alert("You have successfully logged out.");
-}
-
-function showSection(id) {
-    for (let i = 0; i < graphsArray.length; i++) {
-        var elem = document.getElementById(graphsArray[i]);
-        if (elem.style.display === "block") {
-            elem.style.display = "none";
-        }
-    }
-    var curr = document.getElementById(id);
-    if (curr.style.display === "none") {
-        curr.style.display = "block";
-    } else {
-        curr.style.display = "none";
-    }
 }
