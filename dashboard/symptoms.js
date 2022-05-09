@@ -3,8 +3,8 @@ var monthOption = "";
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
+    var counter = localStorage.getItem('Acne ' + monthOption);
     if (acneOption.localeCompare("Whiteheads") == 0) {
-        var counter = localStorage.getItem('Acne ' + monthOption);
         if(counter == "") {
             localStorage.setItem('Acne ' + monthOption, 1);
         } else {
