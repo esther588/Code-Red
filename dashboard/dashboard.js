@@ -1,6 +1,20 @@
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var acneColors = [
+    "#8E3200",
+    "#A64B2A",
+    "#D7A86E",
+    "#FFEBC1",
+    "#8E3200",
+    "#A64B2A",
+    "#D7A86E",
+    "#FFEBC1",
+    "#8E3200",
+    "#A64B2A",
+    "#D7A86E",
+    "#FFEBC1"
+];
 var moodColors = [
     "#4E944F",
     "#83BD75",
@@ -88,7 +102,7 @@ function acneCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: acneColors,
             data: yValues
             }]
         },
@@ -105,7 +119,7 @@ function acneCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: acneColors,
             data: yValues
             }]
         },
@@ -122,7 +136,7 @@ function acneCreateAll() {
     data: {
         labels: xValues,
         datasets: [{
-        backgroundColor: barColors,
+        backgroundColor: acneColors,
         data: yValues
         }]
     },
@@ -139,17 +153,8 @@ function acneCreateGraph(type) {
     document.getElementById("acneContainer").innerHTML = '&nbsp;';
     document.getElementById("acneContainer").innerHTML = '<canvas id="createAcne" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createAcne").getContext("2d");
-    var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var yValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-    ];
   
-    createGraph(elem, type, acneTitle);
+    createGraph(elem, type, acneTitle, acneColors);
 }
 
 // Functions for mood graphs
