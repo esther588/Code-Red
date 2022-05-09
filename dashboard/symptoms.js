@@ -142,17 +142,17 @@ var fatigueCounter = localStorage.getObj('fatigueCounter');
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
-    var counter = acneCounter.get[monthOption];
+    var counter = acneCounter.monthOption;
     if (acneOption.localeCompare("Whiteheads") == 0) {
-        acneCounter.get[monthOption, counter++];
+        acneCounter.monthOption = counter++;
     } else if (acneOption.localeCompare("Blackheads") == 0) {
-        acneCounter.get[monthOption, counter++];
+        acneCounter.monthOption = counter++;
     }  else if (acneOption.localeCompare("Papules") == 0) {
-        acneCounter.get[monthOption, counter++];
+        acneCounter.monthOption = counter++;
     }  else if (acneOption.localeCompare("Nodules") == 0) {
-        acneCounter.get[monthOptions, counter++];
+        acneCounter.monthOption = counter++;
     }  else if (acneOption.localeCompare("Cysts") == 0) {
-        acneCounter.get[monthOption, counter++];
+        acneCounter.monthOption = counter++;
     }
     localStorage.setObj('acneCounter', acneCounter);
     alert("Your data has been submitted!");
