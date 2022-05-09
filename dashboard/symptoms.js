@@ -2,50 +2,40 @@ var optionsMap = new Map();
 var monthOption = "";
 
 function acneSubmit() {
-    for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i].localeCompare("Whiteheads") == 0) {
-            var counter = localStorage.getItem('Acne ' + monthOption);
-            if(counter == "") {
-                localStorage.setItem('Acne ' + monthOption, 1);
-            } else {
-                localStorage.setItem('Acne ' + monthOption, counter++);
-            }
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Blackheads") == 0) {
-            if(counter == "") {
-                localStorage.setItem('Acne ' + monthOption, 1);
-            } else {
-                localStorage.setItem('Acne ' + monthOption, counter++);
-            }
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Papules") == 0) {
-            if(counter == "") {
-                localStorage.setItem('Acne ' + monthOption, 1);
-            } else {
-                localStorage.setItem('Acne ' + monthOption, counter++);
-            }
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Nodules") == 0) {
-            if(counter == "") {
-                localStorage.setItem('Acne ' + monthOption, 1);
-            } else {
-                localStorage.setItem('Acne ' + monthOption, counter++);
-            }
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Cysts") == 0) {
-            if(counter == "") {
-                localStorage.setItem('Acne ' + monthOption, 1);
-            } else {
-                localStorage.setItem('Acne ' + monthOption, counter++);
-            }
-            alert("Your data has been submitted!");
-            break;
+    var acneOption = optionsMap.get("Acne");
+    if (acneOption.localeCompare("Whiteheads") == 0) {
+        var counter = localStorage.getItem('Acne ' + monthOption);
+        if(counter == "") {
+            localStorage.setItem('Acne ' + monthOption, 1);
+        } else {
+            localStorage.setItem('Acne ' + monthOption, counter++);
+        }
+    } else if (acneOption.localeCompare("Blackheads") == 0) {
+        if(counter == "") {
+            localStorage.setItem('Acne ' + monthOption, 1);
+        } else {
+            localStorage.setItem('Acne ' + monthOption, counter++);
+        }
+    }  else if (acneOption.localeCompare("Papules") == 0) {
+        if(counter == "") {
+            localStorage.setItem('Acne ' + monthOption, 1);
+        } else {
+            localStorage.setItem('Acne ' + monthOption, counter++);
+        }
+    }  else if (acneOption.localeCompare("Nodules") == 0) {
+        if(counter == "") {
+            localStorage.setItem('Acne ' + monthOption, 1);
+        } else {
+            localStorage.setItem('Acne ' + monthOption, counter++);
+        }
+    }  else if (acneOption.localeCompare("Cysts") == 0) {
+        if(counter == "") {
+            localStorage.setItem('Acne ' + monthOption, 1);
+        } else {
+            localStorage.setItem('Acne ' + monthOption, counter++);
         }
     }
+    alert("Your data has been submitted!");
 }
 
 function moodSubmit() {
