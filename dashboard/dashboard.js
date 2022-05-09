@@ -199,7 +199,7 @@ function moodCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: moodColors,
-            data: yValues
+            data: moodValues
             }]
         },
         options: {
@@ -216,7 +216,7 @@ function moodCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: moodColors,
-            data: yValues
+            data: moodValues
             }]
         },
         options: {
@@ -233,7 +233,7 @@ function moodCreateAll() {
         labels: xValues,
         datasets: [{
         backgroundColor: moodColors,
-        data: yValues
+        data: moodValues
         }]
     },
     options: {
@@ -250,7 +250,7 @@ function moodCreateGraph(type) {
     document.getElementById("moodContainer").innerHTML = '<canvas id="createMood" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createMood").getContext("2d");
   
-    createGraph(elem, type, moodTitle, moodColors);
+    createGraph(elem, type, moodTitle, moodColors, moodValues);
 }
 
 // Functions for cramps graphs
@@ -292,7 +292,7 @@ function crampsCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: crampsColors,
-            data: yValues
+            data: crampsValues
             }]
         },
         options: {
@@ -309,7 +309,7 @@ function crampsCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: crampsColors,
-            data: yValues
+            data: crampsValues
             }]
         },
         options: {
@@ -326,7 +326,7 @@ function crampsCreateAll() {
         labels: xValues,
         datasets: [{
         backgroundColor: crampsColors,
-        data: yValues
+        data: crampsValues
         }]
     },
     options: {
@@ -343,7 +343,7 @@ function crampsCreateGraph(type) {
     document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createCramps").getContext("2d");
   
-    createGraph(elem, type, crampsTitle, crampsColors);
+    createGraph(elem, type, crampsTitle, crampsColors, crampsValues);
 }
 
 // Functions for fatigue graphs
@@ -385,7 +385,7 @@ function fatigueCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: fatigueColors,
-            data: yValues
+            data: fatigueValues
             }]
         },
         options: {
@@ -402,7 +402,7 @@ function fatigueCreateAll() {
             labels: xValues,
             datasets: [{
             backgroundColor: fatigueColors,
-            data: yValues
+            data: fatigueValues
             }]
         },
         options: {
@@ -419,7 +419,7 @@ function fatigueCreateAll() {
         labels: xValues,
         datasets: [{
         backgroundColor: fatigueColors,
-        data: yValues
+        data: fatigueValues
         }]
     },
     options: {
@@ -436,7 +436,7 @@ function fatigueCreateGraph(type) {
     document.getElementById("fatigueContainer").innerHTML = '<canvas id="createFatigue" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createFatigue").getContext("2d");
   
-    createGraph(elem, type, fatigueTitle, fatigueColors);
+    createGraph(elem, type, fatigueTitle, fatigueColors, fatigueValues);
 }
 
 function createGraph(elem, type, title, colors, yValues) {
