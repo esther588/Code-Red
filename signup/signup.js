@@ -4,13 +4,13 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
-var acneCounter = [];
+var acneCounter = [0, 0, 0, 0, 0];
 localStorage.setObj('acneCounter', acneCounter);
-var moodCounter = [];
+var moodCounter = [0, 0, 0, 0];
 localStorage.setObj('moodCounter', moodCounter);
-var crampsCounter = [];
+var crampsCounter = [0, 0, 0, 0];
 localStorage.setObj('crampsCounter', crampsCounter);
-var fatigueCounter = [];
+var fatigueCounter = [0, 0, 0, 0, 0, 0];
 localStorage.setObj('fatigueCounter', fatigueCounter);
 
 signupButton.addEventListener("click", (e) => {
