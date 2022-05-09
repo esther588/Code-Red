@@ -103,10 +103,10 @@ function acneCreateAll() {
     const newChart = new Chart(elem, {
         type: "line",
         data: {
-            labels: acneValues,
+            labels: xValues,
             datasets: [{
             backgroundColor: acneColors,
-            data: yValues
+            data: acneCounter
             }]
         },
         options: {
@@ -120,10 +120,10 @@ function acneCreateAll() {
     const newChart1 = new Chart(elem1, {
         type: "bar",
         data: {
-            labels: acneValues,
+            labels: xValues,
             datasets: [{
             backgroundColor: acneColors,
-            data: yValues
+            data: acneCounter
             }]
         },
         options: {
@@ -137,10 +137,10 @@ function acneCreateAll() {
     const newChart2 = new Chart(elem2, {
     type: "pie",
     data: {
-        labels: acneValues,
+        labels: xValues,
         datasets: [{
         backgroundColor: acneColors,
-        data: yValues
+        data: acneCounter
         }]
     },
     options: {
@@ -439,7 +439,7 @@ function fatigueCreateGraph(type) {
     createGraph(elem, type, fatigueTitle, fatigueColors);
 }
 
-function createGraph(elem, type, title, colors, xValues) {
+function createGraph(elem, type, title, colors, yValues) {
     const newChart = new Chart(elem, {
         type: type,
         data: {
