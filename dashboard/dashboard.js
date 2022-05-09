@@ -280,7 +280,7 @@ function crampsCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: crampsColors,
             data: yValues
             }]
         },
@@ -297,7 +297,7 @@ function crampsCreateAll() {
         data: {
             labels: xValues,
             datasets: [{
-            backgroundColor: barColors,
+            backgroundColor: crampsColors,
             data: yValues
             }]
         },
@@ -314,7 +314,7 @@ function crampsCreateAll() {
     data: {
         labels: xValues,
         datasets: [{
-        backgroundColor: barColors,
+        backgroundColor: crampsColors,
         data: yValues
         }]
     },
@@ -332,7 +332,7 @@ function crampsCreateGraph(type) {
     document.getElementById("crampsContainer").innerHTML = '<canvas id="createCramps" style="width:100%;max-width:600px"></canvas>';
     var elem = document.getElementById("createCramps").getContext("2d");
   
-    createGraph(elem, type, crampsTitle);
+    createGraph(elem, type, crampsTitle, crampsColors);
 }
 
 // Functions for fatigue graphs
