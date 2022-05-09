@@ -135,8 +135,12 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 
+var acneCounter = localStorage.getObj('acneCounter');
+var moodCounter = localStorage.getObj('moodCounter');
+var crampsCounter = localStorage.getObj('crampsCounter');
+var fatigueCounter = localStorage.getObj('fatigueCounter');
 
 function acneSubmit() {
-
+    
     alert("Your data has been submitted!");
 }
