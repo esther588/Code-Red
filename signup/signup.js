@@ -4,65 +4,65 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
-var acneCounter = new Map([
-    ["January", 0],
-    ["February", 0],
-    ["March", 0],
-    ["April", 0],
-    ["May", 0],
-    ["June", 9],
-    ["July", 0],
-    ["August", 0],
-    ["September", 0],
-    ["October", 0],
-    ["November", 0],
-    ["December", 0]
-]);
+var acneCounter = {
+    January: 0,
+    February: 0,
+    March: 0,
+    April: 0,
+    May: 0,
+    June: 0,
+    July: 0,
+    August: 0,
+    September: 0,
+    October: 0,
+    November: 0,
+    December: 0
+};
 localStorage.setObj('acneCounter', acneCounter);
-var moodCounter = new Map([
-    ["January", 0],
-    ["February", 0],
-    ["March", 0],
-    ["April", 0],
-    ["May", 0],
-    ["June", 9],
-    ["July", 0],
-    ["August", 0],
-    ["September", 0],
-    ["October", 0],
-    ["November", 0],
-    ["December", 0]
-]);
+var moodCounter = {
+    January: 0,
+    February: 0,
+    March: 0,
+    April: 0,
+    May: 0,
+    June: 0,
+    July: 0,
+    August: 0,
+    September: 0,
+    October: 0,
+    November: 0,
+    December: 0
+};
 localStorage.setObj('moodCounter', moodCounter);
-var crampsCounter = new Map([
-    ["January", 0],
-    ["February", 0],
-    ["March", 0],
-    ["April", 0],
-    ["May", 0],
-    ["June", 9],
-    ["July", 0],
-    ["August", 0],
-    ["September", 0],
-    ["October", 0],
-    ["November", 0],
-    ["December", 0]
-]);
+var crampsCounter = {
+    January: 0,
+    February: 0,
+    March: 0,
+    April: 0,
+    May: 0,
+    June: 0,
+    July: 0,
+    August: 0,
+    September: 0,
+    October: 0,
+    November: 0,
+    December: 0
+};
 localStorage.setObj('crampsCounter', crampsCounter);
-var fatigueCounter = new Map([
-    ["January", 0],
-    ["February", 0],
-    ["March", 0],
-    ["April", 0],
-    ["May", 0],
-    ["June", 9],
-    ["July", 0],
-    ["August", 0],
-    ["September", 0],
-    ["October", 0],
-    ["November", 0],
-    ["December", 0]
-]);
+var fatigueCounter = {
+    January: 0,
+    February: 0,
+    March: 0,
+    April: 0,
+    May: 0,
+    June: 0,
+    July: 0,
+    August: 0,
+    September: 0,
+    October: 0,
+    November: 0,
+    December: 0
+};
 localStorage.setObj('fatigueCounter', fatigueCounter);
 
 signupButton.addEventListener("click", (e) => {
