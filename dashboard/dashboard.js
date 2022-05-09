@@ -1,3 +1,5 @@
+feather.replace();
+
 var acneValues = localStorage.getObj('acneCounter');
 var moodValues = localStorage.getObj('moodCounter');
 var crampsValues = localStorage.getObj('crampsCounter');
@@ -64,8 +66,6 @@ var acneTitle = "Acne Flare-Ups";
 var moodTitle = "Mood Swings";
 var crampsTitle = "Intensity of Cramps";
 var fatigueTitle = "Fatigueness";
-
-feather.replace();
 
 // Functions for acne graphs
 
