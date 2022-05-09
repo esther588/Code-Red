@@ -30,103 +30,7 @@ function showSlides(n) {
 }
 
 var optionsMap = new Map();
-var acneCounter = localStorage.getObj('acneCounter');
-var moodCounter = localStorage.getObj('moodCounter');
-var crampsCounter = localStorage.getObj('crampsCounter');
-var fatigueCounter = localStorage.getObj('fatigueCounter');
 var monthOption = "";
-
-function acneSubmit() {
-    var acneOption = optionsMap.get("Acne");
-    var counter = acneCounter.get[monthOption];
-    if (acneOption.localeCompare("Whiteheads") == 0) {
-        acneCounter.get[monthOption, counter++];
-    } else if (acneOption.localeCompare("Blackheads") == 0) {
-        acneCounter.get[monthOption, counter++];
-    }  else if (acneOption.localeCompare("Papules") == 0) {
-        acneCounter.get[monthOption, counter++];
-    }  else if (acneOption.localeCompare("Nodules") == 0) {
-        acneCounter.get[monthOptions, counter++];
-    }  else if (acneOption.localeCompare("Cysts") == 0) {
-        acneCounter.get[monthOption, counter++];
-    }
-    localStorage.setObj('acneCounter', acneCounter);
-    alert("Your data has been submitted!");
-}
-
-function moodSubmit() {
-    for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i].localeCompare("Irritability") == 0) {
-            localStorage.setItem('Mood', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Anger") == 0) {
-            localStorage.setItem('Mood', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Sadness") == 0) {
-            localStorage.setItem('Mood', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Anxiety") == 0) {
-            localStorage.setItem('Mood', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }
-    }
-}
-
-function crampsSubmit() {
-    for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i].localeCompare("None") == 0) {
-            localStorage.setItem('Cramps', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Minimal") == 0) {
-            localStorage.setItem('Cramps', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Moderate") == 0) {
-            localStorage.setItem('Cramps', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Extreme") == 0) {
-            localStorage.setItem('Cramps', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }
-    }
-}
-
-function fatigueSubmit() {
-    for (let i = 0; i < optionsArray.length; i++) {
-        if (optionsArray[i].localeCompare("Social") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Emotional") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Physical") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }  else if (optionsArray[i].localeCompare("Pain") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Mental") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        } else if (optionsArray[i].localeCompare("Chronic") == 0) {
-            localStorage.setItem('Fatigue', optionsArray[i]);
-            alert("Your data has been submitted!");
-            break;
-        }
-    }
-}
 
 for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
     dropdown.addEventListener('click', function () {
@@ -222,3 +126,34 @@ window.addEventListener('click', function (e) {
         }
     }
 });
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+var acneCounter = localStorage.getObj('acneCounter');
+var moodCounter = localStorage.getObj('moodCounter');
+var crampsCounter = localStorage.getObj('crampsCounter');
+var fatigueCounter = localStorage.getObj('fatigueCounter');
+
+function acneSubmit() {
+    var acneOption = optionsMap.get("Acne");
+    var counter = acneCounter.get[monthOption];
+    if (acneOption.localeCompare("Whiteheads") == 0) {
+        acneCounter.get[monthOption, counter++];
+    } else if (acneOption.localeCompare("Blackheads") == 0) {
+        acneCounter.get[monthOption, counter++];
+    }  else if (acneOption.localeCompare("Papules") == 0) {
+        acneCounter.get[monthOption, counter++];
+    }  else if (acneOption.localeCompare("Nodules") == 0) {
+        acneCounter.get[monthOptions, counter++];
+    }  else if (acneOption.localeCompare("Cysts") == 0) {
+        acneCounter.get[monthOption, counter++];
+    }
+    localStorage.setObj('acneCounter', acneCounter);
+    alert("Your data has been submitted!");
+}
