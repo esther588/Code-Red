@@ -142,7 +142,6 @@ var fatigueCounter = localStorage.getObj('fatigueCounter');
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
-    var counter = acneCounter.monthOption;
     
     alert("Your data has been submitted!");
 }
