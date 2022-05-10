@@ -4,14 +4,20 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
+// Save arrays to localStorage
+
 var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('acneCounter', acneCounter);
+const jsonArr1 = JSON.stringify(acneCounter);
+localStorage.setItem("acneCounter", jsonArr1);
 var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('moodCounter', moodCounter);
+const jsonArr2 = JSON.stringify(acneCounter);
+localStorage.setItem("moodCounter", jsonArr2);
 var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('crampsCounter', crampsCounter);
+const jsonArr3 = JSON.stringify(acneCounter);
+localStorage.setItem("crampsCounter", jsonArr3);
 var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('fatigueCounter', fatigueCounter);
+const jsonArr4 = JSON.stringify(acneCounter);
+localStorage.setItem("fatigueCounter", jsonArr4);
 
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();

@@ -2,14 +2,20 @@ const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
 
+// Save arrays to localStorage
+
 var acneCounter = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
-localStorage.setObj('acneCounter', acneCounter);
+const jsonArr1 = JSON.stringify(acneCounter);
+localStorage.setItem("acneCounter", jsonArr1);
 var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('moodCounter', moodCounter);
+const jsonArr2 = JSON.stringify(acneCounter);
+localStorage.setItem("moodCounter", jsonArr2);
 var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('crampsCounter', crampsCounter);
+const jsonArr3 = JSON.stringify(acneCounter);
+localStorage.setItem("crampsCounter", jsonArr3);
 var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-localStorage.setObj('fatigueCounter', fatigueCounter);
+const jsonArr4 = JSON.stringify(acneCounter);
+localStorage.setItem("fatigueCounter", jsonArr4);
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
