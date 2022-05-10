@@ -8,13 +8,13 @@ var acneCounter = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
 const jsonArr1 = JSON.stringify(acneCounter);
 localStorage.setItem("acneCounter", jsonArr1);
 var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr2 = JSON.stringify(acneCounter);
+const jsonArr2 = JSON.stringify(moodCounter);
 localStorage.setItem("moodCounter", jsonArr2);
 var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr3 = JSON.stringify(acneCounter);
+const jsonArr3 = JSON.stringify(crampsCounter);
 localStorage.setItem("crampsCounter", jsonArr3);
 var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr4 = JSON.stringify(acneCounter);
+const jsonArr4 = JSON.stringify(fatigueCounter);
 localStorage.setItem("fatigueCounter", jsonArr4);
 
 loginButton.addEventListener("click", (e) => {
