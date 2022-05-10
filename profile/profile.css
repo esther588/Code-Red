@@ -40,7 +40,7 @@ body {
     background: #fff;
 }
   
-.profile-img{
+.profile-img {
     text-align: center;
     width: 200px;
     /* Container's dimensions */
@@ -49,7 +49,7 @@ body {
     -webkit-border-radius: 75%;
     -moz-border-radius: 75%;
     box-shadow: 0 0 0 1px #eee;
-    background: url("https://images.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg?fit=crop&fm=jpg&h=700&q=80&w=1225") center center no-repeat;
+    background: url("photos/default_user.jpeg") center center no-repeat;
     background-size: cover;
     margin: auto;
     margin-top: 20px;
