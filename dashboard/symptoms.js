@@ -127,10 +127,14 @@ window.addEventListener('click', function (e) {
     }
 });
 
-var acneCounter = localStorage.getObj('acneCounter');
-var fatigueCounter = localStorage.getObj('fatigueCounter');
-var crampsCounter = localStorage.getObj('crampsCounter');
-var fatigueCounter = localStorage.getObj('fatigueCounter');
+const strAcne = localStorage.getItem("acneCounter");
+var acneCounter = JSON.parse(strAcne);
+const strMood = localStorage.getItem("moodCounter");
+var moodCounter = JSON.parse(strMood);
+const strCramps = localStorage.getItem("crampsCounter");
+var crampsCounter = JSON.parse(strCramps);
+const strFatigue = localStorage.getItem("fatigueCounter");
+var fatigueCounter = JSON.parse(strFatigue);
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
