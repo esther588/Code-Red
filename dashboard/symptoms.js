@@ -151,7 +151,21 @@ function acneSubmit() {
 }
 
 function moodSubmit() {
-
+    var moodOption = optionsMap.get("Mood");
+    var counter = moodCounter[monthIndex];
+    if (moodOption.localeCompare("Whiteheads") == 0) {
+        moodCounter[monthIndex] = counter++;
+    } else if (moodOption.localeCompare("Blackheads") == 0) {
+        moodCounter[monthIndex] = counter++;
+    }  else if (moodOption.localeCompare("Papules") == 0) {
+        moodCounter[monthIndex] = counter++;
+    }  else if (moodOption.localeCompare("Nodules") == 0) {
+        moodCounter[monthIndex] = counter++;
+    }  else if (moodOption.localeCompare("Cysts") == 0) {
+        moodCounter[monthIndex] = counter++;
+    }
+    localStorage.setObj('moodCounter', moodCounter);
+    alert("Your data has been submitted!");
 }
 
 function crampsSubmit() {
