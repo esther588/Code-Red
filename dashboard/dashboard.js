@@ -82,10 +82,14 @@ function showSection(id) {
     }
 }
 
-var acneValues = localStorage.getObj('acneCounter');
-var moodValues = localStorage.getObj('moodCounter');
-var crampsValues = localStorage.getObj('crampsCounter');
-var fatigueValues = localStorage.getObj('fatigueCounter');
+const strAcne = localStorage.getItem("acneCounter");
+var acneValues = JSON.parse(strAcne);
+const strMood = localStorage.getItem("moodCounter");
+var moodValues = JSON.parse(strMood);
+const strCramps = localStorage.getItem("crampsCounter");
+var crampsValues = JSON.parse(strCramps);
+const strFatigue = localStorage.getItem("fatigueCounter");
+var fatigueValues = JSON.parse(strFatigue);
 
 // Functions for acne graphs
 
