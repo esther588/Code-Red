@@ -150,7 +150,8 @@ function acneSubmit() {
     }  else if (acneOption.localeCompare("Cysts") == 0) {
         acneCounter[monthIndex] = counter++;
     }
-    localStorage.setObj('acneCounter', acneCounter);
+    const jsonArr = JSON.stringify(acneCounter);
+    localStorage.setItem("acneCounter", jsonArr);
     alert("Your data has been submitted!");
 }
 
@@ -166,7 +167,8 @@ function moodSubmit() {
     }  else if (fatigueOption.localeCompare("Anxiety") == 0) {
         fatigueCounter[monthIndex] = counter++;
     }
-    localStorage.setObj('fatigueCounter', fatigueCounter);
+    const jsonArr = JSON.stringify(moodCounter);
+    localStorage.setItem("moodCounter", jsonArr);
     alert("Your data has been submitted!");
 }
 
@@ -182,7 +184,8 @@ function crampsSubmit() {
     }  else if (crampsOption.localeCompare("Extreme") == 0) {
         crampsCounter[monthIndex] = counter++;
     }
-    localStorage.setObj('crampsCounter', crampsCounter);
+    const jsonArr = JSON.stringify(crampsCounter);
+    localStorage.setItem("crampsCounter", jsonArr);
     alert("Your data has been submitted!");
 }
 
@@ -202,6 +205,7 @@ function fatigueSubmit() {
     } else if (fatigueOption.localeCompare("Chronic") == 0) {
         fatigueCounter[monthIndex] = counter++;
     }
-    localStorage.setObj('fatigueCounter', fatigueCounter);
+    const jsonArr = JSON.stringify(fatigueCounter);
+    localStorage.setItem("fatigueCounter", jsonArr);
     alert("Your data has been submitted!");
 }
