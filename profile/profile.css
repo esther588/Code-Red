@@ -10,10 +10,19 @@ body{
 }
 .profile-img{
     text-align: center;
-}
-.profile-img img{
-    width: 70%;
-    height: 100%;
+  width: 200px;
+  /* Container's dimensions */
+  
+  height: 200px;
+  -webkit-border-radius: 75%;
+  -moz-border-radius: 75%;
+  box-shadow: 0 0 0 1px #eee;
+  background: url("https://images.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg?fit=crop&fm=jpg&h=700&q=80&w=1225") center center no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  align-content: center;
 }
 .profile-img .file {
     position: relative;
@@ -30,6 +39,26 @@ body{
     opacity: 0;
     right: 0;
     top: 0;
+}
+.trick {
+  display: inline-block;
+  vertical-align: middle;
+  height: 150px;
+}
+
+.image:hover {
+  box-shadow: 0px 5px 20px .9px #3F3F3F;
+}
+
+.image:hover {
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+  -webkit-transition: 1.6s ease-in-out;
+  transition: 1.6s ease-in-out;
+}
+.trick:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .profile-head h5{
     color: #333;
