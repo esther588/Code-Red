@@ -2,6 +2,15 @@ const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
 
+var acneCounter = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
+localStorage.setObj('acneCounter', acneCounter);
+var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+localStorage.setObj('moodCounter', moodCounter);
+var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+localStorage.setObj('crampsCounter', crampsCounter);
+var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+localStorage.setObj('fatigueCounter', fatigueCounter);
+
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
 
