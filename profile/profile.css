@@ -1,20 +1,38 @@
-body{
+body {
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
-.emp-profile{
+
+.emp-profile {
     padding: 3%;
     margin-top: 3%;
     margin-bottom: 3%;
     border-radius: 0.5rem;
     background: #fff;
 }
-.profile-img{
+
+.profile-img {
     text-align: center;
+    width: 200px;
+    /* Container's dimensions */
+    
+    height: 200px;
+    -webkit-border-radius: 75%;
+    -moz-border-radius: 75%;
+    box-shadow: 0 0 0 1px #eee;
+    background: url("https://images.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg?fit=crop&fm=jpg&h=700&q=80&w=1225") center center no-repeat;
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    align-content: center;
 }
-.profile-img img{
-    width: 70%;
-    height: 100%;
+  
+.trick {
+    display: inline-block;
+    vertical-align: middle;
+    height: 150px;
 }
+
 .profile-img .file {
     position: relative;
     overflow: hidden;
