@@ -3,12 +3,12 @@ displayFirst();
 displayLast();
 displayFull();
 
-var currentUser = localStorage.getItem('currentUser');
 var firstName = localStorage.getItem(currentUser + ' firstname');
 var lastName = localStorage.getItem(currentUser + ' firstname');
 
 function displayUser() {
     var userID = document.getElementById("username");
+    var currentUser = localStorage.getItem('currentUser');
     userID.innerHTML = currentUser;
 }
 
