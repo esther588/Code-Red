@@ -12,13 +12,13 @@ function displayUser() {
 }
 
 function displayFirst() {
-    var userID = document.getElementById("username");
-    userID.innerHTML = currentUser;
+    var firstID = document.getElementById("first-name");
+    firstID.innerHTML = firstName;
 }
 
 function displayLast() {
-    var userID = document.getElementById("username");
-    userID.innerHTML = currentUser;
+    var lastID = document.getElementById("last-name");
+    lastID.innerHTML = currenlastNametUser;
 }
 
 document.querySelector("input").onchange = function() {
