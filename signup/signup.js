@@ -42,17 +42,12 @@ signupButton.addEventListener("click", (e) => {
         if(username.value == storedUser) {
             signupUserError.style.opacity = 1;
         } else {
-            // Store the data in the database
-            const db = mysql.createPool({
-                user: username,
-                frist: firstname,
-                last: lastname,
-                password: password
-             })
-             db.getConnection( (err, connection)=> {
-                if (err) throw (err)
-                alert("You have successfully signed up!");
-             })
+            // Store the data via localStorage
+            localStorage.setItem(username + ' firstname', firstname);
+            localStorage.setItem(username + ' lastname', lastname);
+            localStorage.setItem(username + ' username', username);
+            localStorage.setItem(username + ' password', password);
+            alert("You have successfully signed up!");
         }
     }
 })
