@@ -1,7 +1,19 @@
+var currentUser = localStorage.getItem('currentUser');
 displayUser();
+displayFirst();
+displayLast();
 
 function displayUser() {
-    var currentUser = localStorage.getItem('currentUser');
+    var userID = document.getElementById("username");
+    userID.innerHTML = currentUser;
+}
+
+function displayFirst() {
+    var userID = document.getElementById("username");
+    userID.innerHTML = currentUser;
+}
+
+function displayLast() {
     var userID = document.getElementById("username");
     userID.innerHTML = currentUser;
 }
