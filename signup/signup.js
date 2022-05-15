@@ -51,8 +51,8 @@ signupButton.addEventListener("click", (e) => {
              })
              db.getConnection( (err, connection)=> {
                 if (err) throw (err)
+                alert("You have successfully signed up!");
              })
-            alert("You have successfully signed up!");
         }
     }
 })
