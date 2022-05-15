@@ -2,7 +2,8 @@ displayUser();
 
 function displayUser() {
     var currentUser = localStorage.getItem('currentUser');
-    document.getElementById("username").innerHTML = currentUser;
+    var userID = document.getElementById("username");
+    userID.innerHTML = currentUser;
 }
 
 document.querySelector("input").onchange = function() {
