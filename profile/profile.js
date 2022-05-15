@@ -5,6 +5,7 @@ var lastName = localStorage.getItem(currentUser + ' firstname');
 displayUser();
 displayFirst();
 displayLast();
+displayFull();
 
 function displayUser() {
     var userID = document.getElementById("username");
@@ -18,7 +19,12 @@ function displayFirst() {
 
 function displayLast() {
     var lastID = document.getElementById("last-name");
-    lastID.innerHTML = currenlastNametUser;
+    lastID.innerHTML = lastName;
+}
+
+function displayFull() {
+    var fullID = document.getElementById("full-name");
+    fullID.innerHTML = firstName + lastName;
 }
 
 document.querySelector("input").onchange = function() {
