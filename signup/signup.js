@@ -8,6 +8,9 @@ const signupBlankError = document.getElementById("signup-blank-error");
 const signupPwdError = document.getElementById("signup-pwd-error");
 const signupUserError = document.getElementById("signup-user-error");
 
+var today = new Date();
+var currentYear = today.getFullYear();
+
 // Save arrays to localStorage
 
 var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -47,6 +50,7 @@ signupButton.addEventListener("click", (e) => {
             localStorage.setItem(username + ' lastname', lastname);
             localStorage.setItem(username + ' username', username);
             localStorage.setItem(username + ' password', password);
+            localStorage.setItem(username + ' year', currentYear);
             alert("You have successfully signed up!");
         }
     }
