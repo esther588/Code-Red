@@ -28,11 +28,11 @@ loginButton.addEventListener("click", (e) => {
     var storedUser = localStorage.getItem(username + ' username');
     var storedPwd = localStorage.getItem(username + ' password');
 
-    // Store current username
-    localStorage.setItem('currentUser', storedUser);
-
     // Check if stored data from signuo form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
+        // Store current username
+        localStorage.setItem('currentUser', storedUser);
+        
         alert("You have successfully logged in.");
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
