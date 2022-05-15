@@ -1,3 +1,7 @@
+const express = require("express");
+const app = express();
+const mysql = require("mysql");
+
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupBlankError = document.getElementById("signup-blank-error");
@@ -10,13 +14,13 @@ var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const jsonArr1 = JSON.stringify(acneCounter);
 localStorage.setItem("acneCounter", jsonArr1);
 var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr2 = JSON.stringify(acneCounter);
+const jsonArr2 = JSON.stringify(moodCounter);
 localStorage.setItem("moodCounter", jsonArr2);
 var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr3 = JSON.stringify(acneCounter);
+const jsonArr3 = JSON.stringify(crampsCounter);
 localStorage.setItem("crampsCounter", jsonArr3);
 var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr4 = JSON.stringify(acneCounter);
+const jsonArr4 = JSON.stringify(fatigueCounter);
 localStorage.setItem("fatigueCounter", jsonArr4);
 
 signupButton.addEventListener("click", (e) => {
@@ -38,11 +42,16 @@ signupButton.addEventListener("click", (e) => {
         if(username.value == storedUser) {
             signupUserError.style.opacity = 1;
         } else {
-            // Store the data via localStorage
-            localStorage.setItem(username + ' firstname', firstname);
-            localStorage.setItem(username + ' lastname', lastname);
-            localStorage.setItem(username + ' username', username);
-            localStorage.setItem(username + ' password', password);
+            // Store the data in the database
+            const db = mysql.createPool({
+                user: username,
+                frist: firstname,
+                last: lastname,
+                password: password
+             })
+             db.getConnection( (err, connection)=> {
+                if (err) throw (err)
+             })
             alert("You have successfully signed up!");
         }
     }
