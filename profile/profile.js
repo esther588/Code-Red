@@ -1,4 +1,7 @@
 var currentUser = localStorage.getItem('currentUser');
+var firstName = localStorage.getItem(currentUser + ' firstname');
+var lastName = localStorage.getItem(currentUser + ' firstname');
+
 displayUser();
 displayFirst();
 displayLast();
