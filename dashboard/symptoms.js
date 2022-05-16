@@ -209,3 +209,19 @@ function fatigueSubmit() {
     localStorage.setItem("fatigueCounter", jsonArr);
     alert("Your data has been submitted!");
 }
+
+document.getElementById("acneSubmit").onclick = function() {
+    alert("button was clicked");
+}​;​
+
+document.getElementById("moodSubmit").onclick = function() {
+    alert("button was clicked");
+}​;​
+
+document.getElementById("crampsSubmit").onclick = function() {
+    alert("button was clicked");
+}​;​
+
+document.getElementById("fatigueSubmit").onclick = function() {
+    alert("button was clicked");
+}​;​
