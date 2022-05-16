@@ -159,6 +159,7 @@ function acneSubmit() {
     localStorage.setItem("acneCounter", jsonArr);
     acneFlag = true;
     alert("Your data has been submitted!");
+    checkSubmit();
 }
 
 function moodSubmit() {
@@ -177,6 +178,7 @@ function moodSubmit() {
     localStorage.setItem("moodCounter", jsonArr);
     moodFlag = true;
     alert("Your data has been submitted!");
+    checkSubmit();
 }
 
 function crampsSubmit() {
@@ -195,6 +197,7 @@ function crampsSubmit() {
     localStorage.setItem("crampsCounter", jsonArr);
     crampsFlag = true;
     alert("Your data has been submitted!");
+    checkSubmit();
 }
 
 function fatigueSubmit() {
@@ -217,4 +220,13 @@ function fatigueSubmit() {
     localStorage.setItem("fatigueCounter", jsonArr);
     fatigueFlag = true;
     alert("Your data has been submitted!");
+    checkSubmit();
+}
+
+function checkSubmit() {
+    if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
+        location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
+    } else {
+        alert("Please submit data for all the slides.");
+    }
 }
