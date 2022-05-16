@@ -41,16 +41,16 @@ signupButton.addEventListener("click", (e) => {
     } else if (password.length < 8) {
         signupPwdError.style.opacity = 1;
     } else {
-        var storedUser = localStorage.getItem(username + ' username');
+        var storedUser = localStorage.getItem(username + " username");
         if(username.value == storedUser) {
             signupUserError.style.opacity = 1;
         } else {
             // Store the data via localStorage
-            localStorage.setItem(username + ' firstname', firstname);
-            localStorage.setItem(username + ' lastname', lastname);
-            localStorage.setItem(username + ' username', username);
-            localStorage.setItem(username + ' password', password);
-            localStorage.setItem(username + ' year', currentYear);
+            localStorage.setItem(username + " firstname", firstname);
+            localStorage.setItem(username + " lastname", lastname);
+            localStorage.setItem(username + " username", username);
+            localStorage.setItem(username + " password", password);
+            localStorage.setItem(username + " year", currentYear);
             alert("You have successfully signed up!");
             location.assign("https://esther588.github.io/Code-Red/login/login.html");
         }

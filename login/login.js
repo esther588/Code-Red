@@ -10,13 +10,13 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
 
     // Stored data from the signup form
-    var storedUser = localStorage.getItem(username + ' username');
-    var storedPwd = localStorage.getItem(username + ' password');
+    var storedUser = localStorage.getItem(username + " username");
+    var storedPwd = localStorage.getItem(username + " password");
 
     // Check if stored data from signuo form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
         // Store current username
-        localStorage.setItem('currentUser', storedUser);
+        localStorage.setItem("currentUser", storedUser);
 
         // Create and store a map of flags
         var flagsMap = new Map([
