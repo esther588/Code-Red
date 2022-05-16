@@ -52,6 +52,7 @@ signupButton.addEventListener("click", (e) => {
             localStorage.setItem(username + ' password', password);
             localStorage.setItem(username + ' year', currentYear);
             alert("You have successfully signed up!");
+            location.assign("https://esther588.github.io/Code-Red/login/login.html");
         }
     }
 })
