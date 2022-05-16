@@ -226,7 +226,5 @@ function fatigueSubmit() {
 function checkSubmit() {
     if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
         location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
-    } else {
-        alert("Please submit data for all the slides.");
     }
 }
