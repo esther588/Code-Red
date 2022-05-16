@@ -136,6 +136,11 @@ var crampsCounter = JSON.parse(strCramps);
 const strFatigue = localStorage.getItem("fatigueCounter");
 var fatigueCounter = JSON.parse(strFatigue);
 
+var acneFlag = false;
+var moodFlag = false;
+var crampsFlag = false;
+var fatigueFlag = false;
+
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
     var counter = acneCounter[monthIndex];
@@ -152,6 +157,7 @@ function acneSubmit() {
     }
     const jsonArr = JSON.stringify(acneCounter);
     localStorage.setItem("acneCounter", jsonArr);
+    acneFlag = true;
     alert("Your data has been submitted!");
 }
 
@@ -169,6 +175,7 @@ function moodSubmit() {
     }
     const jsonArr = JSON.stringify(moodCounter);
     localStorage.setItem("moodCounter", jsonArr);
+    moodFlag = true;
     alert("Your data has been submitted!");
 }
 
@@ -186,6 +193,7 @@ function crampsSubmit() {
     }
     const jsonArr = JSON.stringify(crampsCounter);
     localStorage.setItem("crampsCounter", jsonArr);
+    crampsFlag = true;
     alert("Your data has been submitted!");
 }
 
@@ -207,21 +215,6 @@ function fatigueSubmit() {
     }
     const jsonArr = JSON.stringify(fatigueCounter);
     localStorage.setItem("fatigueCounter", jsonArr);
+    fatigueFlag = true;
     alert("Your data has been submitted!");
 }
-
-document.getElementById("acneSubmit").onclick = function() {
-    alert("button was clicked");
-}​;​
-
-document.getElementById("moodSubmit").onclick = function() {
-    alert("button was clicked");
-}​;​
-
-document.getElementById("crampsSubmit").onclick = function() {
-    alert("button was clicked");
-}​;​
-
-document.getElementById("fatigueSubmit").onclick = function() {
-    alert("button was clicked");
-}​;​
