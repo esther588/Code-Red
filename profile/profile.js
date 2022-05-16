@@ -6,7 +6,7 @@ displayFull();
 function displayUser() {
     var userID = document.getElementById("username");
     var currentUser = localStorage.getItem('currentUser');
-    userID.innerHTML = String(currentUser);
+    userID.innerHTML = currentUser;
 }
 
 function displayFirst() {
