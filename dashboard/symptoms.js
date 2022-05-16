@@ -135,11 +135,13 @@ const strCramps = localStorage.getItem("crampsCounter");
 var crampsCounter = JSON.parse(strCramps);
 const strFatigue = localStorage.getItem("fatigueCounter");
 var fatigueCounter = JSON.parse(strFatigue);
+const strFlags = localStorage.getItem("flagsMap");
+var flagsMap = JSON.parse(strFlags);
 
-var acneFlag = false;
-var moodFlag = false;
-var crampsFlag = false;
-var fatigueFlag = false;
+var acneFlag = flagsMap.get("acne");
+var moodFlag = flagsMap.get("mood");
+var crampsFlag = flagsMap.get("cramps");
+var fatigueFlag = flagsMap.get("fatigue");
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
@@ -225,6 +227,12 @@ function fatigueSubmit() {
 
 function checkSubmit() {
     if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
+        flagsMap.set("acne", true);
+        flagsMap.set("mood", true);
+        flagsMap.set("cramps", true);
+        flagsMap.set("fatigue", true);
+        const jsonMap = JSON.stringify(flagsMap);
+        localStorage.setItem("flagsMap", jsonMap);
         location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
     }
 }
