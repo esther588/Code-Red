@@ -57,14 +57,6 @@ function createBody(date, month, year) {
         if(j === date) { 
             addClass = ' class="selected"'; 
         }
-        
-        switch(j) {
-            case 8:
-            case 10:
-            case 27:
-                addClass = ' class="event"';
-            break;
-        }
 
         html += '<li><a href="#" title="' + j + '" data-value="' + j + '"' + addClass + '>' + j + '</a></li>';
     }
