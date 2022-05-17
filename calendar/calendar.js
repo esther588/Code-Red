@@ -118,8 +118,6 @@ function showNotes() {
   
     if (notesObj.length != 0) {
         notesElm.innerHTML = html;
-    } else {
-        notesElm.innerHTML = "Empty Notes";
     }
 }
 
