@@ -49,7 +49,7 @@ function createBody(date, month, year) {
     var firstDay = new Date(year, month, 1);
     var dayOfWeek = firstDay.getDay();
     var totalDays = daysInMonth(month, year);
-    for(var i = 1; i < dayOfWeek; i++) {
+    for(var i = dayOfWeek; i < totalDays + dayOfWeek; i++) {
         html += '<li><a href="#" title="' + i + '" data-value="' + i + '"' + '' + '>' + '</a></li>';
     }
     for(var j = 1; j <= totalDays; j++){
