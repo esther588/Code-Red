@@ -85,9 +85,33 @@ function createMonths(monthsArr, month) {
 }
 
 function addNote() {
-  const noteInput = document.getElementById("note-input");
-    html = '';
-    note = noteInput.value;
-    html += '<ul class="noteList"><li>' + note + '<a href="#" title="Remove note" class="removeNote animate">x</a></li></ul>';
-    noteHtml.innerHTML = html;
+  let addTxt = document.getElementById("note-input");
+    let notes = localStorage.getItem("notes");
+  
+    if (notes == null) notesObj = [];
+    else notesObj = JSON.parse(notes);
+  
+    notesObj.push(addTxt.value);
+    localStorage.setItem("notes", JSON.stringify(notesObj));
+    addTxt.value = "";
+  showNotes();
+}
+
+function showNotes() {
+  let notes = localStorage.getItem("notes");
+  
+    if (notes == null) notesObj = [];
+    else notesObj = JSON.parse(notes);
+  
+    let html = "";
+  
+    notesObj.forEach(function(element, index) {
+        html += '<ul class="noteList"><li>' + element + '<a href="#" title="Remove note" class="removeNote animate">x</a></li></ul>';
+    });
+  
+    let notesElm = document.getElementById("note");
+  
+    if (notesObj.length != 0) notesElm.innerHTML = html;
+    else
+        notesElm.innerHTML = "Empty Notes";
 }
