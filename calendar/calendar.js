@@ -122,3 +122,19 @@ function showNotes() {
         notesElm.innerHTML = "Empty Notes";
     }
 }
+
+function deleteNote(index) {
+    let notes = localStorage.getItem("notes");
+  
+    if (notes == null) {
+        notesArr = [];
+    } else {
+        notesArr = JSON.parse(notes);
+    }
+  
+    notesArry.splice(index, 1);
+  
+    localStorage.setItem("notes", JSON.stringify(notesArr));
+  
+    showNotes();
+}
