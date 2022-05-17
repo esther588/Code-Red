@@ -77,7 +77,7 @@ function createMonths(monthsArr, month) {
 }
 
 function addNote() {
-    let addTxt = document.getElementById("note-input");
+    let notesInput = document.getElementById("note-input");
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
@@ -86,9 +86,9 @@ function addNote() {
         notesArr = JSON.parse(notes);
     }
   
-    notesArr.push(addTxt.value);
+    notesArr.push(notesInput.value);
     localStorage.setItem("notes", JSON.stringify(notesArr));
-    addTxt.value = "";
+    notesInput.value = "";
     showNotes();
 }
 
