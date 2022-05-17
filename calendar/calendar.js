@@ -85,23 +85,29 @@ function createMonths(monthsArr, month) {
 }
 
 function addNote() {
-  let addTxt = document.getElementById("note-input");
+    let addTxt = document.getElementById("note-input");
     let notes = localStorage.getItem("notes");
   
-    if (notes == null) notesObj = [];
-    else notesObj = JSON.parse(notes);
+    if (notes == null) {
+        notesObj = [];
+    } else {
+        notesObj = JSON.parse(notes);
+    }
   
     notesObj.push(addTxt.value);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value = "";
-  showNotes();
+    showNotes();
 }
 
 function showNotes() {
-  let notes = localStorage.getItem("notes");
+    let notes = localStorage.getItem("notes");
   
-    if (notes == null) notesObj = [];
-    else notesObj = JSON.parse(notes);
+    if (notes == null) {
+        notesObj = [];
+    } else {
+        notesObj = JSON.parse(notes);
+    }
   
     let html = "";
   
@@ -111,7 +117,9 @@ function showNotes() {
   
     let notesElm = document.getElementById("note");
   
-    if (notesObj.length != 0) notesElm.innerHTML = html;
-    else
+    if (notesObj.length != 0) {
+        notesElm.innerHTML = html;
+    } else {
         notesElm.innerHTML = "Empty Notes";
+    }
 }
