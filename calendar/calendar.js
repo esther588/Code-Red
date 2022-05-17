@@ -24,26 +24,32 @@ displayYear(currentYear);
 createBody(currentDate, currentMonth, currentYear);
 createMonths(abbrevMonths, currentMonth);
 
+// Display the current day of the week
 function displayDay(daysArr, day) {
     finalDay = document.getElementById("currentDay");
     finalDay.innerHTML = daysArr[day];
 }
 
+// Display the current month and date 
 function displayDate(date, monthsArr, month) {
     fullDate = document.getElementById("currentDate");
     fullDate.innerHTML = monthsArr[month] + " " + date;
 }
 
+// Display the current year
 function displayYear(year) {
 
     finalYear = document.getElementById("currentYear");
     finalYear.innerHTML = year;
 }
 
+// Find the total days of the month
+
 function daysInMonth(month, year) {
     return 32 - new Date(year, month, 32).getDate();
 }
 
+// Display all the days of the month
 function createBody(date, month, year) {
     html = '';
     var firstDay = new Date(year, month, 1);
@@ -63,6 +69,7 @@ function createBody(date, month, year) {
     daysHtml.innerHTML = html;
 }
 
+// Display all of the months
 function createMonths(monthsArr, month) {
     html = '';
     for(var i = 0; i < 12; i++) {
