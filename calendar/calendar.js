@@ -81,13 +81,13 @@ function addNote() {
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
-        notesObj = [];
+        notesArr = [];
     } else {
-        notesObj = JSON.parse(notes);
+        notesArr = JSON.parse(notes);
     }
   
-    notesObj.push(addTxt.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
+    notesArr.push(addTxt.value);
+    localStorage.setItem("notes", JSON.stringify(notesArr));
     addTxt.value = "";
     showNotes();
 }
@@ -96,20 +96,20 @@ function showNotes() {
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
-        notesObj = [];
+        notesArr = [];
     } else {
-        notesObj = JSON.parse(notes);
+        notesArr = JSON.parse(notes);
     }
   
     let html = "";
   
-    notesObj.forEach(function(element, index) {
+    notesArr.forEach(function(element, index) {
         html += '<ul class="noteList"><li>' + element + '<a href="#" title="Remove note" class="removeNote animate">x</a></li></ul>';
     });
   
     let notesElm = document.getElementById("note");
   
-    if (notesObj.length != 0) {
+    if (notesArr.length != 0) {
         notesElm.innerHTML = html;
     } else {
         notesElm.innerHTML = "Empty Notes";
