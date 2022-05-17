@@ -111,8 +111,7 @@ function showNotes() {
     let html = "";
   
     notesObj.forEach(function(element, index) {
-        index++;
-        html += '<ul class="noteList"><li>' + element + '<a href="#" title="Remove note" class="removeNote animate" id="' + index + '" onclick=""deleteNote(id)>x</a></li></ul>';
+        html += '<ul class="noteList"><li>' + element + '<a href="#" title="Remove note" class="removeNote animate" id="' + index + '" onclick="deleteNote(id)">x</a></li></ul>';
     });
   
     let notesElm = document.getElementById("note");
