@@ -139,7 +139,7 @@ function deleteNote(index) {
     showNotes();
 }
 
-function checkSubmit() {
+function checkFlags() {
     const strFlags = localStorage.getItem("flagsArr");
     var flagsArr = JSON.parse(strFlags);
 
