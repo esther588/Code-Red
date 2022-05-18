@@ -19,14 +19,9 @@ loginButton.addEventListener("click", (e) => {
         localStorage.setItem("currentUser", storedUser);
 
         // Create and store a map of flags
-        var flagsMap = new Map([
-            ["acne", false],
-            ["mood", false],
-            ["cramps", false],
-            ["fatigue", false]
-          ]);
-        const jsonMap = JSON.stringify(flagsMap);
-        localStorage.setItem("flagsMap", jsonMap);
+        var flagsArr = [false, false, false, false]
+        const jsonArr = JSON.stringify(flagsArr);
+        localStorage.setItem("flagsArr", jsonArr);
 
         alert("You have successfully logged in.");
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
