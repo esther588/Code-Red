@@ -83,18 +83,20 @@ function createMonths(monthsArr, month) {
     monthsHtml.innerHTML = html;
 }
 
+showNotes();
+
 function addNote() {
     let notesInput = document.getElementById("note-input");
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
-        notesObj = [];
+        notesArr = [];
     } else {
-        notesObj = JSON.parse(notes);
+        notesArr = JSON.parse(notes);
     }
   
-    notesObj.push(notesInput.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
+    notesArr.push(notesInput.value);
+    localStorage.setItem("notes", JSON.stringify(notesArr));
     notesInput.value = "";
     showNotes();
 }
@@ -103,20 +105,20 @@ function showNotes() {
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
-        notesObj = [];
+        notesArr = [];
     } else {
-        notesObj = JSON.parse(notes);
+        notesArr = JSON.parse(notes);
     }
   
     let html = "";
   
-    notesObj.forEach(function(element, index) {
+    notesArr.forEach(function(element, index) {
         html += '<ul class="noteList"><li>' + element + '<a href="#" title="Remove note" class="removeNote animate" id="' + index + '" onclick="deleteNote(id)">x</a></li></ul>';
     });
   
     let notesElm = document.getElementById("note");
   
-    if (notesObj.length != 0) {
+    if (notesArr.length != 0) {
         notesElm.innerHTML = html;
     }
 }
@@ -125,14 +127,14 @@ function deleteNote(index) {
     let notes = localStorage.getItem("notes");
   
     if (notes == null) {
-        notesObj = [];
+        notesArr = [];
     } else {
-        notesObj = JSON.parse(notes);
+        notesArr = JSON.parse(notes);
     }
   
-    notesObj.splice(index, 1);
+    notesArr.splice(index, 1);
   
-    localStorage.setItem("notes", JSON.stringify(notesObj));
+    localStorage.setItem("notes", JSON.stringify(notesArr));
   
     showNotes();
 }
