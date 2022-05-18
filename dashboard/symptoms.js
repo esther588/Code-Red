@@ -227,12 +227,12 @@ function fatigueSubmit() {
 
 function checkSubmit() {
     if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
-        flagsMap.set("acne", true);
-        flagsMap.set("mood", true);
-        flagsMap.set("cramps", true);
-        flagsMap.set("fatigue", true);
-        const jsonMap = JSON.stringify(flagsMap);
-        localStorage.setItem("flagsMap", jsonMap);
+        flagsArr[0] = true;
+        flagsArr[1] = true;
+        flagsArr[2] = true;
+        flagsArr[3] = true;
+        const jsonMap = JSON.stringify(flagsArr);
+        localStorage.setItem("flagsArr", jsonMap);
         location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
     }
 }
