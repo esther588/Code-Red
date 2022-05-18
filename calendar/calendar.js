@@ -148,6 +148,8 @@ function checkSubmit() {
     var crampsFlag = flagsArr[2];
     var fatigueFlag = flagsArr[3];
     if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
-        location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
+        document.getElementById("dashboard").href = "https://esther588.github.io/Code-Red/dashboard/dashboard.html"; 
+    } else {
+        document.getElementById("dashboard").href = "https://esther588.github.io/Code-Red/dashboard/symptoms.html"; 
     }
 }
