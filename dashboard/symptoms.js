@@ -135,13 +135,13 @@ const strCramps = localStorage.getItem("crampsCounter");
 var crampsCounter = JSON.parse(strCramps);
 const strFatigue = localStorage.getItem("fatigueCounter");
 var fatigueCounter = JSON.parse(strFatigue);
-const strFlags = localStorage.getItem("flagsMap");
-var flagsMap = JSON.parse(strFlags);
+const strFlags = localStorage.getItem("flagsArr");
+var flagsArr = JSON.parse(strFlags);
 
-var acneFlag = flagsMap.get("acne");
-var moodFlag = flagsMap.get("mood");
-var crampsFlag = flagsMap.get("cramps");
-var fatigueFlag = flagsMap.get("fatigue");
+var acneFlag = flagsArr[0];
+var moodFlag = flagsArr[1];
+var crampsFlag = flagsArr[2];
+var fatigueFlag = flagsArr[3];
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
