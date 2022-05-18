@@ -1,7 +1,3 @@
-document.getElementById("#heart-trigger").click(function () {
-    document.getElementById("li").toggleClass("visible");
-});
- 
 // Create a date object and get the date, month, year and day of the week
 var today = new Date();
 var currentDate = today.getDate();
