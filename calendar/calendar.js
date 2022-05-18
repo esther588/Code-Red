@@ -138,3 +138,16 @@ function deleteNote(index) {
   
     showNotes();
 }
+
+function checkSubmit() {
+    const strFlags = localStorage.getItem("flagsArr");
+    var flagsArr = JSON.parse(strFlags);
+
+    var acneFlag = flagsArr[0];
+    var moodFlag = flagsArr[1];
+    var crampsFlag = flagsArr[2];
+    var fatigueFlag = flagsArr[3];
+    if(acneFlag == true && moodFlag == true && crampsFlag == true && fatigueFlag == true) {
+        location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
+    }
+}
