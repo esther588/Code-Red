@@ -83,6 +83,8 @@ function createMonths(monthsArr, month) {
     monthsHtml.innerHTML = html;
 }
 
+showNotes();
+
 function addNote() {
     let notesInput = document.getElementById("note-input");
     let notes = localStorage.getItem("notes");
