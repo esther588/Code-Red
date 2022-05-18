@@ -85,6 +85,7 @@ function createMonths(monthsArr, month) {
 
 showNotes();
 
+// Add a note and the display all notes
 function addNote() {
     let notesInput = document.getElementById("note-input");
     let notes = localStorage.getItem("notes");
@@ -101,6 +102,7 @@ function addNote() {
     showNotes();
 }
 
+// Display all notes
 function showNotes() {
     let notes = localStorage.getItem("notes");
   
@@ -123,6 +125,7 @@ function showNotes() {
     }
 }
 
+// Delete a specific note and then display remaining notes
 function deleteNote(index) {
     let notes = localStorage.getItem("notes");
   
@@ -139,6 +142,7 @@ function deleteNote(index) {
     showNotes();
 }
 
+// Check the flags to determine which link to direct to
 function checkFlags() {
     const strFlags = localStorage.getItem("flagsArr");
     var flagsArr = JSON.parse(strFlags);
