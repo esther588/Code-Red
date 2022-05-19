@@ -1,7 +1,3 @@
-const express = require("express");
-const app = express();
-const mysql = require("mysql");
-
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupBlankError = document.getElementById("signup-blank-error");
@@ -10,21 +6,6 @@ const signupUserError = document.getElementById("signup-user-error");
 
 var today = new Date();
 var currentYear = today.getFullYear();
-
-// Save arrays to localStorage
-
-var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr1 = JSON.stringify(acneCounter);
-localStorage.setItem("acneCounter", jsonArr1);
-var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr2 = JSON.stringify(moodCounter);
-localStorage.setItem("moodCounter", jsonArr2);
-var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr3 = JSON.stringify(crampsCounter);
-localStorage.setItem("crampsCounter", jsonArr3);
-var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const jsonArr4 = JSON.stringify(fatigueCounter);
-localStorage.setItem("fatigueCounter", jsonArr4);
 
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -51,6 +32,21 @@ signupButton.addEventListener("click", (e) => {
             localStorage.setItem(username + " username", username);
             localStorage.setItem(username + " password", password);
             localStorage.setItem(username + " year", currentYear);
+
+            // Save arrays to localStorage
+            var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            const jsonArr1 = JSON.stringify(acneCounter);
+            localStorage.setItem("acneCounter", jsonArr1);
+            var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            const jsonArr2 = JSON.stringify(moodCounter);
+            localStorage.setItem("moodCounter", jsonArr2);
+            var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            const jsonArr3 = JSON.stringify(crampsCounter);
+            localStorage.setItem("crampsCounter", jsonArr3);
+            var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            const jsonArr4 = JSON.stringify(fatigueCounter);
+            localStorage.setItem("fatigueCounter", jsonArr4);
+
             alert("You have successfully signed up!");
             location.assign("https://esther588.github.io/Code-Red/login/login.html");
         }
