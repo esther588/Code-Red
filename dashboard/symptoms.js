@@ -145,18 +145,16 @@ var fatigueFlag = flagsArr[3];
 
 function acneSubmit() {
     var acneOption = optionsMap.get("Acne");
-    var counter = acneCounter[monthIndex];
     if (acneOption.localeCompare("Whiteheads") == 0) {
-        acneCounter[monthIndex] = counter++;
-        alert("Hello");
+        acneCounter[monthIndex] += 1;
     } else if (acneOption.localeCompare("Blackheads") == 0) {
-        acneCounter[monthIndex] = counter++;
+        acneCounter[monthIndex] += 1;
     }  else if (acneOption.localeCompare("Papules") == 0) {
-        acneCounter[monthIndex] = counter++;
+        acneCounter[monthIndex] += 1;
     }  else if (acneOption.localeCompare("Nodules") == 0) {
-        acneCounter[monthIndex] = counter++;
+        acneCounter[monthIndex] += 1;
     }  else if (acneOption.localeCompare("Cysts") == 0) {
-        acneCounter[monthIndex] = counter++;
+        acneCounter[monthIndex] += 1;
     }
     const jsonArr = JSON.stringify(acneCounter);
     localStorage.setItem("acneCounter", jsonArr);
