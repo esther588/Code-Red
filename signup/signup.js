@@ -24,7 +24,6 @@ signupButton.addEventListener("click", (e) => {
     } else {
         var storedUser = localStorage.getItem(username + " username");
         if(username.value == storedUser) {
-            alert(storedUser);
             signupUserError.style.opacity = 1;
         } else {
             // Store the data via localStorage
