@@ -160,15 +160,15 @@ function acneSubmit() {
 function moodSubmit() {
     const strMood = localStorage.getItem("moodCounter");
     var moodCounter = JSON.parse(strMood);
-    var fatigueOption = optionsMap.get("Mood");
-    if (fatigueOption.localeCompare("Irritability") == 0) {
-        fatigueCounter[monthIndex] += 1;
-    } else if (fatigueOption.localeCompare("Anger") == 0) {
-        fatigueCounter[monthIndex] += 1;
-    }  else if (fatigueOption.localeCompare("Sadness") == 0) {
-        fatigueCounter[monthIndex] += 1;
-    }  else if (fatigueOption.localeCompare("Anxiety") == 0) {
-        fatigueCounter[monthIndex] += 1;
+    var moodOption = optionsMap.get("Mood");
+    if (moodOption.localeCompare("Irritability") == 0) {
+        moodCounter[monthIndex] += 1;
+    } else if (moodOption.localeCompare("Anger") == 0) {
+        moodCounter[monthIndex] += 1;
+    }  else if (moodOption.localeCompare("Sadness") == 0) {
+        moodCounter[monthIndex] += 1;
+    }  else if (moodOption.localeCompare("Anxiety") == 0) {
+        moodCounter[monthIndex] += 1;
     }
     const jsonArr = JSON.stringify(moodCounter);
     localStorage.setItem("moodCounter", jsonArr);
