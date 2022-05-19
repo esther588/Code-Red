@@ -82,8 +82,15 @@ function showSection(id) {
     }
 }
 
-function dashboardFlags() {
-    localStorage.setItem("dashFlag", true);
+function changeFlags() {
+    const strFlags = localStorage.getItem("flagsArr");
+    var flagsArr = JSON.parse(strFlags);
+    flagsArr[0] = false;
+    flagsArr[1] = false;
+    flagsArr[2] = false;
+    flagsArr[3] = false;
+    const jsonArr = JSON.stringify(flagsArr);
+    localStorage.setItem("flagsArr", jsonArr);
 }
 
 const strAcne = localStorage.getItem("acneCounter");

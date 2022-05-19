@@ -135,7 +135,6 @@ const strCramps = localStorage.getItem("crampsCounter");
 var crampsCounter = JSON.parse(strCramps);
 const strFatigue = localStorage.getItem("fatigueCounter");
 var fatigueCounter = JSON.parse(strFatigue);
-const dashFlag = localStorage.getItem("dashFlag");
 const strFlags = localStorage.getItem("flagsArr");
 var flagsArr = JSON.parse(strFlags);
 
@@ -162,9 +161,7 @@ function acneSubmit() {
     localStorage.setItem("acneCounter", jsonArr);
     acneFlag = true;
     alert("Your data has been submitted!");
-    if(dashFlag == null) {
-        checkSubmit();
-    }
+    checkSubmit();
 }
 
 function moodSubmit() {
@@ -183,9 +180,7 @@ function moodSubmit() {
     localStorage.setItem("moodCounter", jsonArr);
     moodFlag = true;
     alert("Your data has been submitted!");
-    if(dashFlag == null) {
-        checkSubmit();
-    }
+    checkSubmit();
 }
 
 function crampsSubmit() {
@@ -204,9 +199,7 @@ function crampsSubmit() {
     localStorage.setItem("crampsCounter", jsonArr);
     crampsFlag = true;
     alert("Your data has been submitted!");
-    if(dashFlag == null) {
-        checkSubmit();
-    }
+    checkSubmit();
 }
 
 function fatigueSubmit() {
@@ -229,9 +222,7 @@ function fatigueSubmit() {
     localStorage.setItem("fatigueCounter", jsonArr);
     fatigueFlag = true;
     alert("Your data has been submitted!");
-    if(dashFlag == null) {
-        checkSubmit();
-    }
+    checkSubmit();
 }
 
 function checkSubmit() {
@@ -240,8 +231,8 @@ function checkSubmit() {
         flagsArr[1] = true;
         flagsArr[2] = true;
         flagsArr[3] = true;
-        const jsonMap = JSON.stringify(flagsArr);
-        localStorage.setItem("flagsArr", jsonMap);
+        const jsonArr = JSON.stringify(flagsArr);
+        localStorage.setItem("flagsArr", jsonArr);
         location.assign("https://esther588.github.io/Code-Red/dashboard/dashboard.html");
     }
 }
