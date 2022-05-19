@@ -23,7 +23,7 @@ signupButton.addEventListener("click", (e) => {
         signupPwdError.style.opacity = 1;
     } else {
         var storedUser = localStorage.getItem(username + " username");
-        if(username == storedUser) {
+        if(username.localeCompare(storedUser) == 0) {
             signupUserError.style.opacity = 1;
         } else {
             // Store the data via localStorage
