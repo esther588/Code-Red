@@ -162,7 +162,9 @@ function acneSubmit() {
     localStorage.setItem("acneCounter", jsonArr);
     acneFlag = true;
     alert("Your data has been submitted!");
-    checkSubmit();
+    if(dashFlag == null) {
+        checkSubmit();
+    }
 }
 
 function moodSubmit() {
