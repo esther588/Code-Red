@@ -18,6 +18,8 @@ loginButton.addEventListener("click", (e) => {
         // Store current username
         localStorage.setItem("currentUser", username);
 
+        alert(username);
+
         // Create and store a map of flags
         var flagsArr = [false, false, false, false]
         const jsonArr = JSON.stringify(flagsArr);
