@@ -127,14 +127,6 @@ window.addEventListener('click', function (e) {
     }
 });
 
-const strAcne = localStorage.getItem("acneCounter");
-var acneCounter = JSON.parse(strAcne);
-const strMood = localStorage.getItem("moodCounter");
-var moodCounter = JSON.parse(strMood);
-const strCramps = localStorage.getItem("crampsCounter");
-var crampsCounter = JSON.parse(strCramps);
-const strFatigue = localStorage.getItem("fatigueCounter");
-var fatigueCounter = JSON.parse(strFatigue);
 const strFlags = localStorage.getItem("flagsArr");
 var flagsArr = JSON.parse(strFlags);
 
@@ -144,6 +136,8 @@ var crampsFlag = flagsArr[2];
 var fatigueFlag = flagsArr[3];
 
 function acneSubmit() {
+    const strAcne = localStorage.getItem("acneCounter");
+    var acneCounter = JSON.parse(strAcne);
     var acneOption = optionsMap.get("Acne");
     if (acneOption.localeCompare("Whiteheads") == 0) {
         acneCounter[monthIndex] += 1;
@@ -164,16 +158,17 @@ function acneSubmit() {
 }
 
 function moodSubmit() {
+    const strMood = localStorage.getItem("moodCounter");
+    var moodCounter = JSON.parse(strMood);
     var fatigueOption = optionsMap.get("Mood");
-    var counter = fatigueCounter[monthIndex];
     if (fatigueOption.localeCompare("Irritability") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     } else if (fatigueOption.localeCompare("Anger") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }  else if (fatigueOption.localeCompare("Sadness") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }  else if (fatigueOption.localeCompare("Anxiety") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }
     const jsonArr = JSON.stringify(moodCounter);
     localStorage.setItem("moodCounter", jsonArr);
@@ -183,16 +178,17 @@ function moodSubmit() {
 }
 
 function crampsSubmit() {
+    const strCramps = localStorage.getItem("crampsCounter");
+    var crampsCounter = JSON.parse(strCramps);
     var crampsOption = optionsMap.get("Cramps");
-    var counter = crampsCounter[monthIndex];
     if (crampsOption.localeCompare("None") == 0) {
-        crampsCounter[monthIndex] = counter++;
+        crampsCounter[monthIndex] += 1;
     } else if (crampsOption.localeCompare("Minimal") == 0) {
-        crampsCounter[monthIndex] = counter++;
+        crampsCounter[monthIndex] += 1;
     }  else if (crampsOption.localeCompare("Moderate") == 0) {
-        crampsCounter[monthIndex] = counter++;
+        crampsCounter[monthIndex] += 1;
     }  else if (crampsOption.localeCompare("Extreme") == 0) {
-        crampsCounter[monthIndex] = counter++;
+        crampsCounter[monthIndex] += 1;
     }
     const jsonArr = JSON.stringify(crampsCounter);
     localStorage.setItem("crampsCounter", jsonArr);
@@ -202,20 +198,21 @@ function crampsSubmit() {
 }
 
 function fatigueSubmit() {
+    const strFatigue = localStorage.getItem("fatigueCounter");
+    var fatigueCounter = JSON.parse(strFatigue);
     var fatigueOption = optionsMap.get("Fatigue");
-    var counter = fatigueCounter[monthIndex];
     if (fatigueOption.localeCompare("Social") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     } else if (fatigueOption.localeCompare("Emotional") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }  else if (fatigueOption.localeCompare("Physical") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }  else if (fatigueOption.localeCompare("Pain") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }  else if (fatigueOption.localeCompare("Mental") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     } else if (fatigueOption.localeCompare("Chronic") == 0) {
-        fatigueCounter[monthIndex] = counter++;
+        fatigueCounter[monthIndex] += 1;
     }
     const jsonArr = JSON.stringify(fatigueCounter);
     localStorage.setItem("fatigueCounter", jsonArr);
