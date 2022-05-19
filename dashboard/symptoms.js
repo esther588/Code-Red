@@ -148,6 +148,7 @@ function acneSubmit() {
     var counter = acneCounter[monthIndex];
     if (acneOption.localeCompare("Whiteheads") == 0) {
         acneCounter[monthIndex] = counter++;
+        alert("Hello");
     } else if (acneOption.localeCompare("Blackheads") == 0) {
         acneCounter[monthIndex] = counter++;
     }  else if (acneOption.localeCompare("Papules") == 0) {
