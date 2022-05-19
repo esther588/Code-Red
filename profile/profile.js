@@ -2,6 +2,7 @@ displayUser();
 displayFirst();
 displayLast();
 displayFull();
+displayYear();
 
 function displayUser() {
     var userID = document.getElementById("username");
@@ -29,6 +30,13 @@ function displayFull() {
     var firstName = localStorage.getItem(currentUser + ' firstname');
     var lastName = localStorage.getItem(currentUser + ' lastname');
     fullID.innerHTML = firstName + " " + lastName;
+}
+
+function displayYear() {
+    var yearID = document.getElementById("year");
+    var currentUser = localStorage.getItem('currentUser');
+    var year = localStorage.getItem(currentUser + ' year');
+    yearID.innerHTML = year;
 }
 
 document.querySelector("input").onchange = function() {
