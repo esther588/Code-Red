@@ -16,8 +16,6 @@ signupButton.addEventListener("click", (e) => {
     const username = signupForm.username.value;
     const password = signupForm.password.value;
 
-    document.getElementById("test").innerHTML = username;
-
     // Check if data is empty or doesn't meet the password requirements
     if (firstname == "" && lastname == "" && username === "" && password === "") {
         signupBlankError.style.opacity = 1;
@@ -27,6 +25,7 @@ signupButton.addEventListener("click", (e) => {
         var storedUser = localStorage.getItem(username + " username");
         if(username.value == storedUser) {
             signupUserError.style.opacity = 1;
+            document.getElementById("test").innerHTML = storedUser;
         } else {
             // Store the data via localStorage
             localStorage.setItem(username + " firstname", firstname);
