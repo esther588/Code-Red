@@ -4,9 +4,10 @@ displayLast();
 displayFull();
 displayYear();
 
+var currentUser = localStorage.getItem('currentUser');
+
 function displayUser() {
     var userID = document.getElementById("username");
-    var currentUser = localStorage.getItem('currentUser');
     userID.innerHTML = currentUser;
 }
 
