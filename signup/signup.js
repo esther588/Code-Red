@@ -23,9 +23,8 @@ signupButton.addEventListener("click", (e) => {
         signupPwdError.style.opacity = 1;
     } else {
         var storedUser = localStorage.getItem(username + " username");
-        if(username.value == storedUser) {
+        if(username == storedUser) {
             signupUserError.style.opacity = 1;
-            document.getElementById("test").innerHTML = username.value;
         } else {
             // Store the data via localStorage
             localStorage.setItem(username + " firstname", firstname);
