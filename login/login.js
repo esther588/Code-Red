@@ -24,7 +24,6 @@ loginButton.addEventListener("click", (e) => {
         localStorage.setItem("flagsArr", jsonArr);
 
         alert("You have successfully logged in.");
-        alert(username.value);
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
         loginErrorMsg.style.opacity = 1;
