@@ -16,7 +16,7 @@ signupButton.addEventListener("click", (e) => {
     const username = signupForm.username.value;
     const password = signupForm.password.value;
 
-    document.getElementById("username-field").innerHTML = username;
+    document.getElementById("test").innerHTML = username;
 
     // Check if data is empty or doesn't meet the password requirements
     if (firstname == "" && lastname == "" && username === "" && password === "") {
