@@ -23,20 +23,6 @@ loginButton.addEventListener("click", (e) => {
         const jsonArr = JSON.stringify(flagsArr);
         localStorage.setItem("flagsArr", jsonArr);
 
-        // Save arrays to localStorage
-        var acneCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        const jsonArr1 = JSON.stringify(acneCounter);
-        localStorage.setItem("acneCounter", jsonArr1);
-        var moodCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        const jsonArr2 = JSON.stringify(moodCounter);
-        localStorage.setItem("moodCounter", jsonArr2);
-        var crampsCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        const jsonArr3 = JSON.stringify(crampsCounter);
-        localStorage.setItem("crampsCounter", jsonArr3);
-        var fatigueCounter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        const jsonArr4 = JSON.stringify(fatigueCounter);
-        localStorage.setItem("fatigueCounter", jsonArr4);
-
         alert("You have successfully logged in.");
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
