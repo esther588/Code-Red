@@ -16,7 +16,7 @@ loginButton.addEventListener("click", (e) => {
     // Check if stored data from signuo form is equal to data from login form
     if(username.value == storedUser && password.value == storedPwd) {
         // Store current username
-        localStorage.setItem("currentUser", storedUser);
+        localStorage.setItem("currentUser", username);
 
         // Create and store a map of flags
         var flagsArr = [false, false, false, false]
