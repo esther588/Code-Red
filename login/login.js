@@ -18,14 +18,13 @@ loginButton.addEventListener("click", (e) => {
         // Store current username
         localStorage.setItem("currentUser", username);
 
-        alert(username);
-
         // Create and store a map of flags
         var flagsArr = [false, false, false, false]
         const jsonArr = JSON.stringify(flagsArr);
         localStorage.setItem("flagsArr", jsonArr);
 
         alert("You have successfully logged in.");
+        alert(username);
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
         loginErrorMsg.style.opacity = 1;
