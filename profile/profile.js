@@ -28,7 +28,7 @@ function displayFull() {
     var currentUser = localStorage.getItem('currentUser');
     var firstName = localStorage.getItem('esther588' + ' firstname');
     var lastName = localStorage.getItem('esther588' + ' lastname');
-    fullID.innerHTML = firstName + lastName;
+    fullID.innerHTML = firstName + " " + lastName;
 }
 
 document.querySelector("input").onchange = function() {
