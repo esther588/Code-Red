@@ -13,8 +13,6 @@ loginButton.addEventListener("click", (e) => {
     var storedUser = localStorage.getItem(username + " username");
     var storedPwd = localStorage.getItem(username + " password");
 
-    document.getElementById("test").innerHTML = storedUser;
-
     // Check if stored data from signuo form is equal to data from login form
     if(username.localeCompare(storedUser) == 0 && password.localeCompare(storedPwd) == 0) {
         // Store current username
