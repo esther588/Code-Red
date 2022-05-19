@@ -135,6 +135,7 @@ const strCramps = localStorage.getItem("crampsCounter");
 var crampsCounter = JSON.parse(strCramps);
 const strFatigue = localStorage.getItem("fatigueCounter");
 var fatigueCounter = JSON.parse(strFatigue);
+const dashFlag = localStorage.getItem("dashFlag");
 const strFlags = localStorage.getItem("flagsArr");
 var flagsArr = JSON.parse(strFlags);
 
@@ -180,7 +181,9 @@ function moodSubmit() {
     localStorage.setItem("moodCounter", jsonArr);
     moodFlag = true;
     alert("Your data has been submitted!");
-    checkSubmit();
+    if(dashFlag == null) {
+        checkSubmit();
+    }
 }
 
 function crampsSubmit() {
@@ -199,7 +202,9 @@ function crampsSubmit() {
     localStorage.setItem("crampsCounter", jsonArr);
     crampsFlag = true;
     alert("Your data has been submitted!");
-    checkSubmit();
+    if(dashFlag == null) {
+        checkSubmit();
+    }
 }
 
 function fatigueSubmit() {
@@ -222,7 +227,9 @@ function fatigueSubmit() {
     localStorage.setItem("fatigueCounter", jsonArr);
     fatigueFlag = true;
     alert("Your data has been submitted!");
-    checkSubmit();
+    if(dashFlag == null) {
+        checkSubmit();
+    }
 }
 
 function checkSubmit() {

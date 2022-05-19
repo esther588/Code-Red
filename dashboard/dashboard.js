@@ -82,6 +82,10 @@ function showSection(id) {
     }
 }
 
+function dashboardFlags() {
+    localStorage.setItem("dashFlag", true);
+}
+
 const strAcne = localStorage.getItem("acneCounter");
 var acneValues = JSON.parse(strAcne);
 const strMood = localStorage.getItem("moodCounter");
