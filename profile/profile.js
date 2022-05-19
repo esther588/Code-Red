@@ -5,6 +5,8 @@ displayFull();
 displayYear();
 
 var currentUser = localStorage.getItem('currentUser');
+var firstName = localStorage.getItem(currentUser + ' firstname');
+var lastName = localStorage.getItem(currentUser + ' lastname');
 
 function displayUser() {
     var userID = document.getElementById("username");
@@ -13,20 +15,16 @@ function displayUser() {
 
 function displayFirst() {
     var firstID = document.getElementById("first-name");
-    var firstName = localStorage.getItem(currentUser + ' firstname');
     firstID.innerHTML = firstName;
 }
 
 function displayLast() {
     var lastID = document.getElementById("last-name");
-    var lastName = localStorage.getItem(currentUser + ' lastname');
     lastID.innerHTML = lastName;
 }
 
 function displayFull() {
     var fullID = document.getElementById("full-name");
-    var firstName = localStorage.getItem(currentUser + ' firstname');
-    var lastName = localStorage.getItem(currentUser + ' lastname');
     fullID.innerHTML = firstName + " " + lastName;
 }
 
