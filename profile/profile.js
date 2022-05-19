@@ -12,22 +12,22 @@ function displayUser() {
 function displayFirst() {
     var firstID = document.getElementById("first-name");
     var currentUser = localStorage.getItem('currentUser');
-    var firstName = localStorage.getItem('esther588' + ' firstname');
+    var firstName = localStorage.getItem(currentUser + ' firstname');
     firstID.innerHTML = firstName;
 }
 
 function displayLast() {
     var lastID = document.getElementById("last-name");
     var currentUser = localStorage.getItem('currentUser');
-    var lastName = localStorage.getItem('esther588' + ' lastname');
+    var lastName = localStorage.getItem(currentUser + ' lastname');
     lastID.innerHTML = lastName;
 }
 
 function displayFull() {
     var fullID = document.getElementById("full-name");
     var currentUser = localStorage.getItem('currentUser');
-    var firstName = localStorage.getItem('esther588' + ' firstname');
-    var lastName = localStorage.getItem('esther588' + ' lastname');
+    var firstName = localStorage.getItem(currentUser + ' firstname');
+    var lastName = localStorage.getItem(currentUser + ' lastname');
     fullID.innerHTML = firstName + " " + lastName;
 }
 
