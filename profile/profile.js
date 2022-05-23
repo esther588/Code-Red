@@ -26,8 +26,8 @@ function displayLast() {
 function displayFull() {
     var fullID = document.getElementById("full-name");
     var currentUser = localStorage.getItem('currentUser');
-    var firstName = localStorage.getItem('esther588' + ' firstname');
-    var lastName = localStorage.getItem('esther588' + ' lastname');
+    var firstName = localStorage.getItem(currentUser + ' firstname');
+    var lastName = localStorage.getItem(currentUser + ' lastname');
     fullID.innerHTML = firstName + " " + lastName;
 }
 
