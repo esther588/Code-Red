@@ -508,7 +508,7 @@ function showNotes() {
     let html = "";
   
     notesArr.forEach(function(element, index) {
-        html += '<div class="task-box yellow"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div></div>';
+        html += '<div class="task-box yellow"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div>';
     });
   
     let notesElm = document.getElementById("notes-section");
