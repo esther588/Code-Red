@@ -493,6 +493,8 @@ function createGraph(elem, type, title, colors, yValues) {
         });
 }
 
+showNotes();
+
 // Display all notes
 function showNotes() {
     let notes = localStorage.getItem("notes");
