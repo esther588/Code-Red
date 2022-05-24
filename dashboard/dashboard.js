@@ -492,3 +492,26 @@ function createGraph(elem, type, title, colors, yValues) {
         }
         });
 }
+
+// Display all notes
+function showNotes() {
+    let notes = localStorage.getItem("notes");
+  
+    if (notes == null) {
+        notesArr = [];
+    } else {
+        notesArr = JSON.parse(notes);
+    }
+  
+    let html = "";
+  
+    notesArr.forEach(function(element, index) {
+        html += '<div class="task-box yellow"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div></div>';
+    });
+  
+    let notesElm = document.getElementById("note");
+  
+    if (notesArr.length != 0) {
+        notesElm.innerHTML = html;
+    }
+}
