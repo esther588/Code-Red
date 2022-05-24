@@ -49,7 +49,9 @@ document.querySelector("input").onchange = function() {
 function getPhoto() {
     var currentUser = localStorage.getItem('currentUser');
     var savedPhoto = localStorage.getItem(currentUser + " url");
-    document.getElementById("profile-photo").style.background = "url(" + savedPhoto + ") center center no-repeat";
+    if(savedPhoto != null) {
+        document.getElementById("profile-photo").style.background = "url(" + savedPhoto + ") center center no-repeat";
+    }
 }
 
 function logOutMsg() {
