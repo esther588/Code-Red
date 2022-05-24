@@ -509,7 +509,7 @@ function showNotes() {
         html += '<div class="task-box yellow"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div></div>';
     });
   
-    let notesElm = document.getElementById("note");
+    let notesElm = document.getElementById("notes-section");
   
     if (notesArr.length != 0) {
         notesElm.innerHTML = html;
