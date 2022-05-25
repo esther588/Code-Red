@@ -517,10 +517,10 @@ function showNotes() {
             html += '<div class="task-box blue"><div class="description-task"><div class="task-name">' + element + '</div></div><div class="more-button"></div></div>';
             counter++;
         } else if (counter == 3){
-            html += '<div class="task-box red"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div>';
+            html += '<div class="task-box red"><div class="description-task"><div class="task-name">' + element + '</div></div><div class="more-button"></div></div>';
             counter++;
         } else {
-            html += '<div class="task-box green"><div class="description-task"><div class="task-name">' + element + '/div></div><div class="more-button"></div>';
+            html += '<div class="task-box green"><div class="description-task"><div class="task-name">' + element + '</div></div><div class="more-button"></div></div>';
             counter = 1;
         }
     });
