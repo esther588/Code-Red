@@ -50,7 +50,6 @@ function getPhoto() {
     var currentUser = localStorage.getItem('currentUser');
     var savedPhoto = localStorage.getItem(currentUser + " url");
     if(savedPhoto != null) {
-        document.getElementById("url-link").innerHTML = savedPhoto;
         document.getElementById("profile-photo").style.background = "url(" + savedPhoto + ") center center no-repeat";
     } else {
         document.getElementById("profile-photo").style.background = "url('default_user.jpeg') center center no-repeat";
