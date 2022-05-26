@@ -1,4 +1,4 @@
-getPhoto();
+//getPhoto();
 displayUser();
 displayFirst();
 displayLast();
