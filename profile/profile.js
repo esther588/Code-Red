@@ -45,13 +45,8 @@ document.querySelector("input").onchange = function() {
     document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
     var reader = new FileReader();
     reader.onloadend = () => {
-        var base64Str = reader.result
-                .replace('data:', '')
-                .replace(/^.+,/, '');
-
-            console.log(base64Str);
-            var currentUser = localStorage.getItem('currentUser');
-            localStorage.setItem(currentUser + " base64Str", base64Str);
+        var currentUser = localStorage.getItem('currentUser');
+        localStorage.setItem(currentUser + " dataUrl", reader.result);
     };
     reader.readAsDataURL(file);
 }
