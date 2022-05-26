@@ -44,13 +44,13 @@ document.querySelector("input").onchange = function() {
     document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
     var currentUser = localStorage.getItem('currentUser');
     localStorage.setItem(currentUser + " url", url);
+    document.getElementById("url-link").innerHTML = url;
 }
 
 function getPhoto() {
     var currentUser = localStorage.getItem('currentUser');
     var savedPhoto = localStorage.getItem(currentUser + " url");
     if(savedPhoto != null) {
-        document.getElementById("url-link").innerHTML = savedPhoto;
         document.getElementById("profile-photo").style.background = "url(" + savedPhoto + ") center center no-repeat";
     } else {
         document.getElementById("profile-photo").style.background = "url('default_user.jpeg') center center no-repeat";
