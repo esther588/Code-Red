@@ -429,9 +429,6 @@ a, a:hover, a:focus, a:active {
 
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
-body{text-align:center}
-div{display:block;position:absolute}
-
 h1{
 	background:#fff;
 	width:100%;
