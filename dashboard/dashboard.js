@@ -532,6 +532,8 @@ function showNotes() {
     }
 }
 
+displayWelcomeMsg();
+
 function displayWelcomeMsg() {
     var currentUser = localStorage.getItem('currentUser');
     var firstName = localStorage.getItem(currentUser + ' firstname');
