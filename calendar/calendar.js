@@ -137,11 +137,7 @@ function deleteNote(index) {
         notesArr = JSON.parse(notes);
     }
     
-    if(notesArr.length == 1) {
-        notesArr = [];
-    } else {
-        notesArr.splice(index, 1);
-    }
+    notesArr.splice(index, 1);
   
     localStorage.setItem("notes", JSON.stringify(notesArr));
   
