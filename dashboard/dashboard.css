@@ -432,14 +432,6 @@ a, a:hover, a:focus, a:active {
 body{text-align:center}
 div{display:block;position:absolute}
 
-.container{
-	width:320px;
-	height:320px;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%)
-	}
-
 h1{
 	background:#fff;
 	width:100%;
