@@ -122,6 +122,8 @@ function showNotes() {
   
     if (notesArr.length != 0) {
         notesElm.innerHTML = html;
+    } else {
+        notesElm.innerHTML = '';
     }
 }
 
