@@ -43,8 +43,17 @@ document.querySelector("input").onchange = function() {
     var file = this.files[0];
     var url = URL.createObjectURL(this.files[0]);
     document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
-    var currentUser = localStorage.getItem('currentUser');
-    localStorage.setItem(currentUser + " file-name", file.name);
+    var reader = new FileReader();
+    reader.onloadend = () => {
+        var base64Str = reader.result
+                .replace('data:', '')
+                .replace(/^.+,/, '');
+
+            console.log(base64Str);
+            var currentUser = localStorage.getItem('currentUser');
+            localStorage.setItem(currentUser + " base64Str", base64Str);
+    };
+    reader.readAsDataURL(file);
 }
 
 function logOutMsg() {
