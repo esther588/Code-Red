@@ -51,6 +51,21 @@ document.querySelector("input").onchange = function() {
     reader.readAsDataURL(file);
 }
 
+var currentUser = localStorage.getItem('currentUser');
+var dataUrl = localStorage.getItem(currentUser + " dataUrl");
+dataURLtoBlob(dataUrl);
+
+function dataURLtoBlob(dataUrl) {
+    var arr = dataUrl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while(n--){
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    var newBlob = new Blob([u8arr], {type:mime});
+    var url = URL.createObjectURL(newBlob);
+    document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
+}
+
 function logOutMsg() {
     alert("You have successfully logged out.");
 }
