@@ -11,7 +11,7 @@
         <script src="https://unpkg.com/feather-icons"></script>
         <script defer src="dashboard.js"></script>
     </head>
-    <body>
+    <body onload="displayWelcomeMsg()">
         <div class="task-manager">
             <div class="left-bar">
                 <div class="upper-part">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="page-content">
-                <div class="header" id="welcome-msg" onload="displayWelcomeMsg()"></div>
+                <div class="header" id="welcome-msg"></div>
             </div>
             <div class="page-content" id="acneGraphs" style="display: none;">
                 <div class="header">Graphs For Acne</div>
