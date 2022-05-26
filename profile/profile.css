@@ -74,12 +74,6 @@ body {
     top: 0;
 }
   
-.trick {
-    display: inline-block;
-    vertical-align: middle;
-    height: 150px;
-}
-  
 .image:hover {
     box-shadow: 0px 5px 20px .9px #3F3F3F;
 }
@@ -90,12 +84,7 @@ body {
     -webkit-transition: 1.6s ease-in-out;
     transition: 1.6s ease-in-out;
 }
-  
-.trick:hover img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-  
+
 .profile-head h5{
     color: #333;
 }
