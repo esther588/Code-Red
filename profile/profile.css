@@ -49,6 +49,7 @@ body {
     -webkit-border-radius: 75%;
     -moz-border-radius: 75%;
     box-shadow: 0 0 0 1px #eee;
+    background: url(default_user.jpeg) center center no-repeat;
     background-size: cover;
     margin: auto;
     margin-top: 20px;
