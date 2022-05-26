@@ -531,3 +531,9 @@ function showNotes() {
         notesElm.innerHTML = html;
     }
 }
+
+function displayWelcomeMsg() {
+    const currentUser = localStorage.getItem("currentUser");
+    const firstName = localStorage.getItem(currentUser + "firstname");
+    document.getElementById("welcome-msg").innerHTML = "Welcome " + firstName + "!";
+}
