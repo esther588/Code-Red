@@ -19,9 +19,41 @@
             </ul>
           </nav>
         </header>
-        <div class="block">
-
-        </div>
-        
+        <div class="calendar">
+          <div class="col leftCol">
+            <div class="content">
+              <h1 class="day" id="currentDay"></h1>
+              <h1 class="date" id="currentDate"></h1>
+              <div class="notes">
+                <p>
+                  <input id="note-input" type="text" value="" placeholder="Add New Note"/>
+                  <a type="button" title="Add note" class="addNote animate" onclick="addNote()">+</a>
+                </p>
+                <ul class="noteList" id="note"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="col rightCol">
+              <div class="content">
+                <h2 class="year" id="currentYear"></h2>
+                <ul class="months" id="calendarMonths"></ul>
+                <div class="clearfix"></div>
+                <ul class="weekday">
+                  <li><a href="#" title="Sun" data-value="1">Sun</a></li>
+                  <li><a href="#" title="Mon" data-value="2">Mon</a></li>
+                  <li><a href="#" title="Tue" data-value="3">Tue</a></li>
+                  <li><a href="#" title="Wed" data-value="4">Wed</a></li>
+                  <li><a href="#" title="Thu" data-value="5">Thu</a></li>
+                  <li><a href="#" title="Fri" data-value="6">Fri</a></li>
+                  <li><a href="#" title="Say" data-value="7">Sat</a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <ul class="days" id="calendarBody">
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
     </body>
 </html>
