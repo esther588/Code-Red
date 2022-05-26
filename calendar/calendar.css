@@ -82,31 +82,6 @@ nav ul a:hover {
   }
 }
 
-.heart {
-  display: none;
-  margin: 0 auto;
-  padding: 12px 30px;
-}
-
-@media all and (min-width: 545px) {
-  .heart {
-    display: block;
-    margin: initial;
-  }
-}
-
-.heart-trigger {
-  display: block;
-  order: -1;
-  padding: 12px 30px;
-}
-
-@media all and (min-width: 545px) {
-  .heart-trigger {
-      order: initial;
-  }
-}
-
 *,:active {
   outline: none;
 }
