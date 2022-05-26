@@ -41,20 +41,10 @@ function displayYear() {
 
 document.querySelector("input").onchange = function() {
     var file = this.files[0];
-    var url = file.name;
+    var url = URL.createObjectURL(this.files[0]);
     document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
     var currentUser = localStorage.getItem('currentUser');
-    localStorage.setItem(currentUser + " url", url);
-}
-
-function getPhoto() {
-    var currentUser = localStorage.getItem('currentUser');
-    var savedPhoto = localStorage.getItem(currentUser + " url");
-    if(savedPhoto != null) {
-        document.getElementById("profile-photo").style.background = "url(" + savedPhoto + ") center center no-repeat";
-    } else {
-        document.getElementById("profile-photo").style.background = "url('default_user.jpeg') center center no-repeat";
-    }
+    localStorage.setItem(currentUser + " file-name", file.name);
 }
 
 function logOutMsg() {
