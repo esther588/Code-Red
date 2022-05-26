@@ -1,3 +1,4 @@
+getPhoto();
 displayUser();
 displayFirst();
 displayLast();
