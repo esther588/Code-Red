@@ -533,7 +533,7 @@ function showNotes() {
 }
 
 function displayWelcomeMsg() {
-    const currentUser = localStorage.getItem("currentUser");
-    const firstName = localStorage.getItem(currentUser + " firstname");
+    var currentUser = localStorage.getItem('currentUser');
+    var firstName = localStorage.getItem(currentUser + ' firstname');
     document.getElementById("welcome-msg").innerHTML = "Welcome " + firstName + "!";
 }
