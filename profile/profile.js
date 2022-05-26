@@ -42,6 +42,7 @@ function displayYear() {
 document.querySelector("input").onchange = function() {
     var file = this.files[0];
     var url = file.name;
+    document.getElementById("url-link").innerHTML = url;
     document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
     var currentUser = localStorage.getItem('currentUser');
     localStorage.setItem(currentUser + " url", url);
