@@ -39,13 +39,6 @@ function displayYear() {
     yearID.innerHTML = year;
 }
 
-document.querySelector("input").onchange = function() {
-    var url = URL.createObjectURL(this.files[0]);
-    document.getElementById("profile-photo").style.background = "url(" + url + ") center center no-repeat";
-    var currentUser = localStorage.getItem('currentUser');
-    localStorage.setItem(currentUser + " url", url);
-}
-
 function getPhoto() {
     var currentUser = localStorage.getItem('currentUser');
     var savedPhoto = localStorage.getItem(currentUser + " url");
