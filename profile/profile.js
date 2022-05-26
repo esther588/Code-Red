@@ -1,4 +1,3 @@
-getPhoto();
 displayUser();
 displayFirst();
 displayLast();
