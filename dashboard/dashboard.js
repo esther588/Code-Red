@@ -535,6 +535,5 @@ function showNotes() {
 function displayWelcomeMsg() {
     var currentUser = localStorage.getItem('currentUser');
     var firstName = localStorage.getItem(currentUser + ' firstname');
-    var welcomeMsg = document.getElementById("welcome-msg");
-    welcomeMsg.innerHTML = "Welcome " + firstName + "!";
+    document.getElementById("welcome-msg-1").innerHTML = "Welcome, ";
 }
