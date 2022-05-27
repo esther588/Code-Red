@@ -549,7 +549,11 @@ function displayWelcomeMsg() {
 }
 
 function changeStatus(id) {
-    localStorage.setItem(id, "checked");
+    if(document.getElementById(id).checked) {
+        localStorage.setItem(id, "checked");
+    } else {
+        localStorage.setItem(id, "unchecked");
+    }
 }
 
 function checkStatus() {
