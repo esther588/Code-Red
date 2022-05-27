@@ -548,6 +548,21 @@ function displayWelcomeMsg() {
     document.getElementById("welcome-msg-4").innerHTML = " " + lastName;
 }
 
-function changeStatus(curr, id) {
-    document.getElementById(id).innerText = curr.checked;
-  }
+function changeStatus(id) {
+    localStorage.setItem(id, "checked");
+}
+
+checkStatus();
+
+function checkStatus() {
+    var checked1 = localStorage.getItem("item-1");
+    var checked2 = localStorage.getItem("item-2");
+    var checked3 = localStorage.getItem("item-3");
+    if(checked1.localeCompare("checked") == 0) {
+        document.getElementById("item-1").checked = true;
+    } else if(checked2.localeCompare("checked") == 0) {
+        document.getElementById("item-2").checked = true;
+    } else if(checked3.localeCompare("checked") == 0) {
+        document.getElementById("item-3").checked = true;
+    }
+}
