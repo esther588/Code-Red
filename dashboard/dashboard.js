@@ -1,5 +1,6 @@
 feather.replace();
 
+// Create  and initialize data and labels used for the graphs
 var graphsArray = ["acneGraphs", "moodGraphs", "crampsGraphs", "fatigueGraphs"];
 var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var acneColors = [
@@ -67,6 +68,7 @@ function logOutMsg() {
     alert("You have successfully logged out.");
 }
 
+// Show section that's been clicked and hide main page content
 function showSection(id) {
     for (let i = 0; i < graphsArray.length; i++) {
         var elem = document.getElementById(graphsArray[i]);
@@ -84,6 +86,7 @@ function showSection(id) {
     prev.style.display = "none";
 }
 
+// Clicking symptoms page from the dashboard changes the flags back to false
 function changeFlags() {
     const strFlags = localStorage.getItem("flagsArr");
     var flagsArr = JSON.parse(strFlags);
@@ -534,6 +537,7 @@ function showNotes() {
     }
 }
 
+// Display the welcome message along with full name
 function displayWelcomeMsg() {
     var currentUser = localStorage.getItem('currentUser');
     var firstName = localStorage.getItem(currentUser + ' firstname');
