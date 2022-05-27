@@ -552,8 +552,6 @@ function changeStatus(id) {
     localStorage.setItem(id, "checked");
 }
 
-checkStatus();
-
 function checkStatus() {
     var checked1 = localStorage.getItem("item-1");
     var checked2 = localStorage.getItem("item-2");
