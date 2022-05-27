@@ -562,11 +562,17 @@ function checkStatus() {
     var checked3 = localStorage.getItem("item-3");
     if(checked1.localeCompare("checked") == 0) {
         document.getElementById("item-1").checked = true;
+    } else if(checked1.localeCompare("unchecked") == 0) {
+        document.getElementById("item-1").checked = false;
     }
     if(checked2.localeCompare("checked") == 0) {
         document.getElementById("item-2").checked = true;
+    } else if(checked2.localeCompare("unchecked") == 0) {
+        document.getElementById("item-2").checked = false;
     }
     if(checked3.localeCompare("checked") == 0) {
         document.getElementById("item-3").checked = true;
+    } else if(checked3.localeCompare("unchecked") == 0) {
+        document.getElementById("item-3").checked = false;
     }
 }
