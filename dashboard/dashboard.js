@@ -547,3 +547,7 @@ function displayWelcomeMsg() {
     document.getElementById("welcome-msg-3").innerHTML = firstName;
     document.getElementById("welcome-msg-4").innerHTML = " " + lastName;
 }
+
+function changeStatus(curr, id) {
+    document.getElementById(id).innerText = curr.checked;
+  }
