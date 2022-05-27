@@ -389,32 +389,6 @@ label .label-text:before {
   border: 1px solid var(--checkbox-color);
 }
 
-.tag {
-  font-size: 10px;
-  padding: 4px 8px;
-  border-radius: 20px;
-}
-
-.tag.approved {
-  background-color: var(--tag-color-one);
-  color: var(--tag-color-text-one);
-}
-
-.tag.progress {
-  background-color: var(--tag-color-two);
-  color: var(--tag-color-text-two);
-}
-
-.tag.review {
-  background-color: var(--tag-color-three);
-  color: var(--tag-color-text-three);
-}
-
-.tag.waiting {
-  background-color: var(--tag-color-four);
-  color: var(--tag-color-text-four);
-}
-
 .upcoming {
   border-bottom: 1px solid #ddd;
   padding-bottom: 30px;
