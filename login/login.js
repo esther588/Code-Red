@@ -23,6 +23,11 @@ loginButton.addEventListener("click", (e) => {
         const jsonArr = JSON.stringify(flagsArr);
         localStorage.setItem("flagsArr", jsonArr);
 
+        // Uncheck all boxes on checklist from dashboard
+        localStorage.setItem("item-1", "unchecked");
+        localStorage.setItem("item-2", "unchecked");
+        localStorage.setItem("item-3", "unchecked");
+
         alert("You have successfully logged in.");
         location.assign("https://esther588.github.io/Code-Red/calendar/calendar.html");
     } else {
