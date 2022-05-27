@@ -80,6 +80,8 @@ function showSection(id) {
     } else {
         curr.style.display = "none";
     }
+    var prev = document.getElementById("welcome-page");
+    prev.style.display = "none";
 }
 
 function changeFlags() {
