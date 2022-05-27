@@ -536,7 +536,8 @@ function displayWelcomeMsg() {
     var currentUser = localStorage.getItem('currentUser');
     var firstName = localStorage.getItem(currentUser + ' firstname');
     var lastName = localStorage.getItem(currentUser + ' lastname');
-    document.getElementById("welcome-msg-1").innerHTML = "Welcome, ";
-    document.getElementById("welcome-msg-2").innerHTML = firstName;
-    document.getElementById("welcome-msg-3").innerHTML = " " + lastName;
+    document.getElementById("welcome-msg-1").innerHTML = "Welcome ";
+    document.getElementById("welcome-msg-2").innerHTML = "Home, ";
+    document.getElementById("welcome-msg-3").innerHTML = firstName;
+    document.getElementById("welcome-msg-4").innerHTML = " " + lastName;
 }
